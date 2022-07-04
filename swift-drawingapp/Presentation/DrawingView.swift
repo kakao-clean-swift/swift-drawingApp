@@ -8,5 +8,7 @@
 import UIKit
 
 class DrawingView: UIView {
-    
+    var viewModel: DrawingViewModel? {
+        DIContainer.shared.resolve(for: DrawingViewModel.self)
+    }
 }

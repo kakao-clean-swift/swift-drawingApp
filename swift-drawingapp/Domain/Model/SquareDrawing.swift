@@ -5,8 +5,9 @@
 //  Created by kakao on 2022/07/04.
 //
 
-import Foundation
+import UIKit
 
 struct SquareDrawing: SquareType, Drawing {
-    
+    var frame: CGRect = .zero
+    var isSelected: Bool = false
 }

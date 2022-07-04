@@ -29,6 +29,10 @@
 		C21E8FC62872DA020043BFAF /* DrawingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21E8FC52872DA020043BFAF /* DrawingViewModel.swift */; };
 		C21E8FC92872DC2D0043BFAF /* DrawingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21E8FC82872DC2D0043BFAF /* DrawingUseCase.swift */; };
 		C21E8FCD2872DCA20043BFAF /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21E8FCC2872DCA20043BFAF /* NetworkClient.swift */; };
+		C21E8FD1287317660043BFAF /* DrawingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C21E8FD0287317660043BFAF /* DrawingView.xib */; };
+		C21E8FD428731B5A0043BFAF /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21E8FD328731B5A0043BFAF /* UIColor+Extension.swift */; };
+		C21E8FD6287329DB0043BFAF /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21E8FD5287329DB0043BFAF /* DIContainer.swift */; };
+		C21E8FDD28733BF80043BFAF /* DIRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21E8FDC28733BF80043BFAF /* DIRoot.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +79,10 @@
 		C21E8FC52872DA020043BFAF /* DrawingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewModel.swift; sourceTree = "<group>"; };
 		C21E8FC82872DC2D0043BFAF /* DrawingUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingUseCase.swift; sourceTree = "<group>"; };
 		C21E8FCC2872DCA20043BFAF /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		C21E8FD0287317660043BFAF /* DrawingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrawingView.xib; sourceTree = "<group>"; };
+		C21E8FD328731B5A0043BFAF /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		C21E8FD5287329DB0043BFAF /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
+		C21E8FDC28733BF80043BFAF /* DIRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIRoot.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,7 +138,8 @@
 				C21E8FC12872D9AD0043BFAF /* Presentation */,
 				83A846E028725EFA00C777B1 /* AppDelegate.swift */,
 				83A846E228725EFA00C777B1 /* SceneDelegate.swift */,
-				83A846E428725EFA00C777B1 /* ViewController.swift */,
+				C21E8FD5287329DB0043BFAF /* DIContainer.swift */,
+				C21E8FDC28733BF80043BFAF /* DIRoot.swift */,
 				83A846E628725EFA00C777B1 /* Main.storyboard */,
 				83A846E928725EFE00C777B1 /* Assets.xcassets */,
 				83A846EB28725EFE00C777B1 /* LaunchScreen.storyboard */,
@@ -190,8 +199,11 @@
 		C21E8FC12872D9AD0043BFAF /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				C21E8FC32872D9DD0043BFAF /* DrawingView.swift */,
+				C21E8FD228731B420043BFAF /* Extension */,
 				C21E8FC52872DA020043BFAF /* DrawingViewModel.swift */,
+				C21E8FC32872D9DD0043BFAF /* DrawingView.swift */,
+				C21E8FD0287317660043BFAF /* DrawingView.xib */,
+				83A846E428725EFA00C777B1 /* ViewController.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -228,6 +240,14 @@
 			children = (
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		C21E8FD228731B420043BFAF /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C21E8FD328731B5A0043BFAF /* UIColor+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,6 +357,7 @@
 				83A846ED28725EFE00C777B1 /* LaunchScreen.storyboard in Resources */,
 				83A846EA28725EFE00C777B1 /* Assets.xcassets in Resources */,
 				83A846E828725EFA00C777B1 /* Main.storyboard in Resources */,
+				C21E8FD1287317660043BFAF /* DrawingView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +386,8 @@
 				83A846E528725EFA00C777B1 /* ViewController.swift in Sources */,
 				C21E8FBE2872C8790043BFAF /* Color.swift in Sources */,
 				C21E8FAE2872C5D10043BFAF /* LineDrawing.swift in Sources */,
+				C21E8FDD28733BF80043BFAF /* DIRoot.swift in Sources */,
+				C21E8FD428731B5A0043BFAF /* UIColor+Extension.swift in Sources */,
 				83A846E128725EFA00C777B1 /* AppDelegate.swift in Sources */,
 				C21E8FC42872D9DD0043BFAF /* DrawingView.swift in Sources */,
 				C21E8FB52872C7250043BFAF /* Command.swift in Sources */,
@@ -376,6 +399,7 @@
 				C21E8FC92872DC2D0043BFAF /* DrawingUseCase.swift in Sources */,
 				C21E8FC62872DA020043BFAF /* DrawingViewModel.swift in Sources */,
 				C21E8FB02872C5E10043BFAF /* SquareDrawing.swift in Sources */,
+				C21E8FD6287329DB0043BFAF /* DIContainer.swift in Sources */,
 				C21E8FBB2872C8520043BFAF /* LineType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,8 +7,8 @@
 
 import Foundation
 
-protocol BaseUseCase {
-    var apiClient: DrawingAPI { get }
+protocol BaseUseCase: DIRegisterable {
+    var apiClient: DrawingAPIType { get }
     var board: Board { get }
 }
 
@@ -17,14 +17,15 @@ protocol DrawingLogic: BaseUseCase {
 }
 
 class DrawingUseCase: DrawingLogic {
-    let apiClient: DrawingAPI
+    let apiClient: DrawingAPIType
+    let board: Board
     
-    init(apiClient: DrawingAPI, board: Board) {
+    init(apiClient: DrawingAPIType, board: Board) {
         self.apiClient = apiClient
         self.board = board
     }
     
     func addSquare() {
-        board.addSquare()
+        self.board.addSquare()
     }
 }

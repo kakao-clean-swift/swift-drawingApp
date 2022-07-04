@@ -7,11 +7,11 @@
 
 import Foundation
 
-class DrawingViewModel {
-    private let useCase: DrawingUseCase
+class DrawingViewModel: DIRegisterable {
+    private let useCase: DrawingLogic
     var drawings = [Drawing]()
     
-    init(useCase: DrawingUseCase) {
+    init(useCase: DrawingLogic) {
         self.useCase = useCase
     }
     

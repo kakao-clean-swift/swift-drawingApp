@@ -7,10 +7,10 @@
 
 import Foundation
 
-protocol DrawingAPI {
+protocol DrawingAPIType {
     
 }
 
-class DrawingAPIClient: DrawingAPI {
+class DrawingAPIClient: DrawingAPIType {
     
 }
