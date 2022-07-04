@@ -9,12 +9,13 @@ import Foundation
 import CoreGraphics
 import UIKit
 
-final class Drawers {
+final class Drawers<RandomColorize: Randomizable> where RandomColorize.Value == UIColor {
     
     let screen: Screen
     
-    init(screen: Screen) {
+    init(screen: Screen, randomColorize: RandomColorize) {
         self.screen = screen
+        self.randomColorize = randomColorize
     }
     
     private var shapes: [Shape] = []
@@ -31,25 +32,9 @@ final class Drawers {
         shapes.append(Rectangle(color: randomColor(), frame: randomFrame(with: size)))
     }
     
+    private let randomColorize: RandomColorize
     private func randomColor() -> UIColor {
-        [UIColor.systemRed,
-         .systemGreen,
-         .systemBlue,
-         .systemOrange,
-         .systemYellow,
-         .systemPink,
-         .systemPurple,
-         .systemTeal,
-         .systemIndigo,
-         .systemBrown,
-         .systemMint,
-         .systemCyan,
-         .systemGray,
-         .systemGray2,
-         .systemGray3,
-         .systemGray4,
-         .systemGray5,
-         .systemGray6].randomElement() ?? .systemBlue
+        randomColorize.value()
     }
     
     private func randomFrame(with size: CGSize) -> CGRect {
