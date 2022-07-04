@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "swiftlayout",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ioskrew/SwiftLayout",
+      "state" : {
+        "revision" : "42a584784f6b9fffef8e69231e79af4270acd438",
+        "version" : "2.5.4"
+      }
+    }
+  ],
+  "version" : 2
+}
