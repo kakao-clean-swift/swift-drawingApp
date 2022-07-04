@@ -13,6 +13,11 @@ final class Drawers {
         self.screen = screen
     }
     
-    var countOfShapes: Int { 0 }
-    func addRectangle() {}
+    private var shapes: [Shape] = []
+    
+    var countOfShapes: Int { shapes.count }
+    
+    func addRectangle() {
+        shapes.append(Rectangle())
+    }
 }

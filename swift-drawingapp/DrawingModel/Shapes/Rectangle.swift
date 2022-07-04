@@ -1,5 +1,5 @@
 //
-//  Shapes.swift
+//  Rectangle.swift
 //  swift-drawingapp
 //
 //  Created by jaychoi on 2022/07/04.
@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol Shape {
-    var id: UUID { get }
+final class Rectangle: Shape {
+    let id: UUID = .init()
 }
