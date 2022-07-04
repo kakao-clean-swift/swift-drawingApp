@@ -11,6 +11,6 @@ protocol Randomizable {
     
     associatedtype Value
     
-    func value() -> Value
+    static func value() -> Value
     
 }

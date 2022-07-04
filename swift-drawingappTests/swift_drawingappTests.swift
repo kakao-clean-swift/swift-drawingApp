@@ -13,21 +13,18 @@ class DrawersTest: XCTestCase {
     var screen: Screen!
     var drawers: Drawers<MockColorize>!
     
-    var mockColorize: MockColorize!
-    
     override func setUpWithError() throws {
-        mockColorize = MockColorize()
         screen = Screen(size: .init(width: 1024, height: 1024))
-        drawers = Drawers(screen: screen, randomColorize: mockColorize)
+        drawers = Drawers(screen: screen)
     }
 
     override func tearDownWithError() throws {
     }
 
     func testCreateRectangles() {
-        mockColorize.color = UIColor.systemBlue
+        MockColorize.color = UIColor.systemBlue
         drawers.addRectangle()
-        mockColorize.color = UIColor.systemTeal
+        MockColorize.color = UIColor.systemTeal
         drawers.addRectangle()
         
         XCTAssertEqual(drawers.countOfShapes, 2)
@@ -45,8 +42,8 @@ class DrawersTest: XCTestCase {
     }
 
     final class MockColorize: Randomizable {
-        var color: UIColor = .init()
-        func value() -> UIColor {
+        static var color: UIColor = .init()
+        static func value() -> UIColor {
             return color
         }
     }

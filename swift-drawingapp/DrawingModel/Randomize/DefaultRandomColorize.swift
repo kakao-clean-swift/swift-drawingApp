@@ -10,7 +10,7 @@ import UIKit
 
 struct DefaultRandomColorize: Randomizable {
     
-    func value() -> UIColor {
+    static func value() -> UIColor {
         [UIColor.systemRed,
          .systemGreen,
          .systemBlue,

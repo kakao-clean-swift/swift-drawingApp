@@ -13,9 +13,8 @@ final class Drawers<RandomColorize: Randomizable> where RandomColorize.Value == 
     
     let screen: Screen
     
-    init(screen: Screen, randomColorize: RandomColorize) {
+    init(screen: Screen) {
         self.screen = screen
-        self.randomColorize = randomColorize
     }
     
     private var shapes: [Shape] = []
@@ -29,12 +28,7 @@ final class Drawers<RandomColorize: Randomizable> where RandomColorize.Value == 
     
     /// Rectangle을 추가
     func addRectangle(_ size: CGSize = .init(width: 100, height: 100)) {
-        shapes.append(Rectangle(color: randomColor(), frame: randomFrame(with: size)))
-    }
-    
-    private let randomColorize: RandomColorize
-    private func randomColor() -> UIColor {
-        randomColorize.value()
+        shapes.append(Rectangle(color: RandomColorize.value(), frame: randomFrame(with: size)))
     }
     
     private func randomFrame(with size: CGSize) -> CGRect {
