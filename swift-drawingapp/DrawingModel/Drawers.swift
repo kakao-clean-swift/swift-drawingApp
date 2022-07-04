@@ -12,4 +12,6 @@ final class Drawers {
     init(screen: Screen) {
         self.screen = screen
     }
+    
+    func addRectangle() {}
 }

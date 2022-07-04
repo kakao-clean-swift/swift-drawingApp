@@ -22,7 +22,7 @@ class DrawersTest: XCTestCase {
     }
 
     func testCreateRectangles() {
-        
+        drawers.addRectangle()
     }
 
 }
