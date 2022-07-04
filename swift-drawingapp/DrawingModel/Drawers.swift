@@ -29,7 +29,7 @@ where RandomColorize.Value == UIColor, RandomFrame.Boundary == FrameBoundary, Ra
     
     /// Rectangle을 추가
     func addRectangle(_ size: CGSize = .init(width: 100, height: 100)) {
-        shapes.append(Rectangle(color: RandomColorize.value(),
+        shapes.append(Rectangle(stroke: RandomColorize.value(),
                                 frame: RandomFrame.value(in: .init(screen: screen, size: size))))
     }
 }

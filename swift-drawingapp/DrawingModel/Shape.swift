@@ -8,10 +8,16 @@
 import Foundation
 import UIKit
 
-protocol Shape {
+protocol Shape: Identity, Dimension, Color {}
+
+protocol Identity {
     var id: UUID { get }
-    
+}
+
+protocol Dimension {
     var frame: CGRect { get set }
-    
-    var color: UIColor { get }
+}
+
+protocol Color {
+    var stroke: UIColor { get }
 }

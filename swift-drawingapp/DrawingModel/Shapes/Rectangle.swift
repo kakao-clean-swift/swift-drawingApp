@@ -12,11 +12,11 @@ final class Rectangle: Shape {
 
     let id: UUID = .init()
    
-    let color: UIColor
+    let stroke: UIColor
     var frame: CGRect
     
-    init(color: UIColor, frame: CGRect) {
-        self.color = color
+    init(stroke: UIColor, frame: CGRect) {
+        self.stroke = stroke
         self.frame = frame
     }
     
