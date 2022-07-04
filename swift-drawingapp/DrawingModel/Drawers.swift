@@ -9,7 +9,8 @@ import Foundation
 import CoreGraphics
 import UIKit
 
-final class Drawers<RandomColorize: Randomizable> where RandomColorize.Value == UIColor {
+final class Drawers<RandomColorize: Randomizable, RandomFrame: BoundaryRandomizable>
+where RandomColorize.Value == UIColor, RandomFrame.Boundary == FrameBoundary, RandomFrame.Value == CGRect {
     
     let screen: Screen
     
@@ -28,12 +29,7 @@ final class Drawers<RandomColorize: Randomizable> where RandomColorize.Value == 
     
     /// Rectangle을 추가
     func addRectangle(_ size: CGSize = .init(width: 100, height: 100)) {
-        shapes.append(Rectangle(color: RandomColorize.value(), frame: randomFrame(with: size)))
-    }
-    
-    private func randomFrame(with size: CGSize) -> CGRect {
-        let xPosition = CGFloat.random(in: 0..<screen.size.width - size.width)
-        let yPosition = CGFloat.random(in: 0..<screen.size.height - size.height)
-        return CGRect(origin: .init(x: xPosition, y: yPosition), size: size)
+        shapes.append(Rectangle(color: RandomColorize.value(),
+                                frame: RandomFrame.value(in: .init(screen: screen, size: size))))
     }
 }

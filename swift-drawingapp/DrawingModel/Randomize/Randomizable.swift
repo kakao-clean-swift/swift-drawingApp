@@ -14,3 +14,15 @@ protocol Randomizable {
     static func value() -> Value
     
 }
+
+protocol Boundable {
+    associatedtype Value
+    func calibration(value: Value) -> Value
+}
+
+protocol BoundaryRandomizable {
+    associatedtype Boundary = Boundable
+    associatedtype Value
+    
+    static func value(in boundary: Boundary) -> Value
+}

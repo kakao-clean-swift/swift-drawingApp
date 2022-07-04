@@ -14,6 +14,7 @@
 		069196702872C89700ED5268 /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0691966F2872C89700ED5268 /* Rectangle.swift */; };
 		069196772872CE7300ED5268 /* Randomizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069196762872CE7300ED5268 /* Randomizable.swift */; };
 		069196792872CEEB00ED5268 /* DefaultRandomColorize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069196782872CEEB00ED5268 /* DefaultRandomColorize.swift */; };
+		0691967F2872DC5400ED5268 /* FrameBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0691967E2872DC5400ED5268 /* FrameBoundary.swift */; };
 		83A846E128725EFA00C777B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A846E028725EFA00C777B1 /* AppDelegate.swift */; };
 		83A846E328725EFA00C777B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A846E228725EFA00C777B1 /* SceneDelegate.swift */; };
 		83A846E528725EFA00C777B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A846E428725EFA00C777B1 /* ViewController.swift */; };
@@ -49,6 +50,7 @@
 		0691966F2872C89700ED5268 /* Rectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
 		069196762872CE7300ED5268 /* Randomizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Randomizable.swift; sourceTree = "<group>"; };
 		069196782872CEEB00ED5268 /* DefaultRandomColorize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRandomColorize.swift; sourceTree = "<group>"; };
+		0691967E2872DC5400ED5268 /* FrameBoundary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameBoundary.swift; sourceTree = "<group>"; };
 		83A846DD28725EFA00C777B1 /* swift-drawingapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-drawingapp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83A846E028725EFA00C777B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83A846E228725EFA00C777B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			children = (
 				069196762872CE7300ED5268 /* Randomizable.swift */,
 				069196782872CEEB00ED5268 /* DefaultRandomColorize.swift */,
+				0691967E2872DC5400ED5268 /* FrameBoundary.swift */,
 			);
 			path = Randomize;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				069196692872C59900ED5268 /* Drawers.swift in Sources */,
 				83A846E328725EFA00C777B1 /* SceneDelegate.swift in Sources */,
 				069196772872CE7300ED5268 /* Randomizable.swift in Sources */,
+				0691967F2872DC5400ED5268 /* FrameBoundary.swift in Sources */,
 				0691966D2872C7D300ED5268 /* Shape.swift in Sources */,
 				069196702872C89700ED5268 /* Rectangle.swift in Sources */,
 			);

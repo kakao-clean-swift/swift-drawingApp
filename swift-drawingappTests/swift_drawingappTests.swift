@@ -11,7 +11,7 @@ import XCTest
 class DrawersTest: XCTestCase {
 
     var screen: Screen!
-    var drawers: Drawers<MockColorize>!
+    var drawers: Drawers<MockColorize, MockRandomFrame>!
     
     override func setUpWithError() throws {
         screen = Screen(size: .init(width: 1024, height: 1024))
@@ -45,6 +45,14 @@ class DrawersTest: XCTestCase {
         static var color: UIColor = .init()
         static func value() -> UIColor {
             return color
+        }
+    }
+    
+    final class MockRandomFrame: BoundaryRandomizable {
+        static var frame: CGRect = .init()
+        
+        static func value(in boundary: FrameBoundary) -> CGRect {
+            boundary.calibration(value: frame)
         }
     }
 }
