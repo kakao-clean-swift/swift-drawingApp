@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06028A172872E37F00803B70 /* DefaultRandomFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06028A162872E37F00803B70 /* DefaultRandomFrame.swift */; };
 		069196662872C54C00ED5268 /* SwiftLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 069196652872C54C00ED5268 /* SwiftLayout */; };
 		069196692872C59900ED5268 /* Drawers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069196682872C59900ED5268 /* Drawers.swift */; };
 		0691966B2872C63300ED5268 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0691966A2872C63300ED5268 /* Screen.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06028A162872E37F00803B70 /* DefaultRandomFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRandomFrame.swift; sourceTree = "<group>"; };
 		069196682872C59900ED5268 /* Drawers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drawers.swift; sourceTree = "<group>"; };
 		0691966A2872C63300ED5268 /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		0691966C2872C7D300ED5268 /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
@@ -116,8 +118,9 @@
 			isa = PBXGroup;
 			children = (
 				069196762872CE7300ED5268 /* Randomizable.swift */,
-				069196782872CEEB00ED5268 /* DefaultRandomColorize.swift */,
 				0691967E2872DC5400ED5268 /* FrameBoundary.swift */,
+				069196782872CEEB00ED5268 /* DefaultRandomColorize.swift */,
+				06028A162872E37F00803B70 /* DefaultRandomFrame.swift */,
 			);
 			path = Randomize;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				069196772872CE7300ED5268 /* Randomizable.swift in Sources */,
 				0691967F2872DC5400ED5268 /* FrameBoundary.swift in Sources */,
 				0691966D2872C7D300ED5268 /* Shape.swift in Sources */,
+				06028A172872E37F00803B70 /* DefaultRandomFrame.swift in Sources */,
 				069196702872C89700ED5268 /* Rectangle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

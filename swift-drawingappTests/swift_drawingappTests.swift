@@ -24,9 +24,12 @@ class DrawersTest: XCTestCase {
     func testCreateRectangles() {
         MockColorize.color = UIColor.systemBlue
         MockRandomFrame.frame = CGRect(origin: .init(x: 0, y: 120), size: .init(width: 100, height: 100))
+        
         drawers.addRectangle()
+        
         MockColorize.color = UIColor.systemTeal
         MockRandomFrame.frame = CGRect(origin: .init(x: 120, y: 120), size: .init(width: 100, height: 100))
+        
         drawers.addRectangle()
         
         XCTAssertEqual(drawers.countOfShapes, 2)
