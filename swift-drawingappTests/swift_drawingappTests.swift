@@ -23,6 +23,8 @@ class DrawersTest: XCTestCase {
 
     func testCreateRectangles() {
         drawers.addRectangle()
+        
+        XCTAssertEqual(drawers.countOfShapes, 1)
     }
 
 }

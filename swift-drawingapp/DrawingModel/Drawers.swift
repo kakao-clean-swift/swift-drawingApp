@@ -13,5 +13,6 @@ final class Drawers {
         self.screen = screen
     }
     
+    var countOfShapes: Int { 0 }
     func addRectangle() {}
 }
