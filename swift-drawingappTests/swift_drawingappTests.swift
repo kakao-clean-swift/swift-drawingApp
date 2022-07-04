@@ -25,6 +25,9 @@ class DrawersTest: XCTestCase {
         drawers.addRectangle()
         
         XCTAssertEqual(drawers.countOfShapes, 1)
+        
+        let shape = drawers.shape(of: 0)
+        XCTAssertTrue(shape is Rectangle, String(describing: shape))
     }
 
 }
