@@ -23,19 +23,21 @@ class DrawersTest: XCTestCase {
 
     func testCreateRectangles() {
         MockColorize.color = UIColor.systemBlue
+        MockRandomFrame.frame = CGRect(origin: .init(x: 0, y: 120), size: .init(width: 100, height: 100))
         drawers.addRectangle()
         MockColorize.color = UIColor.systemTeal
+        MockRandomFrame.frame = CGRect(origin: .init(x: 120, y: 120), size: .init(width: 100, height: 100))
         drawers.addRectangle()
         
         XCTAssertEqual(drawers.countOfShapes, 2)
         
         let shape1 = drawers.shape(of: 0) as! Rectangle
-        XCTAssertEqual(shape1.frame.size, CGSize(width: 100, height: 100))
+        XCTAssertEqual(shape1.frame, CGRect(x: 0, y: 120, width: 100, height: 100))
         XCTAssertEqual(shape1.color, UIColor.systemBlue)
         
         let shape2 = drawers.shape(of: 1) as! Rectangle
         
-        XCTAssertEqual(shape2.frame.size, CGSize(width: 100, height: 100))
+        XCTAssertEqual(shape2.frame, CGRect(x: 120, y: 120, width: 100, height: 100))
         XCTAssertEqual(shape2.color, UIColor.systemTeal)
         
         XCTAssertNotEqual(shape1.id, shape2.id)
