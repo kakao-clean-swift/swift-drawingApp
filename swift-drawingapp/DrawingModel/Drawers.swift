@@ -8,5 +8,8 @@
 import Foundation
 
 final class Drawers {
-    
+    let screen: Screen
+    init(screen: Screen) {
+        self.screen = screen
+    }
 }
