@@ -38,6 +38,8 @@ final class Drawers<RandomColorize: Randomizable> where RandomColorize.Value == 
     }
     
     private func randomFrame(with size: CGSize) -> CGRect {
-        CGRect(origin: .zero, size: size)
+        let xPosition = CGFloat.random(in: 0..<screen.size.width - size.width)
+        let yPosition = CGFloat.random(in: 0..<screen.size.height - size.height)
+        return CGRect(origin: .init(x: xPosition, y: yPosition), size: size)
     }
 }

@@ -33,10 +33,15 @@ class DrawersTest: XCTestCase {
         XCTAssertEqual(drawers.countOfShapes, 2)
         
         let shape1 = drawers.shape(of: 0) as! Rectangle
-        let shape2 = drawers.shape(of: 1) as! Rectangle
-        XCTAssertNotEqual(shape1.id, shape2.id)
+        XCTAssertEqual(shape1.frame.size, CGSize(width: 100, height: 100))
         XCTAssertEqual(shape1.color, UIColor.systemBlue)
+        
+        let shape2 = drawers.shape(of: 1) as! Rectangle
+        
+        XCTAssertEqual(shape2.frame.size, CGSize(width: 100, height: 100))
         XCTAssertEqual(shape2.color, UIColor.systemTeal)
+        
+        XCTAssertNotEqual(shape1.id, shape2.id)
     }
 
     final class MockColorize: Randomizable {
