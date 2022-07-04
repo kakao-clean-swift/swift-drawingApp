@@ -11,6 +11,10 @@ import SnapKit
 
 class DrawBottomView: UIView {
     
+    var didTapLeft: (() -> Void)?
+    var didTapCenter: (() -> Void)?
+    var didTapRight: (() -> Void)?
+
     private let leftButton: UIButton = {
         let button = DrawBottomButton()
         button.setTitle("사각형", for: .normal)

@@ -6,3 +6,9 @@
 //
 
 import Foundation
+import Combine
+
+class DrawViewModel {
+    @Published var shapes: [Shape] = []
+    var shapeRange: ShapeRange = ShapeRange()
+}
