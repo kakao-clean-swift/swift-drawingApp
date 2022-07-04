@@ -6,7 +6,8 @@ target 'swift-drawingapp' do
   use_frameworks!
 
   # Pods for swift-drawingapp
-
+  pod 'SnapKit'
+  
   target 'swift-drawingappTests' do
     inherit! :search_paths
     # Pods for testing
