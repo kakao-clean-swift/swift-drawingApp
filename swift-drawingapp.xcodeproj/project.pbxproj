@@ -10,6 +10,7 @@
 		069196662872C54C00ED5268 /* SwiftLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 069196652872C54C00ED5268 /* SwiftLayout */; };
 		069196692872C59900ED5268 /* Drawers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069196682872C59900ED5268 /* Drawers.swift */; };
 		0691966B2872C63300ED5268 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0691966A2872C63300ED5268 /* Screen.swift */; };
+		0691966D2872C7D300ED5268 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0691966C2872C7D300ED5268 /* Shape.swift */; };
 		83A846E128725EFA00C777B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A846E028725EFA00C777B1 /* AppDelegate.swift */; };
 		83A846E328725EFA00C777B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A846E228725EFA00C777B1 /* SceneDelegate.swift */; };
 		83A846E528725EFA00C777B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A846E428725EFA00C777B1 /* ViewController.swift */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		069196682872C59900ED5268 /* Drawers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drawers.swift; sourceTree = "<group>"; };
 		0691966A2872C63300ED5268 /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
+		0691966C2872C7D300ED5268 /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
 		83A846DD28725EFA00C777B1 /* swift-drawingapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-drawingapp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83A846E028725EFA00C777B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83A846E228725EFA00C777B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			children = (
 				069196682872C59900ED5268 /* Drawers.swift */,
 				0691966A2872C63300ED5268 /* Screen.swift */,
+				0691966C2872C7D300ED5268 /* Shape.swift */,
 			);
 			path = DrawingModel;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				83A846E128725EFA00C777B1 /* AppDelegate.swift in Sources */,
 				069196692872C59900ED5268 /* Drawers.swift in Sources */,
 				83A846E328725EFA00C777B1 /* SceneDelegate.swift in Sources */,
+				0691966D2872C7D300ED5268 /* Shape.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
