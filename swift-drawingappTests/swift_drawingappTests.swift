@@ -43,12 +43,18 @@ class DrawersTest: XCTestCase {
         XCTAssertNotEqual(shape1.id, shape2.id)
     }
     
-    func testRectangleLimitation() {
+    func testRectangleFrameLimitation() {
         MockRandomFrame.frame = CGRect(x: -120, y: -120, width: 100, height: 100)
         drawers.addRectangle()
         
         let shape1 = drawers.shape(of: 0) as! Rectangle
         XCTAssertEqual(shape1.frame, CGRect(x: 0, y: 0, width: 100, height: 100))
+        
+        MockRandomFrame.frame = CGRect(x: 1024, y: 1024, width: 100, height: 100)
+        drawers.addRectangle()
+        
+        let shape2 = drawers.shape(of: 1) as! Rectangle
+        XCTAssertEqual(shape2.frame, CGRect(x: 924, y: 924, width: 100, height: 100))
     }
 
     final class MockColorize: Randomizable {
