@@ -7,11 +7,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class DrawViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        let client = ChatClient()
+        client.start()
+        client.send(line: "Hello World")
     }
 
 
