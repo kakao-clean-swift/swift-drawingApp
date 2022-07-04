@@ -6,7 +6,12 @@
 //
 
 import Foundation
+import UIKit
 
 protocol Shape {
     var id: UUID { get }
+    
+    var frame: CGRect { get set }
+    
+    var color: UIColor { get }
 }

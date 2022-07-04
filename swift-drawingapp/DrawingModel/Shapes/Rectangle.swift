@@ -6,7 +6,18 @@
 //
 
 import Foundation
+import UIKit
 
 final class Rectangle: Shape {
+
     let id: UUID = .init()
+   
+    let color: UIColor
+    var frame: CGRect
+    
+    init(color: UIColor, frame: CGRect) {
+        self.color = color
+        self.frame = frame
+    }
+    
 }
