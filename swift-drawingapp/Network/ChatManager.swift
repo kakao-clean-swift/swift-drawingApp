@@ -7,12 +7,35 @@
 
 import Foundation
 
-class ChatManager {
+protocol ChatManagable {
+    func login()
+    func send(to: String,
+              data: Data)
+}
+
+class ChatManager: ChatManagable {
     
     let client: ChatSendable & ChatConnectable
     
     init(client: ChatSendable & ChatConnectable) {
         self.client = client
+        client.start()
     }
     
+    func login() {
+        let data = CommandFactory
+            .command(type: .login)
+            .encoded()
+
+        client.send(data: data!)
+    }
+    
+    func send(to: String,
+              data: Data) {
+        let data = CommandFactory
+            .command(type: .chat, id: to, data: data)
+            .encoded()
+        
+        client.send(data: data!)
+    }
 }

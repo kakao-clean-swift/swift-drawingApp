@@ -11,9 +11,10 @@ class DrawViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let client = ChatClient()
-        client.start()
-        client.send(line: "Hello World")
+        let manager = ChatManager(client: client)
+        manager.login()
     }
 
 

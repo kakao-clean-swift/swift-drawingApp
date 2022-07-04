@@ -14,7 +14,7 @@ protocol ChatConnectable {
 }
 
 protocol ChatSendable {
-    func send(line: String)
+    func send(data: Data)
 }
 
 class ChatClient: ChatConnectable, ChatSendable {
@@ -41,8 +41,7 @@ class ChatClient: ChatConnectable, ChatSendable {
         NSLog("did stop")
     }
     
-    func send(line: String) {
-        let data = Data("\(line)\r\n".utf8)
+    func send(data: Data) {
         self.connection.send(content: data, completion: NWConnection.SendCompletion.contentProcessed { error in
             if let error = error {
                 NSLog("did send, error: %@", "\(error)")
