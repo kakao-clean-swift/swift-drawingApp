@@ -8,14 +8,14 @@
 import UIKit
 
 class DrawingViewModel {
-    @Published var figures = [Figure]()
+    @Published var rects = [Figure]()
+    @Published var drawings = [Figure]()
     @Published var selectedId: UUID?
     @Published var deselectedId: UUID?
     
     func createRect() {
-        // rect를 생성한다.
-        let rect = Rect(randomPoint())
-        figures.append(rect)
+        let rect = Figure(randomPoint())
+        rects.append(rect)
     }
     
     init() {

@@ -77,16 +77,14 @@ class ViewController: UIViewController {
     }
     
     private func setViewModel() {
-        viewModel.$figures
-            .sink { [weak self] figures in
-                guard let figure = figures.last else { return }
+        viewModel.$rects
+            .sink { [weak self] rects in
+                guard let rect = rects.last else { return }
                 
-                if let rect = figure as? Rect {
-                    let rectView = RectView(rect)
-                    self?.observeTouch(rectView)
-                    self?.views[rect.id] = rectView
-                    self?.view.addSubview(rectView)
-                }
+                let rectView = RectView(rect)
+                self?.observeTouch(rectView)
+                self?.views[rect.id] = rectView
+                self?.view.addSubview(rectView)
             }
             .store(in: &subscriptions)
         
@@ -115,19 +113,17 @@ class ViewController: UIViewController {
     
     @objc
     private func pressRectButton() {
-        print(#function)
-        
         viewModel.createRect()
     }
     
     @objc
     private func pressDrawingButton() {
-        print(#function)
+        
     }
     
     @objc
     private func pressSyncButton() {
-        print(#function)
+        
     }
 }
 

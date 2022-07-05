@@ -18,12 +18,11 @@
 		83A846F828725EFF00C777B1 /* swift_drawingappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A846F728725EFF00C777B1 /* swift_drawingappTests.swift */; };
 		83A8470228725EFF00C777B1 /* swift_drawingappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A8470128725EFF00C777B1 /* swift_drawingappUITests.swift */; };
 		83A8470428725EFF00C777B1 /* swift_drawingappUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A8470328725EFF00C777B1 /* swift_drawingappUITestsLaunchTests.swift */; };
-		C25E12C22872D46D009A4564 /* Rect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E12C12872D46D009A4564 /* Rect.swift */; };
+		C25E12C22872D46D009A4564 /* Figure.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E12C12872D46D009A4564 /* Figure.swift */; };
 		C25E12C62872D559009A4564 /* RectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E12C52872D559009A4564 /* RectView.swift */; };
 		C25E12C92872D6AB009A4564 /* DrawingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E12C82872D6AB009A4564 /* DrawingViewModel.swift */; };
 		C25E12CB2872D868009A4564 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E12CA2872D867009A4564 /* Point.swift */; };
 		C25E12CE2872D9AE009A4564 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E12CD2872D9AE009A4564 /* NetworkManager.swift */; };
-		C25E12D02872EF8E009A4564 /* Figure.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E12CF2872EF8E009A4564 /* Figure.swift */; };
 		C25E12D32872F390009A4564 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E12D22872F390009A4564 /* UIView+Extension.swift */; };
 		E195847F6EC6CFBB8E203EC8 /* Pods_swift_drawingappTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74AA93EBCAE399BF7442B4C7 /* Pods_swift_drawingappTests.framework */; };
 /* End PBXBuildFile section */
@@ -67,12 +66,11 @@
 		83A8470128725EFF00C777B1 /* swift_drawingappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_drawingappUITests.swift; sourceTree = "<group>"; };
 		83A8470328725EFF00C777B1 /* swift_drawingappUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_drawingappUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		AE035A490C5E65734C201298 /* Pods-swift-drawingappTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-drawingappTests.debug.xcconfig"; path = "Target Support Files/Pods-swift-drawingappTests/Pods-swift-drawingappTests.debug.xcconfig"; sourceTree = "<group>"; };
-		C25E12C12872D46D009A4564 /* Rect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rect.swift; sourceTree = "<group>"; };
+		C25E12C12872D46D009A4564 /* Figure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Figure.swift; sourceTree = "<group>"; };
 		C25E12C52872D559009A4564 /* RectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectView.swift; sourceTree = "<group>"; };
 		C25E12C82872D6AB009A4564 /* DrawingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewModel.swift; sourceTree = "<group>"; };
 		C25E12CA2872D867009A4564 /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
 		C25E12CD2872D9AE009A4564 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		C25E12CF2872EF8E009A4564 /* Figure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Figure.swift; sourceTree = "<group>"; };
 		C25E12D22872F390009A4564 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		F4DF94540CD115662816B8EF /* Pods_swift_drawingapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swift_drawingapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -188,9 +186,8 @@
 		C25E12BE2872D423009A4564 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C25E12C12872D46D009A4564 /* Rect.swift */,
+				C25E12C12872D46D009A4564 /* Figure.swift */,
 				C25E12CA2872D867009A4564 /* Point.swift */,
-				C25E12CF2872EF8E009A4564 /* Figure.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -472,9 +469,8 @@
 				C25E12C62872D559009A4564 /* RectView.swift in Sources */,
 				83A846E328725EFA00C777B1 /* SceneDelegate.swift in Sources */,
 				C25E12CE2872D9AE009A4564 /* NetworkManager.swift in Sources */,
-				C25E12D02872EF8E009A4564 /* Figure.swift in Sources */,
 				C25E12CB2872D868009A4564 /* Point.swift in Sources */,
-				C25E12C22872D46D009A4564 /* Rect.swift in Sources */,
+				C25E12C22872D46D009A4564 /* Figure.swift in Sources */,
 				C25E12C92872D6AB009A4564 /* DrawingViewModel.swift in Sources */,
 				C25E12D32872F390009A4564 /* UIView+Extension.swift in Sources */,
 			);

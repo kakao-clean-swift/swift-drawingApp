@@ -11,7 +11,7 @@ class RectView: UIView {
     private var id: UUID?
     @Published var touched: UUID?
     
-    init(_ rect: Rect?) {
+    init(_ rect: Figure?) {
         super.init(frame: .zero)
         
         guard let rect = rect,
