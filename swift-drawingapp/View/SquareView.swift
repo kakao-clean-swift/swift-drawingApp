@@ -8,13 +8,12 @@
 import UIKit
 
 protocol SquareAction {
-    func didSelectSquare(_ id: String)
+    func squareView(_ squareView: SquareView, didSelectSquareOf id: String)
 }
 
-final class Square: Figure {
+final class SquareView: UIView {
 
-    private let width: CGFloat = 100
-    private let height: CGFloat = 100
+    var square: Square
 
     private var isSelected: Bool = false {
         didSet {
@@ -24,9 +23,10 @@ final class Square: Figure {
 
     var action: SquareAction?
 
-    init(in rect: CGRect) {
-        super.init(frame: .zero)
-        frame = getRandomRect(in: rect)
+    init(square: Square) {
+        self.square = square
+        super.init(frame: square.rect)
+
         backgroundColor = UIColor.random
         layer.borderColor = UIColor.systemRed.cgColor
         isUserInteractionEnabled = true
@@ -41,22 +41,13 @@ final class Square: Figure {
         isSelected = false
     }
 
-    private func getRandomRect(in rect: CGRect) -> CGRect {
-        let rangeOfX = 0...(rect.width - width)
-        let rangeOfY = 0...(rect.height - height)
-
-        let x = CGFloat.random(in: rangeOfX)
-        let y = CGFloat.random(in: rangeOfY)
-        return CGRect(x: x, y: y, width: width, height: height)
-    }
-
     private func setupGesture() {
         let gesture = UITapGestureRecognizer(target: self, action: #selector(didTapSquare(_:)))
         addGestureRecognizer(gesture)
     }
 
     @objc private func didTapSquare(_ sender: UIGestureRecognizer) {
-        action?.didSelectSquare(id)
+        action?.squareView(self, didSelectSquareOf: square.id)
         isSelected = true
     }
 }

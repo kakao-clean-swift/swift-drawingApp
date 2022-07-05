@@ -19,11 +19,30 @@ class swift_drawingappTests: XCTestCase {
     }
 
     func testDrawingSquare() {
-        let drawingManager = DrawingManager()
+        let canvasManager = CanvasManager()
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 1000, height: 1000))
-        drawingManager.drawSquare(in: view)
-        drawingManager.drawSquare(in: view)
-        XCTAssertEqual(drawingManager.squares.count, 2)
+        canvasManager.start(in: view)
+        canvasManager.drawSquare()
+        canvasManager.drawSquare()
+        XCTAssertEqual(canvasManager.squareViews.count, 2)
+    }
+
+    func testCreatingRandomRectFromSquare() {
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 1000, height: 1000))
+        let square = Square(in: view.frame)
+        let randomRect = square.createRandomRect(in: view.frame)
+
+        XCTAssertTrue(randomRect.minX > 0 && randomRect.maxX < 1000)
+        XCTAssertTrue(randomRect.minY > 0 && randomRect.maxY < 1000)
+        XCTAssertTrue(randomRect.width == 100)
+        XCTAssertTrue(randomRect.height == 100)
+    }
+
+    func testCreatingRectFromDrawing() {
+        var drawing = Drawing()
+        drawing.coordinates = [CGPoint(x: 10, y: 10), CGPoint(x: 20, y: 10), CGPoint(x: 20, y: 20), CGPoint(x: 10, y: 20), CGPoint(x: 10, y: 10)]
+        let drawingRect = drawing.rect
+        XCTAssertEqual(drawingRect, CGRect(x: 10, y: 10, width: 10, height: 10))
     }
 
     func testPerformanceExample() throws {

@@ -30,6 +30,7 @@ class ViewController: UIViewController {
         let button: UIButton = UIButton(frame: .zero)
         button.setTitle("드로잉", for: .normal)
         button.setTitleColor(.systemBlue, for: .normal)
+        button.addTarget(self, action: #selector(didSelectDrawingButton(_:)), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -42,7 +43,7 @@ class ViewController: UIViewController {
         return button
     }()
 
-    private var canvasView: UIView = {
+    private var contentView: UIView = {
         let view: UIView = UIView(frame: .zero)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -55,9 +56,13 @@ class ViewController: UIViewController {
         setupLayout()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        canvasManager.start(in: contentView)
+    }
+
     private func setupLayout() {
         view.addSubview(buttonStackView)
-        view.addSubview(canvasView)
+        view.addSubview(contentView)
         buttonStackView.addArrangedSubview(squareButton)
         buttonStackView.addArrangedSubview(drawingButton)
         buttonStackView.addArrangedSubview(syncButton)
@@ -66,15 +71,19 @@ class ViewController: UIViewController {
             buttonStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             buttonStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -30),
 
-            canvasView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            canvasView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            canvasView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            canvasView.bottomAnchor.constraint(equalTo: buttonStackView.topAnchor)
+            contentView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            contentView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            contentView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            contentView.bottomAnchor.constraint(equalTo: buttonStackView.topAnchor)
         ])
     }
 
     @objc func didSelectSquareButton(_ sender: UIButton) {
-        canvasManager.drawSquare(in: canvasView)
+        canvasManager.drawSquare()
+    }
+
+    @objc func didSelectDrawingButton(_ sender: UIButton) {
+        canvasManager.startDrawing()
     }
 }
 
