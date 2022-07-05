@@ -11,7 +11,7 @@ final class CanvasManager {
 
     private var superView: UIView?
     private var canvasView: UIView?
-    private var drawingView: SketchView?
+    private var sketchView: SketchView?
 
     var squareViews: [SquareView] = []
     var sketcheViews: [DrawingView] = []
@@ -32,7 +32,7 @@ final class CanvasManager {
         superView.addSubview(drawingView)
 
         self.canvasView = canvasView
-        self.drawingView = drawingView
+        self.sketchView = drawingView
     }
 
     func drawSquare() {
@@ -48,7 +48,7 @@ final class CanvasManager {
     }
 
     func startDrawing() {
-        guard let drawingView = drawingView else {
+        guard let drawingView = sketchView else {
             return
         }
 
