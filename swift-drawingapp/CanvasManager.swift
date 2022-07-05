@@ -48,11 +48,11 @@ final class CanvasManager {
     }
 
     func startDrawing() {
-        guard let drawingView = sketchView else {
+        guard let sketchView = sketchView else {
             return
         }
 
-        superView?.bringSubviewToFront(drawingView)
+        superView?.bringSubviewToFront(sketchView)
     }
 }
 
