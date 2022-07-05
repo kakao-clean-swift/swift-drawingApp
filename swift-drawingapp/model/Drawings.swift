@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+//class Drawings {
+//    let lines: [Lines] = []
+//    let rectangles: [Rectangle] = []
+//}

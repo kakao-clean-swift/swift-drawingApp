@@ -29,3 +29,13 @@ class BoxDrawer: BoxDrawProtocol {
         
     }    
 }
+
+class LineDrawer: LineDrawProtocol {
+    func onDrawingLine() {
+        
+    }
+    
+    func startDrawing() {
+        
+    }
+}
