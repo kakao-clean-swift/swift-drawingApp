@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     
     private var subscriptions = Set<AnyCancellable>()
     private var views = [UUID: UIView]()
+    private var figureCount = 0
 
     private let rectButton: UIButton = {
         let button = UIButton()
@@ -85,6 +86,7 @@ class ViewController: UIViewController {
                 self?.observeTouch(rectView)
                 self?.views[rect.id] = rectView
                 self?.view.addSubview(rectView)
+                self?.setAccessibilityIdentifier(rectView)
             }
             .store(in: &subscriptions)
         
@@ -124,6 +126,12 @@ class ViewController: UIViewController {
     @objc
     private func pressSyncButton() {
         
+    }
+    
+    /// UITest를 위한 코드
+    private func setAccessibilityIdentifier(_ view: UIView) {
+        figureCount += 1
+        view.accessibilityIdentifier = "view\(figureCount)"
     }
 }
 
