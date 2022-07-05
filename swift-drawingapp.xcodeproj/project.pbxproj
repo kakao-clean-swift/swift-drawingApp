@@ -16,6 +16,14 @@
 		83A846F828725EFF00C777B1 /* swift_drawingappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A846F728725EFF00C777B1 /* swift_drawingappTests.swift */; };
 		83A8470228725EFF00C777B1 /* swift_drawingappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A8470128725EFF00C777B1 /* swift_drawingappUITests.swift */; };
 		83A8470428725EFF00C777B1 /* swift_drawingappUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A8470328725EFF00C777B1 /* swift_drawingappUITestsLaunchTests.swift */; };
+		D20673172872D02500175B1F /* DrawManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20673162872D02500175B1F /* DrawManager.swift */; };
+		D20673192872D1B300175B1F /* RectangleDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20673182872D1B300175B1F /* RectangleDraw.swift */; };
+		D206731D2872D23600175B1F /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206731C2872D23600175B1F /* Point.swift */; };
+		D206732328747D8600175B1F /* PathDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206732228747D8600175B1F /* PathDraw.swift */; };
+		D206732528747EFF00175B1F /* Drawable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206732428747EFF00175B1F /* Drawable.swift */; };
+		D20673272874820A00175B1F /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20673262874820A00175B1F /* Rectangle.swift */; };
+		D20673292874822E00175B1F /* Drawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20673282874822E00175B1F /* Drawing.swift */; };
+		D206732C2874848300175B1F /* FloatConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206732B2874848300175B1F /* FloatConverter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +57,14 @@
 		83A846FD28725EFF00C777B1 /* swift-drawingappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swift-drawingappUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83A8470128725EFF00C777B1 /* swift_drawingappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_drawingappUITests.swift; sourceTree = "<group>"; };
 		83A8470328725EFF00C777B1 /* swift_drawingappUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_drawingappUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D20673162872D02500175B1F /* DrawManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawManager.swift; sourceTree = "<group>"; };
+		D20673182872D1B300175B1F /* RectangleDraw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleDraw.swift; sourceTree = "<group>"; };
+		D206731C2872D23600175B1F /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
+		D206732228747D8600175B1F /* PathDraw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathDraw.swift; sourceTree = "<group>"; };
+		D206732428747EFF00175B1F /* Drawable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drawable.swift; sourceTree = "<group>"; };
+		D20673262874820A00175B1F /* Rectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
+		D20673282874822E00175B1F /* Drawing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drawing.swift; sourceTree = "<group>"; };
+		D206732B2874848300175B1F /* FloatConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatConverter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +118,10 @@
 				83A846E028725EFA00C777B1 /* AppDelegate.swift */,
 				83A846E228725EFA00C777B1 /* SceneDelegate.swift */,
 				83A846E428725EFA00C777B1 /* ViewController.swift */,
+				D20673162872D02500175B1F /* DrawManager.swift */,
+				D206732A2874847A00175B1F /* Util */,
+				D206731E2872E35800175B1F /* Entity */,
+				D206731F2872E36A00175B1F /* Drawable */,
 				83A846E628725EFA00C777B1 /* Main.storyboard */,
 				83A846E928725EFE00C777B1 /* Assets.xcassets */,
 				83A846EB28725EFE00C777B1 /* LaunchScreen.storyboard */,
@@ -125,6 +145,34 @@
 				83A8470328725EFF00C777B1 /* swift_drawingappUITestsLaunchTests.swift */,
 			);
 			path = "swift-drawingappUITests";
+			sourceTree = "<group>";
+		};
+		D206731E2872E35800175B1F /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D206731C2872D23600175B1F /* Point.swift */,
+				D20673262874820A00175B1F /* Rectangle.swift */,
+				D20673282874822E00175B1F /* Drawing.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		D206731F2872E36A00175B1F /* Drawable */ = {
+			isa = PBXGroup;
+			children = (
+				D206732428747EFF00175B1F /* Drawable.swift */,
+				D20673182872D1B300175B1F /* RectangleDraw.swift */,
+				D206732228747D8600175B1F /* PathDraw.swift */,
+			);
+			path = Drawable;
+			sourceTree = "<group>";
+		};
+		D206732A2874847A00175B1F /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				D206732B2874848300175B1F /* FloatConverter.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +306,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D20673192872D1B300175B1F /* RectangleDraw.swift in Sources */,
 				83A846E528725EFA00C777B1 /* ViewController.swift in Sources */,
+				D20673172872D02500175B1F /* DrawManager.swift in Sources */,
+				D20673272874820A00175B1F /* Rectangle.swift in Sources */,
+				D20673292874822E00175B1F /* Drawing.swift in Sources */,
+				D206732528747EFF00175B1F /* Drawable.swift in Sources */,
+				D206732328747D8600175B1F /* PathDraw.swift in Sources */,
+				D206731D2872D23600175B1F /* Point.swift in Sources */,
+				D206732C2874848300175B1F /* FloatConverter.swift in Sources */,
 				83A846E128725EFA00C777B1 /* AppDelegate.swift in Sources */,
 				83A846E328725EFA00C777B1 /* SceneDelegate.swift in Sources */,
 			);
@@ -437,6 +493,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2JM5567B8G;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "swift-drawingapp/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -444,12 +501,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.kakaocorp.swift-drawingapp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kakaocorp.swift-drawingapp2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -464,6 +522,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2JM5567B8G;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "swift-drawingapp/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -471,12 +530,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.kakaocorp.swift-drawingapp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kakaocorp.swift-drawingapp2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
