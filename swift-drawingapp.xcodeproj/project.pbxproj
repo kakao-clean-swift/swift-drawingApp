@@ -20,6 +20,9 @@
 		AA8A5E9D2875A8DC0085C8A7 /* DrawObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8A5E9C2875A8DC0085C8A7 /* DrawObject.swift */; };
 		AA8A5E9F2875A8E50085C8A7 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8A5E9E2875A8E50085C8A7 /* File.swift */; };
 		AA8A5EA12875F8090085C8A7 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8A5EA02875F8090085C8A7 /* Point.swift */; };
+		AA8A5EA32875F95B0085C8A7 /* DrawManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8A5EA22875F95B0085C8A7 /* DrawManager.swift */; };
+		AA8A5EA52875F97F0085C8A7 /* DrawObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8A5EA42875F97F0085C8A7 /* DrawObjects.swift */; };
+		AA8A5EA72875FFA80085C8A7 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8A5EA62875FFA80085C8A7 /* UIView+Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		AA8A5E9C2875A8DC0085C8A7 /* DrawObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawObject.swift; sourceTree = "<group>"; };
 		AA8A5E9E2875A8E50085C8A7 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		AA8A5EA02875F8090085C8A7 /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
+		AA8A5EA22875F95B0085C8A7 /* DrawManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawManager.swift; sourceTree = "<group>"; };
+		AA8A5EA42875F97F0085C8A7 /* DrawObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawObjects.swift; sourceTree = "<group>"; };
+		AA8A5EA62875FFA80085C8A7 /* UIView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,8 +114,11 @@
 			isa = PBXGroup;
 			children = (
 				AA8A5E992875A8C60085C8A7 /* Model */,
+				AA8A5EA42875F97F0085C8A7 /* DrawObjects.swift */,
+				AA8A5EA22875F95B0085C8A7 /* DrawManager.swift */,
 				83A846E028725EFA00C777B1 /* AppDelegate.swift */,
 				83A846E228725EFA00C777B1 /* SceneDelegate.swift */,
+				AA8A5EA62875FFA80085C8A7 /* UIView+Utils.swift */,
 				83A846E428725EFA00C777B1 /* ViewController.swift */,
 				83A846E628725EFA00C777B1 /* Main.storyboard */,
 				83A846E928725EFE00C777B1 /* Assets.xcassets */,
@@ -280,9 +289,12 @@
 			files = (
 				83A846E528725EFA00C777B1 /* ViewController.swift in Sources */,
 				AA8A5E9F2875A8E50085C8A7 /* File.swift in Sources */,
+				AA8A5EA72875FFA80085C8A7 /* UIView+Utils.swift in Sources */,
 				AA8A5E9B2875A8CD0085C8A7 /* Color.swift in Sources */,
+				AA8A5EA52875F97F0085C8A7 /* DrawObjects.swift in Sources */,
 				AA8A5E9D2875A8DC0085C8A7 /* DrawObject.swift in Sources */,
 				AA8A5EA12875F8090085C8A7 /* Point.swift in Sources */,
+				AA8A5EA32875F95B0085C8A7 /* DrawManager.swift in Sources */,
 				83A846E128725EFA00C777B1 /* AppDelegate.swift in Sources */,
 				83A846E328725EFA00C777B1 /* SceneDelegate.swift in Sources */,
 			);
