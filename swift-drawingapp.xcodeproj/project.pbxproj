@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06028A172872E37F00803B70 /* DefaultRandomFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06028A162872E37F00803B70 /* DefaultRandomFrame.swift */; };
+		069196662872C54C00ED5268 /* SwiftLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 069196652872C54C00ED5268 /* SwiftLayout */; };
+		069196692872C59900ED5268 /* Drawers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069196682872C59900ED5268 /* Drawers.swift */; };
+		0691966B2872C63300ED5268 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0691966A2872C63300ED5268 /* Screen.swift */; };
+		0691966D2872C7D300ED5268 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0691966C2872C7D300ED5268 /* Shape.swift */; };
+		069196702872C89700ED5268 /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0691966F2872C89700ED5268 /* Rectangle.swift */; };
+		069196772872CE7300ED5268 /* Randomizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069196762872CE7300ED5268 /* Randomizable.swift */; };
+		069196792872CEEB00ED5268 /* DefaultRandomColorize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069196782872CEEB00ED5268 /* DefaultRandomColorize.swift */; };
+		0691967F2872DC5400ED5268 /* FrameBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0691967E2872DC5400ED5268 /* FrameBoundary.swift */; };
 		83A846E128725EFA00C777B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A846E028725EFA00C777B1 /* AppDelegate.swift */; };
 		83A846E328725EFA00C777B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A846E228725EFA00C777B1 /* SceneDelegate.swift */; };
 		83A846E528725EFA00C777B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A846E428725EFA00C777B1 /* ViewController.swift */; };
@@ -36,6 +45,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06028A162872E37F00803B70 /* DefaultRandomFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRandomFrame.swift; sourceTree = "<group>"; };
+		069196682872C59900ED5268 /* Drawers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drawers.swift; sourceTree = "<group>"; };
+		0691966A2872C63300ED5268 /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
+		0691966C2872C7D300ED5268 /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
+		0691966F2872C89700ED5268 /* Rectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
+		069196762872CE7300ED5268 /* Randomizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Randomizable.swift; sourceTree = "<group>"; };
+		069196782872CEEB00ED5268 /* DefaultRandomColorize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRandomColorize.swift; sourceTree = "<group>"; };
+		0691967E2872DC5400ED5268 /* FrameBoundary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameBoundary.swift; sourceTree = "<group>"; };
 		83A846DD28725EFA00C777B1 /* swift-drawingapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-drawingapp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83A846E028725EFA00C777B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83A846E228725EFA00C777B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				069196662872C54C00ED5268 /* SwiftLayout in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +94,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		069196672872C58A00ED5268 /* DrawingModel */ = {
+			isa = PBXGroup;
+			children = (
+				069196752872CE6700ED5268 /* Randomize */,
+				0691966E2872C89000ED5268 /* Shapes */,
+				069196682872C59900ED5268 /* Drawers.swift */,
+				0691966A2872C63300ED5268 /* Screen.swift */,
+				0691966C2872C7D300ED5268 /* Shape.swift */,
+			);
+			path = DrawingModel;
+			sourceTree = "<group>";
+		};
+		0691966E2872C89000ED5268 /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				0691966F2872C89700ED5268 /* Rectangle.swift */,
+			);
+			path = Shapes;
+			sourceTree = "<group>";
+		};
+		069196752872CE6700ED5268 /* Randomize */ = {
+			isa = PBXGroup;
+			children = (
+				069196762872CE7300ED5268 /* Randomizable.swift */,
+				0691967E2872DC5400ED5268 /* FrameBoundary.swift */,
+				069196782872CEEB00ED5268 /* DefaultRandomColorize.swift */,
+				06028A162872E37F00803B70 /* DefaultRandomFrame.swift */,
+			);
+			path = Randomize;
+			sourceTree = "<group>";
+		};
 		83A846D428725EF900C777B1 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +148,7 @@
 		83A846DF28725EFA00C777B1 /* swift-drawingapp */ = {
 			isa = PBXGroup;
 			children = (
+				069196672872C58A00ED5268 /* DrawingModel */,
 				83A846E028725EFA00C777B1 /* AppDelegate.swift */,
 				83A846E228725EFA00C777B1 /* SceneDelegate.swift */,
 				83A846E428725EFA00C777B1 /* ViewController.swift */,
@@ -143,6 +193,9 @@
 			dependencies = (
 			);
 			name = "swift-drawingapp";
+			packageProductDependencies = (
+				069196652872C54C00ED5268 /* SwiftLayout */,
+			);
 			productName = "swift-drawingapp";
 			productReference = 83A846DD28725EFA00C777B1 /* swift-drawingapp.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +268,9 @@
 				Base,
 			);
 			mainGroup = 83A846D428725EF900C777B1;
+			packageReferences = (
+				069196642872C54C00ED5268 /* XCRemoteSwiftPackageReference "SwiftLayout" */,
+			);
 			productRefGroup = 83A846DE28725EFA00C777B1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,9 +314,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0691966B2872C63300ED5268 /* Screen.swift in Sources */,
 				83A846E528725EFA00C777B1 /* ViewController.swift in Sources */,
+				069196792872CEEB00ED5268 /* DefaultRandomColorize.swift in Sources */,
 				83A846E128725EFA00C777B1 /* AppDelegate.swift in Sources */,
+				069196692872C59900ED5268 /* Drawers.swift in Sources */,
 				83A846E328725EFA00C777B1 /* SceneDelegate.swift in Sources */,
+				069196772872CE7300ED5268 /* Randomizable.swift in Sources */,
+				0691967F2872DC5400ED5268 /* FrameBoundary.swift in Sources */,
+				0691966D2872C7D300ED5268 /* Shape.swift in Sources */,
+				06028A172872E37F00803B70 /* DefaultRandomFrame.swift in Sources */,
+				069196702872C89700ED5268 /* Rectangle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,6 +660,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		069196642872C54C00ED5268 /* XCRemoteSwiftPackageReference "SwiftLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ioskrew/SwiftLayout";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		069196652872C54C00ED5268 /* SwiftLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 069196642872C54C00ED5268 /* XCRemoteSwiftPackageReference "SwiftLayout" */;
+			productName = SwiftLayout;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 83A846D528725EF900C777B1 /* Project object */;
 }

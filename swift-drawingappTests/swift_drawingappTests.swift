@@ -8,29 +8,70 @@
 import XCTest
 @testable import swift_drawingapp
 
-class swift_drawingappTests: XCTestCase {
+class DrawersTest: XCTestCase {
 
+    var screen: Screen!
+    var drawers: Drawers<MockColorize, MockRandomFrame>!
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        screen = Screen(size: .init(width: 1024, height: 1024))
+        drawers = Drawers(screen: screen)
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    func testCreateRectangles() {
+        MockColorize.color = UIColor.systemBlue
+        MockRandomFrame.frame = CGRect(origin: .init(x: 0, y: 120), size: .init(width: 100, height: 100))
+        
+        drawers.addRectangle()
+        
+        MockColorize.color = UIColor.systemTeal
+        MockRandomFrame.frame = CGRect(origin: .init(x: 120, y: 120), size: .init(width: 100, height: 100))
+        
+        drawers.addRectangle()
+        
+        XCTAssertEqual(drawers.countOfShapes, 2)
+        
+        let shape1 = drawers.shape(of: 0) as! Rectangle
+        XCTAssertEqual(shape1.frame, CGRect(x: 0, y: 120, width: 100, height: 100))
+        XCTAssertEqual(shape1.color, UIColor.systemBlue)
+        
+        let shape2 = drawers.shape(of: 1) as! Rectangle
+        
+        XCTAssertEqual(shape2.frame, CGRect(x: 120, y: 120, width: 100, height: 100))
+        XCTAssertEqual(shape2.color, UIColor.systemTeal)
+        
+        XCTAssertNotEqual(shape1.id, shape2.id)
+    }
+    
+    func testRectangleFrameLimitation() {
+        MockRandomFrame.frame = CGRect(x: -120, y: -120, width: 100, height: 100)
+        drawers.addRectangle()
+        
+        let shape1 = drawers.shape(of: 0) as! Rectangle
+        XCTAssertEqual(shape1.frame, CGRect(x: 0, y: 0, width: 100, height: 100))
+        
+        MockRandomFrame.frame = CGRect(x: 1024, y: 1024, width: 100, height: 100)
+        drawers.addRectangle()
+        
+        let shape2 = drawers.shape(of: 1) as! Rectangle
+        XCTAssertEqual(shape2.frame, CGRect(x: 924, y: 924, width: 100, height: 100))
     }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    final class MockColorize: Randomizable {
+        static var color: UIColor = .init()
+        static func value() -> UIColor {
+            return color
         }
     }
-
+    
+    final class MockRandomFrame: BoundaryRandomizable {
+        static var frame: CGRect = .init()
+        
+        static func value(in boundary: FrameBoundary) -> CGRect {
+            boundary.calibration(value: frame)
+        }
+    }
 }
