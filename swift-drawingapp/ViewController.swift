@@ -14,6 +14,13 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func rectangleButton(_ sender: Any) {
+    }
+    
+    @IBAction func drawButton(_ sender: Any) {
+    }
+    
+    @IBAction func syncButton(_ sender: Any) {
+    }
 }
 
