@@ -16,6 +16,17 @@
 		83A846F828725EFF00C777B1 /* swift_drawingappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A846F728725EFF00C777B1 /* swift_drawingappTests.swift */; };
 		83A8470228725EFF00C777B1 /* swift_drawingappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A8470128725EFF00C777B1 /* swift_drawingappUITests.swift */; };
 		83A8470428725EFF00C777B1 /* swift_drawingappUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A8470328725EFF00C777B1 /* swift_drawingappUITestsLaunchTests.swift */; };
+		C2E22C0F2872CAC10045EAA7 /* DrawingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E22C0E2872CAC10045EAA7 /* DrawingScreen.swift */; };
+		C2E22C122872CC390045EAA7 /* Square.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E22C112872CC390045EAA7 /* Square.swift */; };
+		C2E22C142872CC7E0045EAA7 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E22C132872CC7E0045EAA7 /* Line.swift */; };
+		C2E22C162872CCD70045EAA7 /* SquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E22C152872CCD70045EAA7 /* SquareView.swift */; };
+		C2E22C192872D1EA0045EAA7 /* DrawingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E22C182872D1EA0045EAA7 /* DrawingUseCase.swift */; };
+		C2E22C1C2872D2C40045EAA7 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E22C1B2872D2C40045EAA7 /* Shape.swift */; };
+		C2E22C1E2872D5060045EAA7 /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E22C1D2872D5060045EAA7 /* LineView.swift */; };
+		C2E22C212872D5330045EAA7 /* ShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E22C202872D5330045EAA7 /* ShapeView.swift */; };
+		C2E22C232872E1ED0045EAA7 /* DrawingSyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E22C222872E1ED0045EAA7 /* DrawingSyncManager.swift */; };
+		C2E22C2528732EFC0045EAA7 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E22C2428732EFC0045EAA7 /* Array+Extensions.swift */; };
+		C2E22C2728732F2E0045EAA7 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E22C2628732F2E0045EAA7 /* UIColor+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +60,17 @@
 		83A846FD28725EFF00C777B1 /* swift-drawingappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swift-drawingappUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83A8470128725EFF00C777B1 /* swift_drawingappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_drawingappUITests.swift; sourceTree = "<group>"; };
 		83A8470328725EFF00C777B1 /* swift_drawingappUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_drawingappUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C2E22C0E2872CAC10045EAA7 /* DrawingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingScreen.swift; sourceTree = "<group>"; };
+		C2E22C112872CC390045EAA7 /* Square.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Square.swift; sourceTree = "<group>"; };
+		C2E22C132872CC7E0045EAA7 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		C2E22C152872CCD70045EAA7 /* SquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareView.swift; sourceTree = "<group>"; };
+		C2E22C182872D1EA0045EAA7 /* DrawingUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingUseCase.swift; sourceTree = "<group>"; };
+		C2E22C1B2872D2C40045EAA7 /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
+		C2E22C1D2872D5060045EAA7 /* LineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
+		C2E22C202872D5330045EAA7 /* ShapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeView.swift; sourceTree = "<group>"; };
+		C2E22C222872E1ED0045EAA7 /* DrawingSyncManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingSyncManager.swift; sourceTree = "<group>"; };
+		C2E22C2428732EFC0045EAA7 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
+		C2E22C2628732F2E0045EAA7 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +121,14 @@
 		83A846DF28725EFA00C777B1 /* swift-drawingapp */ = {
 			isa = PBXGroup;
 			children = (
-				83A846E028725EFA00C777B1 /* AppDelegate.swift */,
-				83A846E228725EFA00C777B1 /* SceneDelegate.swift */,
+				C2E22C102872CAD00045EAA7 /* Supporting Files */,
 				83A846E428725EFA00C777B1 /* ViewController.swift */,
+				C2E22C222872E1ED0045EAA7 /* DrawingSyncManager.swift */,
+				C2E22C2828732F390045EAA7 /* Extensions */,
+				C2E22C1F2872D50C0045EAA7 /* View */,
+				C2E22C1A2872D1FD0045EAA7 /* UseCase */,
+				C2E22C172872D1A90045EAA7 /* Model */,
 				83A846E628725EFA00C777B1 /* Main.storyboard */,
-				83A846E928725EFE00C777B1 /* Assets.xcassets */,
-				83A846EB28725EFE00C777B1 /* LaunchScreen.storyboard */,
-				83A846EE28725EFE00C777B1 /* Info.plist */,
 			);
 			path = "swift-drawingapp";
 			sourceTree = "<group>";
@@ -125,6 +148,56 @@
 				83A8470328725EFF00C777B1 /* swift_drawingappUITestsLaunchTests.swift */,
 			);
 			path = "swift-drawingappUITests";
+			sourceTree = "<group>";
+		};
+		C2E22C102872CAD00045EAA7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				83A846E028725EFA00C777B1 /* AppDelegate.swift */,
+				83A846E228725EFA00C777B1 /* SceneDelegate.swift */,
+				83A846E928725EFE00C777B1 /* Assets.xcassets */,
+				83A846EB28725EFE00C777B1 /* LaunchScreen.storyboard */,
+				83A846EE28725EFE00C777B1 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C2E22C172872D1A90045EAA7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C2E22C1B2872D2C40045EAA7 /* Shape.swift */,
+				C2E22C112872CC390045EAA7 /* Square.swift */,
+				C2E22C132872CC7E0045EAA7 /* Line.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C2E22C1A2872D1FD0045EAA7 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				C2E22C182872D1EA0045EAA7 /* DrawingUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		C2E22C1F2872D50C0045EAA7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C2E22C0E2872CAC10045EAA7 /* DrawingScreen.swift */,
+				C2E22C202872D5330045EAA7 /* ShapeView.swift */,
+				C2E22C152872CCD70045EAA7 /* SquareView.swift */,
+				C2E22C1D2872D5060045EAA7 /* LineView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C2E22C2828732F390045EAA7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C2E22C2428732EFC0045EAA7 /* Array+Extensions.swift */,
+				C2E22C2628732F2E0045EAA7 /* UIColor+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,8 +331,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2E22C122872CC390045EAA7 /* Square.swift in Sources */,
 				83A846E528725EFA00C777B1 /* ViewController.swift in Sources */,
 				83A846E128725EFA00C777B1 /* AppDelegate.swift in Sources */,
+				C2E22C232872E1ED0045EAA7 /* DrawingSyncManager.swift in Sources */,
+				C2E22C142872CC7E0045EAA7 /* Line.swift in Sources */,
+				C2E22C1C2872D2C40045EAA7 /* Shape.swift in Sources */,
+				C2E22C212872D5330045EAA7 /* ShapeView.swift in Sources */,
+				C2E22C192872D1EA0045EAA7 /* DrawingUseCase.swift in Sources */,
+				C2E22C162872CCD70045EAA7 /* SquareView.swift in Sources */,
+				C2E22C2528732EFC0045EAA7 /* Array+Extensions.swift in Sources */,
+				C2E22C0F2872CAC10045EAA7 /* DrawingScreen.swift in Sources */,
+				C2E22C2728732F2E0045EAA7 /* UIColor+Extensions.swift in Sources */,
+				C2E22C1E2872D5060045EAA7 /* LineView.swift in Sources */,
 				83A846E328725EFA00C777B1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,7 +522,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "swift-drawingapp/Info.plist";
+				INFOPLIST_FILE = "swift-drawingapp/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -465,7 +549,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "swift-drawingapp/Info.plist";
+				INFOPLIST_FILE = "swift-drawingapp/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
