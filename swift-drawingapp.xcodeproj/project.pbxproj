@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11F13F69401ADE84668AB446 /* Pods_swift_drawingapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4DF94540CD115662816B8EF /* Pods_swift_drawingapp.framework */; };
+		2C85E995B487BCB66299E659 /* Pods_swift_drawingapp_swift_drawingappUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05C570370BDE19CA768273F2 /* Pods_swift_drawingapp_swift_drawingappUITests.framework */; };
 		83A846E128725EFA00C777B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A846E028725EFA00C777B1 /* AppDelegate.swift */; };
 		83A846E328725EFA00C777B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A846E228725EFA00C777B1 /* SceneDelegate.swift */; };
 		83A846E528725EFA00C777B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A846E428725EFA00C777B1 /* ViewController.swift */; };
@@ -16,6 +18,13 @@
 		83A846F828725EFF00C777B1 /* swift_drawingappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A846F728725EFF00C777B1 /* swift_drawingappTests.swift */; };
 		83A8470228725EFF00C777B1 /* swift_drawingappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A8470128725EFF00C777B1 /* swift_drawingappUITests.swift */; };
 		83A8470428725EFF00C777B1 /* swift_drawingappUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A8470328725EFF00C777B1 /* swift_drawingappUITestsLaunchTests.swift */; };
+		C25E12C22872D46D009A4564 /* Figure.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E12C12872D46D009A4564 /* Figure.swift */; };
+		C25E12C62872D559009A4564 /* RectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E12C52872D559009A4564 /* RectView.swift */; };
+		C25E12C92872D6AB009A4564 /* DrawingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E12C82872D6AB009A4564 /* DrawingViewModel.swift */; };
+		C25E12CB2872D868009A4564 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E12CA2872D867009A4564 /* Point.swift */; };
+		C25E12CE2872D9AE009A4564 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E12CD2872D9AE009A4564 /* NetworkManager.swift */; };
+		C25E12D32872F390009A4564 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E12D22872F390009A4564 /* UIView+Extension.swift */; };
+		E195847F6EC6CFBB8E203EC8 /* Pods_swift_drawingappTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74AA93EBCAE399BF7442B4C7 /* Pods_swift_drawingappTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +45,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05C570370BDE19CA768273F2 /* Pods_swift_drawingapp_swift_drawingappUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swift_drawingapp_swift_drawingappUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		12B1A54243C7C87282C8D119 /* Pods-swift-drawingappTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-drawingappTests.release.xcconfig"; path = "Target Support Files/Pods-swift-drawingappTests/Pods-swift-drawingappTests.release.xcconfig"; sourceTree = "<group>"; };
+		1A4C9A14F1A115747187C620 /* Pods-swift-drawingapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-drawingapp.release.xcconfig"; path = "Target Support Files/Pods-swift-drawingapp/Pods-swift-drawingapp.release.xcconfig"; sourceTree = "<group>"; };
+		1A57D235B36EC51CA6ACC1A9 /* Pods-swift-drawingapp-swift-drawingappUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-drawingapp-swift-drawingappUITests.debug.xcconfig"; path = "Target Support Files/Pods-swift-drawingapp-swift-drawingappUITests/Pods-swift-drawingapp-swift-drawingappUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3AC34EF1A72D12108E3E533C /* Pods-swift-drawingapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-drawingapp.debug.xcconfig"; path = "Target Support Files/Pods-swift-drawingapp/Pods-swift-drawingapp.debug.xcconfig"; sourceTree = "<group>"; };
+		74AA93EBCAE399BF7442B4C7 /* Pods_swift_drawingappTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swift_drawingappTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		79202E6953C7BEAC3B94CC9B /* Pods-swift-drawingapp-swift-drawingappUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-drawingapp-swift-drawingappUITests.release.xcconfig"; path = "Target Support Files/Pods-swift-drawingapp-swift-drawingappUITests/Pods-swift-drawingapp-swift-drawingappUITests.release.xcconfig"; sourceTree = "<group>"; };
 		83A846DD28725EFA00C777B1 /* swift-drawingapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-drawingapp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83A846E028725EFA00C777B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83A846E228725EFA00C777B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +65,14 @@
 		83A846FD28725EFF00C777B1 /* swift-drawingappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swift-drawingappUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83A8470128725EFF00C777B1 /* swift_drawingappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_drawingappUITests.swift; sourceTree = "<group>"; };
 		83A8470328725EFF00C777B1 /* swift_drawingappUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_drawingappUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AE035A490C5E65734C201298 /* Pods-swift-drawingappTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-drawingappTests.debug.xcconfig"; path = "Target Support Files/Pods-swift-drawingappTests/Pods-swift-drawingappTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C25E12C12872D46D009A4564 /* Figure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Figure.swift; sourceTree = "<group>"; };
+		C25E12C52872D559009A4564 /* RectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectView.swift; sourceTree = "<group>"; };
+		C25E12C82872D6AB009A4564 /* DrawingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewModel.swift; sourceTree = "<group>"; };
+		C25E12CA2872D867009A4564 /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
+		C25E12CD2872D9AE009A4564 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		C25E12D22872F390009A4564 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		F4DF94540CD115662816B8EF /* Pods_swift_drawingapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swift_drawingapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11F13F69401ADE84668AB446 /* Pods_swift_drawingapp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E195847F6EC6CFBB8E203EC8 /* Pods_swift_drawingappTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +96,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C85E995B487BCB66299E659 /* Pods_swift_drawingapp_swift_drawingappUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B0F48021BE6DFD20F4C3AD4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3AC34EF1A72D12108E3E533C /* Pods-swift-drawingapp.debug.xcconfig */,
+				1A4C9A14F1A115747187C620 /* Pods-swift-drawingapp.release.xcconfig */,
+				1A57D235B36EC51CA6ACC1A9 /* Pods-swift-drawingapp-swift-drawingappUITests.debug.xcconfig */,
+				79202E6953C7BEAC3B94CC9B /* Pods-swift-drawingapp-swift-drawingappUITests.release.xcconfig */,
+				AE035A490C5E65734C201298 /* Pods-swift-drawingappTests.debug.xcconfig */,
+				12B1A54243C7C87282C8D119 /* Pods-swift-drawingappTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7F175CB9A6C30FF1EC29B69D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F4DF94540CD115662816B8EF /* Pods_swift_drawingapp.framework */,
+				05C570370BDE19CA768273F2 /* Pods_swift_drawingapp_swift_drawingappUITests.framework */,
+				74AA93EBCAE399BF7442B4C7 /* Pods_swift_drawingappTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		83A846D428725EF900C777B1 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +133,8 @@
 				83A846F628725EFF00C777B1 /* swift-drawingappTests */,
 				83A8470028725EFF00C777B1 /* swift-drawingappUITests */,
 				83A846DE28725EFA00C777B1 /* Products */,
+				0B0F48021BE6DFD20F4C3AD4 /* Pods */,
+				7F175CB9A6C30FF1EC29B69D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,9 +151,13 @@
 		83A846DF28725EFA00C777B1 /* swift-drawingapp */ = {
 			isa = PBXGroup;
 			children = (
+				C25E12D12872F384009A4564 /* Common */,
+				C25E12CC2872D999009A4564 /* Network */,
+				C25E12C02872D433009A4564 /* ViewModel */,
+				C25E12BF2872D428009A4564 /* View */,
+				C25E12BE2872D423009A4564 /* Model */,
 				83A846E028725EFA00C777B1 /* AppDelegate.swift */,
 				83A846E228725EFA00C777B1 /* SceneDelegate.swift */,
-				83A846E428725EFA00C777B1 /* ViewController.swift */,
 				83A846E628725EFA00C777B1 /* Main.storyboard */,
 				83A846E928725EFE00C777B1 /* Assets.xcassets */,
 				83A846EB28725EFE00C777B1 /* LaunchScreen.storyboard */,
@@ -127,6 +183,48 @@
 			path = "swift-drawingappUITests";
 			sourceTree = "<group>";
 		};
+		C25E12BE2872D423009A4564 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C25E12C12872D46D009A4564 /* Figure.swift */,
+				C25E12CA2872D867009A4564 /* Point.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C25E12BF2872D428009A4564 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				83A846E428725EFA00C777B1 /* ViewController.swift */,
+				C25E12C52872D559009A4564 /* RectView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C25E12C02872D433009A4564 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C25E12C82872D6AB009A4564 /* DrawingViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C25E12CC2872D999009A4564 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C25E12CD2872D9AE009A4564 /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		C25E12D12872F384009A4564 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				C25E12D22872F390009A4564 /* UIView+Extension.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +232,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 83A8470728725EFF00C777B1 /* Build configuration list for PBXNativeTarget "swift-drawingapp" */;
 			buildPhases = (
+				5E981A386C751BEBCABFB305 /* [CP] Check Pods Manifest.lock */,
 				83A846D928725EFA00C777B1 /* Sources */,
 				83A846DA28725EFA00C777B1 /* Frameworks */,
 				83A846DB28725EFA00C777B1 /* Resources */,
+				693FD756E8CF4B13E38FFF5C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +251,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 83A8470A28725EFF00C777B1 /* Build configuration list for PBXNativeTarget "swift-drawingappTests" */;
 			buildPhases = (
+				4606494B6500EF7FD94E8F84 /* [CP] Check Pods Manifest.lock */,
 				83A846EF28725EFF00C777B1 /* Sources */,
 				83A846F028725EFF00C777B1 /* Frameworks */,
 				83A846F128725EFF00C777B1 /* Resources */,
@@ -169,9 +270,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 83A8470D28725EFF00C777B1 /* Build configuration list for PBXNativeTarget "swift-drawingappUITests" */;
 			buildPhases = (
+				E6FC4F0C7DB189CFBC7D179A /* [CP] Check Pods Manifest.lock */,
 				83A846F928725EFF00C777B1 /* Sources */,
 				83A846FA28725EFF00C777B1 /* Frameworks */,
 				83A846FB28725EFF00C777B1 /* Resources */,
+				3555D9760B491554CE3A1C52 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,6 +356,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3555D9760B491554CE3A1C52 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-swift-drawingapp-swift-drawingappUITests/Pods-swift-drawingapp-swift-drawingappUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-swift-drawingapp-swift-drawingappUITests/Pods-swift-drawingapp-swift-drawingappUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-swift-drawingapp-swift-drawingappUITests/Pods-swift-drawingapp-swift-drawingappUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4606494B6500EF7FD94E8F84 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-swift-drawingappTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E981A386C751BEBCABFB305 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-swift-drawingapp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		693FD756E8CF4B13E38FFF5C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-swift-drawingapp/Pods-swift-drawingapp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-swift-drawingapp/Pods-swift-drawingapp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-swift-drawingapp/Pods-swift-drawingapp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6FC4F0C7DB189CFBC7D179A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-swift-drawingapp-swift-drawingappUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		83A846D928725EFA00C777B1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -260,7 +466,13 @@
 			files = (
 				83A846E528725EFA00C777B1 /* ViewController.swift in Sources */,
 				83A846E128725EFA00C777B1 /* AppDelegate.swift in Sources */,
+				C25E12C62872D559009A4564 /* RectView.swift in Sources */,
 				83A846E328725EFA00C777B1 /* SceneDelegate.swift in Sources */,
+				C25E12CE2872D9AE009A4564 /* NetworkManager.swift in Sources */,
+				C25E12CB2872D868009A4564 /* Point.swift in Sources */,
+				C25E12C22872D46D009A4564 /* Figure.swift in Sources */,
+				C25E12C92872D6AB009A4564 /* DrawingViewModel.swift in Sources */,
+				C25E12D32872F390009A4564 /* UIView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,7 +578,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -420,7 +632,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -432,6 +644,7 @@
 		};
 		83A8470828725EFF00C777B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AC34EF1A72D12108E3E533C /* Pods-swift-drawingapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -444,6 +657,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -459,6 +673,7 @@
 		};
 		83A8470928725EFF00C777B1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A4C9A14F1A115747187C620 /* Pods-swift-drawingapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -471,6 +686,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -486,13 +702,14 @@
 		};
 		83A8470B28725EFF00C777B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE035A490C5E65734C201298 /* Pods-swift-drawingappTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kakaocorp.swift-drawingappTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -505,13 +722,14 @@
 		};
 		83A8470C28725EFF00C777B1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12B1A54243C7C87282C8D119 /* Pods-swift-drawingappTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kakaocorp.swift-drawingappTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -524,6 +742,7 @@
 		};
 		83A8470E28725EFF00C777B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A57D235B36EC51CA6ACC1A9 /* Pods-swift-drawingapp-swift-drawingappUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -541,6 +760,7 @@
 		};
 		83A8470F28725EFF00C777B1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79202E6953C7BEAC3B94CC9B /* Pods-swift-drawingapp-swift-drawingappUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
