@@ -13,7 +13,7 @@ class RectangleTests: XCTestCase {
         
         // then
         XCTAssertEqual(rectangle.id, decodedModel.id)
-        XCTAssertEqual(rectangle.color.hex, decodedModel.color.hex)
+        XCTAssertEqual(rectangle.colorHex, decodedModel.colorHex)
         XCTAssertEqual(rectangle.points, decodedModel.points)
     }
 }
