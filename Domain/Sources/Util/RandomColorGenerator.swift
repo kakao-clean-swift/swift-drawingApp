@@ -2,6 +2,7 @@ import Foundation
 import UIKit
 
 public struct RandomColorGenerator {
+    
     public static func color(except: UIColor? = nil) -> UIColor {
         let systemColors = [
             UIColor.systemRed,

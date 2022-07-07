@@ -8,6 +8,7 @@ protocol Shape: Identifiable {
     var isSelectable: Bool { get }
 }
 
+// DTO를 만든다면 DTO가 Codable을 채택할 것!
 struct Rectangle: Shape, Codable {
     
     let id: UUID

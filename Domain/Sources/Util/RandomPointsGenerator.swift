@@ -2,6 +2,7 @@ import Foundation
 import UIKit
 
 public struct RandomPointsGenerator {
+    
     public static func rectangePoints(screenRect: CGRect, size: CGFloat) -> [CGPoint] {
         guard screenRect.minX >= 0 && screenRect.maxX - size >= 0 else { return [] }
         guard screenRect.minY >= 0 && screenRect.maxY - size >= 0 else { return [] }
@@ -16,8 +17,8 @@ public struct RandomPointsGenerator {
         
         let topRight = topLeft.moveX(size)
         let bottomLeft = topLeft.moveY(size)
-        let bottmRight = bottomLeft.moveX(size)
-        return [topLeft, topRight, bottomLeft, bottmRight]
+        let bottomRight = bottomLeft.moveX(size)
+        return [topLeft, topRight, bottomLeft, bottomRight]
     }
 }
 
