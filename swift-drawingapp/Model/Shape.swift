@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Point {
+struct Point: Equatable {
     let x: Double
     let y: Double
     
@@ -24,7 +24,11 @@ protocol Shape {
     init(points: [Point])
 }
 
-struct Rectangle: Shape {
+struct Rectangle: Shape, Equatable {
+    static func == (lhs: Rectangle, rhs: Rectangle) -> Bool {
+        return lhs.points == rhs.points
+    }
+    
     static var countOfPoints: Int {
         return 4
     }
