@@ -18,12 +18,31 @@ class swift_drawingappTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    func testDrawingSquare() {
+        let canvasManager = CanvasManager()
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 1000, height: 1000))
+        canvasManager.start(in: view)
+        canvasManager.drawSquare()
+        canvasManager.drawSquare()
+        XCTAssertEqual(canvasManager.squareViews.count, 2)
+    }
+
+    func testCreatingRandomRectFromSquare() {
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 1000, height: 1000))
+        let square = Square(in: view.frame)
+        let randomRect = square.createRandomRect(in: view.frame)
+
+        XCTAssertTrue(randomRect.minX > 0 && randomRect.maxX < 1000)
+        XCTAssertTrue(randomRect.minY > 0 && randomRect.maxY < 1000)
+        XCTAssertTrue(randomRect.width == 100)
+        XCTAssertTrue(randomRect.height == 100)
+    }
+
+    func testCreatingRectFromDrawing() {
+        var drawing = Drawing()
+        drawing.coordinates = [CGPoint(x: 10, y: 10), CGPoint(x: 20, y: 10), CGPoint(x: 20, y: 20), CGPoint(x: 10, y: 20), CGPoint(x: 10, y: 10)]
+        let drawingRect = drawing.rect
+        XCTAssertEqual(drawingRect, CGRect(x: 10, y: 10, width: 10, height: 10))
     }
 
     func testPerformanceExample() throws {
