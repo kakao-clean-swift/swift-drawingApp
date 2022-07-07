@@ -20,12 +20,14 @@ enum DrawingObjectType {
     }
 }
 
-class DrawingObject {
+class DrawingObject: ItemDrawable {
     var id: String = UUID().uuidString  // unique id
-
-    var type: DrawingObjectType = .none
+    var type: DrawingObjectType = .none    
     var color: UIColor = .systemGray
     var points: [CGPoint] = []
+    var drawingType: DrawingType {
+        return (type == .square) ? .fill : .line
+    }
 
     var startPoint: CGPoint {
         return (points.count > 0) ? points[0] : .zero

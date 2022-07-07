@@ -6,32 +6,49 @@
 //
 
 import UIKit
+import Combine
 
 class DrawingViewModel {
-    @Published var drawableItems: [DrawingObject] = []
+    @Published var drawableItems: [ItemDrawable] = []
+    @Published var isManualDrawingSelected: Bool = false
+    
+    public let manualDrawingEvent = PassthroughSubject<UIColor, Never>()    
+        
     var visibleRect: CGRect = .zero
-
-    func addSquare() {
-        drawableItems.append(squareObject())
+    
+    // input
+    func didTouchManualDrawingButton(selected: Bool) {
+        isManualDrawingSelected = selected
+        startManualDrawing()
+    }
+    
+    func didTouchSquareButton() {
+        isManualDrawingSelected = false
+        addSquareObject()
     }
 
-    func addManualDrawing(color: UIColor, points: [CGPoint]) {
-        let drawingObject = DrawingObject(type: .manual, color: color)
-        drawingObject.points = points
-        drawableItems.append(drawingObject)
+    func didManualDrawing(color: UIColor, points: [CGPoint]) {
+        addManualDrawing(color: color, points: points)
+        isManualDrawingSelected = false
     }
-
-    func getManualDrawingColor() -> UIColor {
-        return randomSystemColor()
+    
+    // output    
+    func startManualDrawing() {
+        manualDrawingEvent.send(randomSystemColor())
     }
-
-    private func squareObject() -> DrawingObject {
+    
+    private func addSquareObject() {
         let squareObject = DrawingObject(type: .square, color: randomSystemColor())
         let startPoint = randomPoint()
         let fixedLength = squareObject.fixedLength
         squareObject.points = [startPoint, CGPoint(x: startPoint.x + fixedLength, y: startPoint.y + fixedLength)]
-
-        return squareObject
+        drawableItems.append(squareObject)
+    }
+    
+    private func addManualDrawing(color: UIColor, points: [CGPoint]) {
+        let drawingObject = DrawingObject(type: .manual, color: color)
+        drawingObject.points = points
+        drawableItems.append(drawingObject)
     }
 
     private func randomSystemColor() -> UIColor {

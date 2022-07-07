@@ -17,7 +17,7 @@
 		83A8470228725EFF00C777B1 /* swift_drawingappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A8470128725EFF00C777B1 /* swift_drawingappUITests.swift */; };
 		83A8470428725EFF00C777B1 /* swift_drawingappUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A8470328725EFF00C777B1 /* swift_drawingappUITestsLaunchTests.swift */; };
 		A140E01A28730496004EC893 /* SquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A140E01928730496004EC893 /* SquareView.swift */; };
-		A140E02928730A80004EC893 /* DrawingObject+ItemDrawable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A140E02828730A80004EC893 /* DrawingObject+ItemDrawable.swift */; };
+		A140E02928730A80004EC893 /* ItemDrawable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A140E02828730A80004EC893 /* ItemDrawable.swift */; };
 		A16D41A62872BF8F007F7FF6 /* DrawingObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16D41A52872BF8F007F7FF6 /* DrawingObject.swift */; };
 		A16D41B92872F044007F7FF6 /* DrawingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16D41B82872F044007F7FF6 /* DrawingImageView.swift */; };
 		A16D41BD2872F172007F7FF6 /* DrawingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16D41BC2872F172007F7FF6 /* DrawingViewModel.swift */; };
@@ -55,7 +55,7 @@
 		83A8470128725EFF00C777B1 /* swift_drawingappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_drawingappUITests.swift; sourceTree = "<group>"; };
 		83A8470328725EFF00C777B1 /* swift_drawingappUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_drawingappUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A140E01928730496004EC893 /* SquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareView.swift; sourceTree = "<group>"; };
-		A140E02828730A80004EC893 /* DrawingObject+ItemDrawable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DrawingObject+ItemDrawable.swift"; sourceTree = "<group>"; };
+		A140E02828730A80004EC893 /* ItemDrawable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDrawable.swift; sourceTree = "<group>"; };
 		A16D41A52872BF8F007F7FF6 /* DrawingObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingObject.swift; sourceTree = "<group>"; };
 		A16D41B82872F044007F7FF6 /* DrawingImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingImageView.swift; sourceTree = "<group>"; };
 		A16D41BC2872F172007F7FF6 /* DrawingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewModel.swift; sourceTree = "<group>"; };
@@ -142,8 +142,8 @@
 		A16D41A42872BCD6007F7FF6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A140E02828730A80004EC893 /* ItemDrawable.swift */,
 				A16D41A52872BF8F007F7FF6 /* DrawingObject.swift */,
-				A140E02828730A80004EC893 /* DrawingObject+ItemDrawable.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -301,7 +301,7 @@
 				A16D41BD2872F172007F7FF6 /* DrawingViewModel.swift in Sources */,
 				83A846E128725EFA00C777B1 /* AppDelegate.swift in Sources */,
 				A16D41A62872BF8F007F7FF6 /* DrawingObject.swift in Sources */,
-				A140E02928730A80004EC893 /* DrawingObject+ItemDrawable.swift in Sources */,
+				A140E02928730A80004EC893 /* ItemDrawable.swift in Sources */,
 				A140E01A28730496004EC893 /* SquareView.swift in Sources */,
 				83A846E328725EFA00C777B1 /* SceneDelegate.swift in Sources */,
 				A16D41B92872F044007F7FF6 /* DrawingImageView.swift in Sources */,

@@ -11,21 +11,10 @@ import Combine
 class ViewController: UIViewController {
     @IBOutlet var drawingCanvas: DrawingImageView!
     @IBOutlet var itemContainerView: UIView!
-    @IBOutlet weak var drawingButton: UIButton!
+    @IBOutlet weak var drawingButton: UIButton!   
 
     private var subscriptions = Set<AnyCancellable>()
     let viewModel = DrawingViewModel()
-    var items: [ItemDrawable] = [] {
-        didSet {
-            drawItems()
-        }
-    }
-
-    var isManualDrawingSelected: Bool = false {
-        didSet {
-            drawingButtonSelected()
-        }
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,39 +23,48 @@ class ViewController: UIViewController {
 
     func bindViewModel() {
         viewModel.visibleRect = CGRect(x: 0, y: 0, width: view.bounds.width - 150, height: view.bounds.height - 300)
+        
         viewModel.$drawableItems
             .sink { [weak self] items in
-                self?.items = items
+                self?.drawItems(items)
+            }.store(in: &subscriptions)
+        
+        viewModel.$isManualDrawingSelected
+            .sink { [weak self] selected in
+                self?.drawingButton.isSelected = selected
+                self?.drawingButtonSelected()
+            }.store(in: &subscriptions)
+        
+        viewModel.manualDrawingEvent
+            .sink { [weak self] color in
+                self?.drawingCanvas.color = color
             }.store(in: &subscriptions)
     }
 
-    func drawItems() {
+    func drawItems(_ items: [ItemDrawable]) {
         itemContainerView.subviews.forEach({ $0.removeFromSuperview() })
         for item in items {
-            if item.fill == true {
+            if item.drawingType == .fill {
                 let itemView = SquareView(item: item)
                 itemContainerView.addSubview(itemView)
             }
-
-            // TODO : manual drawing도 itemView화 해서 붙이기..
         }
     }
 
     // MARK: - Actions
     @IBAction func didTapSqureButton(_ sender: Any) {
-        isManualDrawingSelected = false
-        viewModel.addSquare()
+        viewModel.didTouchSquareButton()
     }
 
     @IBAction func didTapDrawingButton(_ sender: Any) {
-        isManualDrawingSelected = !isManualDrawingSelected
+        viewModel.didTouchManualDrawingButton(selected: !drawingButton.isSelected)
     }
 
     @IBAction func didTapSyncButton(_ sender: Any) {
     }
 
     func drawingButtonSelected() {
-        if isManualDrawingSelected {
+        if drawingButton.isSelected {
             drawingButton.layer.borderColor = UIColor.systemPurple.cgColor
             drawingButton.layer.borderWidth = 5
         } else {
@@ -75,21 +73,19 @@ class ViewController: UIViewController {
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        guard isManualDrawingSelected else { return }
-        let color = viewModel.getManualDrawingColor()
-        drawingCanvas.color = color
+        guard drawingButton.isSelected else { return }
         drawingCanvas.touchesBegan(touches, with: event)
     }
 
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        guard isManualDrawingSelected else { return }
+        guard drawingButton.isSelected else { return }
         drawingCanvas.touchesMoved(touches, with: event)
     }
 
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        guard isManualDrawingSelected else { return }
+        guard drawingButton.isSelected else { return }
         drawingCanvas.touchesEnded(touches, with: event)
-        viewModel.addManualDrawing(color: drawingCanvas.color, points: drawingCanvas.movePoints)
+        viewModel.didManualDrawing(color: drawingCanvas.color, points: drawingCanvas.movePoints)
     }
 }
 

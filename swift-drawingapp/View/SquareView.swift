@@ -28,7 +28,7 @@ class SquareView: UIImageView {
     func drawItem() {
         self.frame = getFrame()
 
-        if item.fill {
+        if item.drawingType == .fill {
             self.backgroundColor = item.color
         }
     }
