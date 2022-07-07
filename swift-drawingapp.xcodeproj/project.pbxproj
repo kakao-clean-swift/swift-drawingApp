@@ -16,6 +16,11 @@
 		83A846F828725EFF00C777B1 /* swift_drawingappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A846F728725EFF00C777B1 /* swift_drawingappTests.swift */; };
 		83A8470228725EFF00C777B1 /* swift_drawingappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A8470128725EFF00C777B1 /* swift_drawingappUITests.swift */; };
 		83A8470428725EFF00C777B1 /* swift_drawingappUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A8470328725EFF00C777B1 /* swift_drawingappUITestsLaunchTests.swift */; };
+		A140E01A28730496004EC893 /* SquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A140E01928730496004EC893 /* SquareView.swift */; };
+		A140E02928730A80004EC893 /* DrawingObject+ItemDrawable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A140E02828730A80004EC893 /* DrawingObject+ItemDrawable.swift */; };
+		A16D41A62872BF8F007F7FF6 /* DrawingObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16D41A52872BF8F007F7FF6 /* DrawingObject.swift */; };
+		A16D41B92872F044007F7FF6 /* DrawingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16D41B82872F044007F7FF6 /* DrawingImageView.swift */; };
+		A16D41BD2872F172007F7FF6 /* DrawingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16D41BC2872F172007F7FF6 /* DrawingViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		83A846FD28725EFF00C777B1 /* swift-drawingappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swift-drawingappUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83A8470128725EFF00C777B1 /* swift_drawingappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_drawingappUITests.swift; sourceTree = "<group>"; };
 		83A8470328725EFF00C777B1 /* swift_drawingappUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_drawingappUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A140E01928730496004EC893 /* SquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareView.swift; sourceTree = "<group>"; };
+		A140E02828730A80004EC893 /* DrawingObject+ItemDrawable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DrawingObject+ItemDrawable.swift"; sourceTree = "<group>"; };
+		A16D41A52872BF8F007F7FF6 /* DrawingObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingObject.swift; sourceTree = "<group>"; };
+		A16D41B82872F044007F7FF6 /* DrawingImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingImageView.swift; sourceTree = "<group>"; };
+		A16D41BC2872F172007F7FF6 /* DrawingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +109,11 @@
 		83A846DF28725EFA00C777B1 /* swift-drawingapp */ = {
 			isa = PBXGroup;
 			children = (
+				A16D41A42872BCD6007F7FF6 /* Model */,
+				A16D41BB2872F064007F7FF6 /* ViewModel */,
+				A16D41BA2872F057007F7FF6 /* View */,
 				83A846E028725EFA00C777B1 /* AppDelegate.swift */,
 				83A846E228725EFA00C777B1 /* SceneDelegate.swift */,
-				83A846E428725EFA00C777B1 /* ViewController.swift */,
 				83A846E628725EFA00C777B1 /* Main.storyboard */,
 				83A846E928725EFE00C777B1 /* Assets.xcassets */,
 				83A846EB28725EFE00C777B1 /* LaunchScreen.storyboard */,
@@ -125,6 +137,33 @@
 				83A8470328725EFF00C777B1 /* swift_drawingappUITestsLaunchTests.swift */,
 			);
 			path = "swift-drawingappUITests";
+			sourceTree = "<group>";
+		};
+		A16D41A42872BCD6007F7FF6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A16D41A52872BF8F007F7FF6 /* DrawingObject.swift */,
+				A140E02828730A80004EC893 /* DrawingObject+ItemDrawable.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A16D41BA2872F057007F7FF6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A16D41B82872F044007F7FF6 /* DrawingImageView.swift */,
+				A140E01928730496004EC893 /* SquareView.swift */,
+				83A846E428725EFA00C777B1 /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A16D41BB2872F064007F7FF6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A16D41BC2872F172007F7FF6 /* DrawingViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +298,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				83A846E528725EFA00C777B1 /* ViewController.swift in Sources */,
+				A16D41BD2872F172007F7FF6 /* DrawingViewModel.swift in Sources */,
 				83A846E128725EFA00C777B1 /* AppDelegate.swift in Sources */,
+				A16D41A62872BF8F007F7FF6 /* DrawingObject.swift in Sources */,
+				A140E02928730A80004EC893 /* DrawingObject+ItemDrawable.swift in Sources */,
+				A140E01A28730496004EC893 /* SquareView.swift in Sources */,
 				83A846E328725EFA00C777B1 /* SceneDelegate.swift in Sources */,
+				A16D41B92872F044007F7FF6 /* DrawingImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,7 +410,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -420,7 +464,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -444,6 +488,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -471,6 +516,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -492,7 +538,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kakaocorp.swift-drawingappTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -511,7 +557,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kakaocorp.swift-drawingappTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -529,6 +575,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kakaocorp.swift-drawingappUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -546,6 +593,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kakaocorp.swift-drawingappUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";

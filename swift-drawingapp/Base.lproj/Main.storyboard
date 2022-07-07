@@ -1,24 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad10_5" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="swift_drawingapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VA0-Nc-lBi" customClass="DrawingImageView" customModule="swift_drawingapp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5pq-Ta-PLJ">
+                                <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dj6-sH-a8a">
+                                <rect key="frame" x="267" y="1012" width="100" height="100"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="IYN-5D-tUq"/>
+                                    <constraint firstAttribute="width" constant="100" id="h9t-sp-fLf"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="사각형"/>
+                                <connections>
+                                    <action selector="didTapSqureButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E2b-0a-0VJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fCA-j7-EwO">
+                                <rect key="frame" x="367" y="1012" width="100" height="100"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="DIg-Xq-yNF"/>
+                                    <constraint firstAttribute="height" constant="100" id="QKA-Me-NeA"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="드로잉"/>
+                                <connections>
+                                    <action selector="didTapDrawingButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eUP-cv-LbE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXm-Gg-Yrw">
+                                <rect key="frame" x="467" y="1012" width="100" height="100"/>
+                                <color key="backgroundColor" systemColor="systemMintColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="3Lv-MB-y92"/>
+                                    <constraint firstAttribute="height" constant="100" id="UXm-GB-mRg"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="동기화"/>
+                                <connections>
+                                    <action selector="didTapSyncButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r1I-ok-685"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="VA0-Nc-lBi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1g4-ES-CjW"/>
+                            <constraint firstAttribute="trailing" secondItem="5pq-Ta-PLJ" secondAttribute="trailing" id="2te-QJ-vhK"/>
+                            <constraint firstAttribute="bottom" secondItem="5pq-Ta-PLJ" secondAttribute="bottom" id="4iu-N7-n7F"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gXm-Gg-Yrw" secondAttribute="bottom" id="HbP-4q-4jJ"/>
+                            <constraint firstItem="5pq-Ta-PLJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ICF-gn-yH9"/>
+                            <constraint firstItem="fCA-j7-EwO" firstAttribute="leading" secondItem="dj6-sH-a8a" secondAttribute="trailing" id="IuD-9i-ApC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fCA-j7-EwO" secondAttribute="bottom" id="OmH-gg-4u9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dj6-sH-a8a" secondAttribute="bottom" id="RLU-B6-OYI"/>
+                            <constraint firstItem="fCA-j7-EwO" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Tzj-1Q-DcR"/>
+                            <constraint firstAttribute="trailing" secondItem="VA0-Nc-lBi" secondAttribute="trailing" id="cCg-Sk-Iul"/>
+                            <constraint firstItem="gXm-Gg-Yrw" firstAttribute="leading" secondItem="fCA-j7-EwO" secondAttribute="trailing" id="hN7-Ut-hGd"/>
+                            <constraint firstAttribute="bottom" secondItem="VA0-Nc-lBi" secondAttribute="bottom" id="jAa-8k-GQu"/>
+                            <constraint firstAttribute="top" secondItem="VA0-Nc-lBi" secondAttribute="top" id="sGb-w2-x7x"/>
+                            <constraint firstAttribute="top" secondItem="5pq-Ta-PLJ" secondAttribute="top" id="wad-S0-NgA"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="drawingButton" destination="fCA-j7-EwO" id="akb-kM-0j9"/>
+                        <outlet property="drawingCanvas" destination="VA0-Nc-lBi" id="rRk-8e-3F6"/>
+                        <outlet property="itemContainerView" destination="5pq-Ta-PLJ" id="QNG-N9-dmX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="113.66906474820145" y="93.884892086330936"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
