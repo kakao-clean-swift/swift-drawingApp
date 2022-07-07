@@ -16,23 +16,6 @@
 		83A846F828725EFF00C777B1 /* swift_drawingappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A846F728725EFF00C777B1 /* swift_drawingappTests.swift */; };
 		83A8470228725EFF00C777B1 /* swift_drawingappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A8470128725EFF00C777B1 /* swift_drawingappUITests.swift */; };
 		83A8470428725EFF00C777B1 /* swift_drawingappUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A8470328725EFF00C777B1 /* swift_drawingappUITestsLaunchTests.swift */; };
-		C21E8FAE2872C5D10043BFAF /* LineDrawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21E8FAD2872C5D10043BFAF /* LineDrawing.swift */; };
-		C21E8FB02872C5E10043BFAF /* SquareDrawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21E8FAF2872C5E10043BFAF /* SquareDrawing.swift */; };
-		C21E8FB22872C6170043BFAF /* WhiteBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21E8FB12872C6170043BFAF /* WhiteBoard.swift */; };
-		C21E8FB52872C7250043BFAF /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21E8FB42872C7240043BFAF /* Command.swift */; };
-		C21E8FB72872C7360043BFAF /* CommandResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21E8FB62872C7360043BFAF /* CommandResponse.swift */; };
-		C21E8FB92872C7630043BFAF /* Drawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21E8FB82872C7630043BFAF /* Drawing.swift */; };
-		C21E8FBB2872C8520043BFAF /* LineType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21E8FBA2872C8520043BFAF /* LineType.swift */; };
-		C21E8FBE2872C8790043BFAF /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21E8FBD2872C8790043BFAF /* Color.swift */; };
-		C21E8FC02872CAD10043BFAF /* SquareType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21E8FBF2872CAD10043BFAF /* SquareType.swift */; };
-		C21E8FC42872D9DD0043BFAF /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21E8FC32872D9DD0043BFAF /* DrawingView.swift */; };
-		C21E8FC62872DA020043BFAF /* DrawingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21E8FC52872DA020043BFAF /* DrawingViewModel.swift */; };
-		C21E8FC92872DC2D0043BFAF /* DrawingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21E8FC82872DC2D0043BFAF /* DrawingUseCase.swift */; };
-		C21E8FCD2872DCA20043BFAF /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21E8FCC2872DCA20043BFAF /* NetworkClient.swift */; };
-		C21E8FD1287317660043BFAF /* DrawingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C21E8FD0287317660043BFAF /* DrawingView.xib */; };
-		C21E8FD428731B5A0043BFAF /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21E8FD328731B5A0043BFAF /* UIColor+Extension.swift */; };
-		C21E8FD6287329DB0043BFAF /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21E8FD5287329DB0043BFAF /* DIContainer.swift */; };
-		C21E8FDD28733BF80043BFAF /* DIRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21E8FDC28733BF80043BFAF /* DIRoot.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,23 +49,6 @@
 		83A846FD28725EFF00C777B1 /* swift-drawingappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swift-drawingappUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83A8470128725EFF00C777B1 /* swift_drawingappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_drawingappUITests.swift; sourceTree = "<group>"; };
 		83A8470328725EFF00C777B1 /* swift_drawingappUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_drawingappUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		C21E8FAD2872C5D10043BFAF /* LineDrawing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineDrawing.swift; sourceTree = "<group>"; };
-		C21E8FAF2872C5E10043BFAF /* SquareDrawing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareDrawing.swift; sourceTree = "<group>"; };
-		C21E8FB12872C6170043BFAF /* WhiteBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteBoard.swift; sourceTree = "<group>"; };
-		C21E8FB42872C7240043BFAF /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
-		C21E8FB62872C7360043BFAF /* CommandResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandResponse.swift; sourceTree = "<group>"; };
-		C21E8FB82872C7630043BFAF /* Drawing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drawing.swift; sourceTree = "<group>"; };
-		C21E8FBA2872C8520043BFAF /* LineType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineType.swift; sourceTree = "<group>"; };
-		C21E8FBD2872C8790043BFAF /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		C21E8FBF2872CAD10043BFAF /* SquareType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareType.swift; sourceTree = "<group>"; };
-		C21E8FC32872D9DD0043BFAF /* DrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
-		C21E8FC52872DA020043BFAF /* DrawingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewModel.swift; sourceTree = "<group>"; };
-		C21E8FC82872DC2D0043BFAF /* DrawingUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingUseCase.swift; sourceTree = "<group>"; };
-		C21E8FCC2872DCA20043BFAF /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
-		C21E8FD0287317660043BFAF /* DrawingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrawingView.xib; sourceTree = "<group>"; };
-		C21E8FD328731B5A0043BFAF /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
-		C21E8FD5287329DB0043BFAF /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
-		C21E8FDC28733BF80043BFAF /* DIRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIRoot.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,13 +99,9 @@
 		83A846DF28725EFA00C777B1 /* swift-drawingapp */ = {
 			isa = PBXGroup;
 			children = (
-				C21E8FCE2872E4200043BFAF /* Data */,
-				C21E8FC72872DC020043BFAF /* Domain */,
-				C21E8FC12872D9AD0043BFAF /* Presentation */,
 				83A846E028725EFA00C777B1 /* AppDelegate.swift */,
 				83A846E228725EFA00C777B1 /* SceneDelegate.swift */,
-				C21E8FD5287329DB0043BFAF /* DIContainer.swift */,
-				C21E8FDC28733BF80043BFAF /* DIRoot.swift */,
+				83A846E428725EFA00C777B1 /* ViewController.swift */,
 				83A846E628725EFA00C777B1 /* Main.storyboard */,
 				83A846E928725EFE00C777B1 /* Assets.xcassets */,
 				83A846EB28725EFE00C777B1 /* LaunchScreen.storyboard */,
@@ -163,91 +125,6 @@
 				83A8470328725EFF00C777B1 /* swift_drawingappUITestsLaunchTests.swift */,
 			);
 			path = "swift-drawingappUITests";
-			sourceTree = "<group>";
-		};
-		C21E8FAA2872C4200043BFAF /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				C21E8FBC2872C8590043BFAF /* Protocol */,
-				C21E8FAD2872C5D10043BFAF /* LineDrawing.swift */,
-				C21E8FAF2872C5E10043BFAF /* SquareDrawing.swift */,
-				C21E8FB12872C6170043BFAF /* WhiteBoard.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		C21E8FB32872C6640043BFAF /* DTO */ = {
-			isa = PBXGroup;
-			children = (
-				C21E8FB42872C7240043BFAF /* Command.swift */,
-				C21E8FB62872C7360043BFAF /* CommandResponse.swift */,
-			);
-			path = DTO;
-			sourceTree = "<group>";
-		};
-		C21E8FBC2872C8590043BFAF /* Protocol */ = {
-			isa = PBXGroup;
-			children = (
-				C21E8FBD2872C8790043BFAF /* Color.swift */,
-				C21E8FB82872C7630043BFAF /* Drawing.swift */,
-				C21E8FBA2872C8520043BFAF /* LineType.swift */,
-				C21E8FBF2872CAD10043BFAF /* SquareType.swift */,
-			);
-			path = Protocol;
-			sourceTree = "<group>";
-		};
-		C21E8FC12872D9AD0043BFAF /* Presentation */ = {
-			isa = PBXGroup;
-			children = (
-				C21E8FD228731B420043BFAF /* Extension */,
-				C21E8FC52872DA020043BFAF /* DrawingViewModel.swift */,
-				C21E8FC32872D9DD0043BFAF /* DrawingView.swift */,
-				C21E8FD0287317660043BFAF /* DrawingView.xib */,
-				83A846E428725EFA00C777B1 /* ViewController.swift */,
-			);
-			path = Presentation;
-			sourceTree = "<group>";
-		};
-		C21E8FC22872D9C40043BFAF /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				C21E8FB32872C6640043BFAF /* DTO */,
-				C21E8FCC2872DCA20043BFAF /* NetworkClient.swift */,
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
-		C21E8FC72872DC020043BFAF /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-				C21E8FCF2872E42C0043BFAF /* Entity */,
-				C21E8FAA2872C4200043BFAF /* Model */,
-				C21E8FC82872DC2D0043BFAF /* DrawingUseCase.swift */,
-			);
-			path = Domain;
-			sourceTree = "<group>";
-		};
-		C21E8FCE2872E4200043BFAF /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				C21E8FC22872D9C40043BFAF /* Network */,
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
-		C21E8FCF2872E42C0043BFAF /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Entity;
-			sourceTree = "<group>";
-		};
-		C21E8FD228731B420043BFAF /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				C21E8FD328731B5A0043BFAF /* UIColor+Extension.swift */,
-			);
-			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,7 +234,6 @@
 				83A846ED28725EFE00C777B1 /* LaunchScreen.storyboard in Resources */,
 				83A846EA28725EFE00C777B1 /* Assets.xcassets in Resources */,
 				83A846E828725EFA00C777B1 /* Main.storyboard in Resources */,
-				C21E8FD1287317660043BFAF /* DrawingView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,25 +258,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C21E8FB22872C6170043BFAF /* WhiteBoard.swift in Sources */,
 				83A846E528725EFA00C777B1 /* ViewController.swift in Sources */,
-				C21E8FBE2872C8790043BFAF /* Color.swift in Sources */,
-				C21E8FAE2872C5D10043BFAF /* LineDrawing.swift in Sources */,
-				C21E8FDD28733BF80043BFAF /* DIRoot.swift in Sources */,
-				C21E8FD428731B5A0043BFAF /* UIColor+Extension.swift in Sources */,
 				83A846E128725EFA00C777B1 /* AppDelegate.swift in Sources */,
-				C21E8FC42872D9DD0043BFAF /* DrawingView.swift in Sources */,
-				C21E8FB52872C7250043BFAF /* Command.swift in Sources */,
-				C21E8FCD2872DCA20043BFAF /* NetworkClient.swift in Sources */,
-				C21E8FC02872CAD10043BFAF /* SquareType.swift in Sources */,
-				C21E8FB92872C7630043BFAF /* Drawing.swift in Sources */,
 				83A846E328725EFA00C777B1 /* SceneDelegate.swift in Sources */,
-				C21E8FB72872C7360043BFAF /* CommandResponse.swift in Sources */,
-				C21E8FC92872DC2D0043BFAF /* DrawingUseCase.swift in Sources */,
-				C21E8FC62872DA020043BFAF /* DrawingViewModel.swift in Sources */,
-				C21E8FB02872C5E10043BFAF /* SquareDrawing.swift in Sources */,
-				C21E8FD6287329DB0043BFAF /* DIContainer.swift in Sources */,
-				C21E8FBB2872C8520043BFAF /* LineType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
