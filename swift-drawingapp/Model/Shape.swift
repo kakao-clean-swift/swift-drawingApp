@@ -10,15 +10,25 @@ import Foundation
 struct Point {
     let x: Double
     let y: Double
+    
+    func distance(from: Point) -> Double {
+        return sqrt(pow((x-from.x), 2) + pow((y-from.y), 2))
+    }
 }
 
 protocol Shape {
+    static var countOfPoints: Int { get }
     var points: [Point] { get set }
     var width: Double { get }
     var height: Double { get }
+    init(points: [Point])
 }
 
 struct Rectangle: Shape {
+    static var countOfPoints: Int {
+        return 4
+    }
+    
     public internal(set) var points: [Point] = []
     
     init(points: [Point]) {

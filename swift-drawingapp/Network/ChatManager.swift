@@ -15,15 +15,17 @@ protocol ChatManagable {
 
 class ChatManager: ChatManagable {
     
+    let commandFactory: CommandGeneratable
     let client: ChatSendable & ChatConnectable
     
-    init(client: ChatSendable & ChatConnectable) {
+    init(client: ChatSendable & ChatConnectable, commandFactory: CommandGeneratable) {
         self.client = client
+        self.commandFactory = commandFactory
         client.start()
     }
     
     func login() {
-        let data = CommandFactory
+        let data = commandFactory
             .command(type: .login)
             .encoded()
 
@@ -32,7 +34,7 @@ class ChatManager: ChatManagable {
     
     func send(to: String,
               data: Data) {
-        let data = CommandFactory
+        let data = commandFactory
             .command(type: .chat, id: to, data: data)
             .encoded()
         

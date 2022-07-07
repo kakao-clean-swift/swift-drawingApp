@@ -31,10 +31,12 @@ struct ShapeRange {
 
 class ShapeFactory: ShapeGeneratable {
     
-    let range: ShapeRange
+    let planeRange: ShapeRange
+    let shapeRange: ShapeRange
     
-    init(range: ShapeRange) {
-        self.range = range
+    init(planeRange: ShapeRange, shapeRange: ShapeRange) {
+        self.shapeRange = shapeRange
+        self.planeRange = planeRange
     }
     
     func build<T: Shape>(type: T.Type) -> Shape? {
@@ -47,9 +49,32 @@ class ShapeFactory: ShapeGeneratable {
     }
     
     private func points(count: Int) -> [Point] {
-        return (0..<count).reduce(into: [], { prev, value in
-            prev.append(Point(x: Double.random(in: range.minX..<range.maxX),
-                              y: Double.random(in: range.minY..<range.maxY)))
-        })
+        
+        let startX = Double.random(in: planeRange.minX..<planeRange.maxX)
+        let startY = Double.random(in: planeRange.minY..<planeRange.maxY)
+        
+        var points: [Point] = []
+        for _ in 0...count-1 {
+            let x = Double.random(in: shapeRange.minX..<shapeRange.maxX)
+            let y = Double.random(in: shapeRange.minY..<shapeRange.maxY)
+            let point = Point(x: x, y: y)
+            points.append(point)
+        }
+        
+        let standard = points[0]
+        
+        let rightPoints = points
+            .filter { $0.x > standard.x }
+            .sorted { $0.distance(from: standard) < $1.distance(from: standard) }
+        let leftPoints = points
+            .filter { $0.x < standard.x }
+            .sorted { $0.distance(from: standard) > $1.distance(from: standard) }
+        
+        points = [standard]
+        points.append(contentsOf: rightPoints)
+        points.append(contentsOf: leftPoints)
+        points.append(standard)
+                
+        return points.map { Point(x: startX + $0.x, y: startY + $0.y )}
     }
 }

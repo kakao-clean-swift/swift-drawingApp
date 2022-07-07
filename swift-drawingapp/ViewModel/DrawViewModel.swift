@@ -10,5 +10,5 @@ import Combine
 
 class DrawViewModel {
     @Published var shapes: [Shape] = []
-    var shapeRange: ShapeRange = ShapeRange()
+    var planeRange: ShapeRange = ShapeRange()
 }
