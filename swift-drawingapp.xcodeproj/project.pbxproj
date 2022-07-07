@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		551474012872CA3D00929152 /* Selectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551474002872CA3D00929152 /* Selectable.swift */; };
+		551474032872CA4300929152 /* Colorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551474022872CA4300929152 /* Colorable.swift */; };
+		5514740B2872CAAB00929152 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5514740A2872CAAB00929152 /* Point.swift */; };
+		5514740F2872CC7700929152 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5514740E2872CC7700929152 /* Color.swift */; };
+		551474132872CED700929152 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551474122872CED700929152 /* Identifiable.swift */; };
+		551474152872CF1400929152 /* Drawable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551474142872CF1400929152 /* Drawable.swift */; };
+		551474172872CF8200929152 /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551474162872CF8200929152 /* Rectangle.swift */; };
+		5514741C2872D0AD00929152 /* Draw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5514741B2872D0AD00929152 /* Draw.swift */; };
+		5514741E2872D7DD00929152 /* LineDrawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5514741D2872D7DD00929152 /* LineDrawing.swift */; };
+		551474202872E57D00929152 /* DrawableFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5514741F2872E57D00929152 /* DrawableFactory.swift */; };
 		83A846E128725EFA00C777B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A846E028725EFA00C777B1 /* AppDelegate.swift */; };
 		83A846E328725EFA00C777B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A846E228725EFA00C777B1 /* SceneDelegate.swift */; };
 		83A846E528725EFA00C777B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A846E428725EFA00C777B1 /* ViewController.swift */; };
@@ -36,6 +46,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		551474002872CA3D00929152 /* Selectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selectable.swift; sourceTree = "<group>"; };
+		551474022872CA4300929152 /* Colorable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colorable.swift; sourceTree = "<group>"; };
+		5514740A2872CAAB00929152 /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
+		5514740E2872CC7700929152 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		551474122872CED700929152 /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
+		551474142872CF1400929152 /* Drawable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drawable.swift; sourceTree = "<group>"; };
+		551474162872CF8200929152 /* Rectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
+		5514741B2872D0AD00929152 /* Draw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Draw.swift; sourceTree = "<group>"; };
+		5514741D2872D7DD00929152 /* LineDrawing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineDrawing.swift; sourceTree = "<group>"; };
+		5514741F2872E57D00929152 /* DrawableFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawableFactory.swift; sourceTree = "<group>"; };
 		83A846DD28725EFA00C777B1 /* swift-drawingapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-drawingapp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83A846E028725EFA00C777B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83A846E228725EFA00C777B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +96,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		551473FF2872CA2F00929152 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				551474002872CA3D00929152 /* Selectable.swift */,
+				551474022872CA4300929152 /* Colorable.swift */,
+				551474122872CED700929152 /* Identifiable.swift */,
+				551474142872CF1400929152 /* Drawable.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		551474062872CA5F00929152 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5514741B2872D0AD00929152 /* Draw.swift */,
+				5514740A2872CAAB00929152 /* Point.swift */,
+				5514740E2872CC7700929152 /* Color.swift */,
+				551474162872CF8200929152 /* Rectangle.swift */,
+				5514741D2872D7DD00929152 /* LineDrawing.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		551474072872CA7200929152 /* Usecase */ = {
+			isa = PBXGroup;
+			children = (
+				5514741F2872E57D00929152 /* DrawableFactory.swift */,
+			);
+			path = Usecase;
+			sourceTree = "<group>";
+		};
+		551474182872D06600929152 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		83A846D428725EF900C777B1 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +160,10 @@
 				83A846E028725EFA00C777B1 /* AppDelegate.swift */,
 				83A846E228725EFA00C777B1 /* SceneDelegate.swift */,
 				83A846E428725EFA00C777B1 /* ViewController.swift */,
+				551474182872D06600929152 /* ViewModel */,
+				551474072872CA7200929152 /* Usecase */,
+				551474062872CA5F00929152 /* Model */,
+				551473FF2872CA2F00929152 /* Protocol */,
 				83A846E628725EFA00C777B1 /* Main.storyboard */,
 				83A846E928725EFE00C777B1 /* Assets.xcassets */,
 				83A846EB28725EFE00C777B1 /* LaunchScreen.storyboard */,
@@ -260,7 +322,17 @@
 			files = (
 				83A846E528725EFA00C777B1 /* ViewController.swift in Sources */,
 				83A846E128725EFA00C777B1 /* AppDelegate.swift in Sources */,
+				5514740F2872CC7700929152 /* Color.swift in Sources */,
+				551474132872CED700929152 /* Identifiable.swift in Sources */,
+				5514741E2872D7DD00929152 /* LineDrawing.swift in Sources */,
+				551474152872CF1400929152 /* Drawable.swift in Sources */,
+				5514741C2872D0AD00929152 /* Draw.swift in Sources */,
 				83A846E328725EFA00C777B1 /* SceneDelegate.swift in Sources */,
+				551474202872E57D00929152 /* DrawableFactory.swift in Sources */,
+				5514740B2872CAAB00929152 /* Point.swift in Sources */,
+				551474032872CA4300929152 /* Colorable.swift in Sources */,
+				551474172872CF8200929152 /* Rectangle.swift in Sources */,
+				551474012872CA3D00929152 /* Selectable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,7 +438,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -420,7 +492,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -437,6 +509,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N7B3VPVQX3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "swift-drawingapp/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -464,6 +537,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N7B3VPVQX3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "swift-drawingapp/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
