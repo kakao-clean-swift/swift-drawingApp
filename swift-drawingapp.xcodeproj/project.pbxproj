@@ -23,7 +23,14 @@
 		D206732528747EFF00175B1F /* Drawable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206732428747EFF00175B1F /* Drawable.swift */; };
 		D20673272874820A00175B1F /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20673262874820A00175B1F /* Rectangle.swift */; };
 		D20673292874822E00175B1F /* Drawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20673282874822E00175B1F /* Drawing.swift */; };
-		D206732C2874848300175B1F /* FloatConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206732B2874848300175B1F /* FloatConverter.swift */; };
+		D206732C2874848300175B1F /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206732B2874848300175B1F /* Converter.swift */; };
+		D2639AB42877EDD1007E1199 /* PathDrawTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2639AB32877EDD1007E1199 /* PathDrawTest.swift */; };
+		D2639AB62877F2AA007E1199 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2639AB52877F2AA007E1199 /* Size.swift */; };
+		D2639AB92877FBD4007E1199 /* IdenditiableRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2639AB82877FBD4007E1199 /* IdenditiableRectangle.swift */; };
+		D2639ABC2878012E007E1199 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2639ABB2878012E007E1199 /* UIView+Extension.swift */; };
+		D27057192877E4B600CE7299 /* FigureDrawableFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27057182877E4B600CE7299 /* FigureDrawableFactory.swift */; };
+		D270571B2877E4C200CE7299 /* PathDrawableFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D270571A2877E4C200CE7299 /* PathDrawableFactory.swift */; };
+		D270571D2877E6CA00CE7299 /* RectangleDrawTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D270571C2877E6CA00CE7299 /* RectangleDrawTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +71,14 @@
 		D206732428747EFF00175B1F /* Drawable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drawable.swift; sourceTree = "<group>"; };
 		D20673262874820A00175B1F /* Rectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
 		D20673282874822E00175B1F /* Drawing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drawing.swift; sourceTree = "<group>"; };
-		D206732B2874848300175B1F /* FloatConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatConverter.swift; sourceTree = "<group>"; };
+		D206732B2874848300175B1F /* Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
+		D2639AB32877EDD1007E1199 /* PathDrawTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathDrawTest.swift; sourceTree = "<group>"; };
+		D2639AB52877F2AA007E1199 /* Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
+		D2639AB82877FBD4007E1199 /* IdenditiableRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdenditiableRectangle.swift; sourceTree = "<group>"; };
+		D2639ABB2878012E007E1199 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		D27057182877E4B600CE7299 /* FigureDrawableFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FigureDrawableFactory.swift; sourceTree = "<group>"; };
+		D270571A2877E4C200CE7299 /* PathDrawableFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathDrawableFactory.swift; sourceTree = "<group>"; };
+		D270571C2877E6CA00CE7299 /* RectangleDrawTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleDrawTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,8 +133,11 @@
 				83A846E228725EFA00C777B1 /* SceneDelegate.swift */,
 				83A846E428725EFA00C777B1 /* ViewController.swift */,
 				D20673162872D02500175B1F /* DrawManager.swift */,
+				D2639ABA28780117007E1199 /* Extension */,
+				D27057172877E48D00CE7299 /* Factory */,
 				D206732A2874847A00175B1F /* Util */,
 				D206731E2872E35800175B1F /* Entity */,
+				D2639AB72877FBBE007E1199 /* Model */,
 				D206731F2872E36A00175B1F /* Drawable */,
 				83A846E628725EFA00C777B1 /* Main.storyboard */,
 				83A846E928725EFE00C777B1 /* Assets.xcassets */,
@@ -134,6 +151,8 @@
 			isa = PBXGroup;
 			children = (
 				83A846F728725EFF00C777B1 /* swift_drawingappTests.swift */,
+				D270571C2877E6CA00CE7299 /* RectangleDrawTest.swift */,
+				D2639AB32877EDD1007E1199 /* PathDrawTest.swift */,
 			);
 			path = "swift-drawingappTests";
 			sourceTree = "<group>";
@@ -151,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				D206731C2872D23600175B1F /* Point.swift */,
+				D2639AB52877F2AA007E1199 /* Size.swift */,
 				D20673262874820A00175B1F /* Rectangle.swift */,
 				D20673282874822E00175B1F /* Drawing.swift */,
 			);
@@ -170,9 +190,34 @@
 		D206732A2874847A00175B1F /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				D206732B2874848300175B1F /* FloatConverter.swift */,
+				D206732B2874848300175B1F /* Converter.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		D2639AB72877FBBE007E1199 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D2639AB82877FBD4007E1199 /* IdenditiableRectangle.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D2639ABA28780117007E1199 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D2639ABB2878012E007E1199 /* UIView+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		D27057172877E48D00CE7299 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				D27057182877E4B600CE7299 /* FigureDrawableFactory.swift */,
+				D270571A2877E4C200CE7299 /* PathDrawableFactory.swift */,
+			);
+			path = Factory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,15 +351,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2639AB92877FBD4007E1199 /* IdenditiableRectangle.swift in Sources */,
+				D2639ABC2878012E007E1199 /* UIView+Extension.swift in Sources */,
 				D20673192872D1B300175B1F /* RectangleDraw.swift in Sources */,
 				83A846E528725EFA00C777B1 /* ViewController.swift in Sources */,
+				D27057192877E4B600CE7299 /* FigureDrawableFactory.swift in Sources */,
 				D20673172872D02500175B1F /* DrawManager.swift in Sources */,
 				D20673272874820A00175B1F /* Rectangle.swift in Sources */,
 				D20673292874822E00175B1F /* Drawing.swift in Sources */,
+				D270571B2877E4C200CE7299 /* PathDrawableFactory.swift in Sources */,
 				D206732528747EFF00175B1F /* Drawable.swift in Sources */,
+				D2639AB62877F2AA007E1199 /* Size.swift in Sources */,
 				D206732328747D8600175B1F /* PathDraw.swift in Sources */,
 				D206731D2872D23600175B1F /* Point.swift in Sources */,
-				D206732C2874848300175B1F /* FloatConverter.swift in Sources */,
+				D206732C2874848300175B1F /* Converter.swift in Sources */,
 				83A846E128725EFA00C777B1 /* AppDelegate.swift in Sources */,
 				83A846E328725EFA00C777B1 /* SceneDelegate.swift in Sources */,
 			);
@@ -325,6 +375,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				83A846F828725EFF00C777B1 /* swift_drawingappTests.swift in Sources */,
+				D2639AB42877EDD1007E1199 /* PathDrawTest.swift in Sources */,
+				D270571D2877E6CA00CE7299 /* RectangleDrawTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,7 +474,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -476,7 +528,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -552,7 +604,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kakaocorp.swift-drawingappTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -571,7 +623,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kakaocorp.swift-drawingappTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
