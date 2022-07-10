@@ -12,47 +12,36 @@ final class DrawingScreen: UIView {
     private var drawingPoints: [CGPoint] = []
 
     var enableDrawingLine: Bool = false
+    var padding: UIEdgeInsets = .zero
 
     var shapes: [Shape] {
         subviews.compactMap({ ($0 as? ShapeView)?.shape })
     }
 
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        commonInit()
-    }
-
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        commonInit()
-    }
-
-    private func commonInit() {
-        self.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(drawLine(gesture:))))
-    }
-
-    func addSquareViewForRandom() {
-        let insetedBounds = bounds.inset(by: UIEdgeInsets(top: 50, left: 50, bottom: 50, right: 50))
+    var randomPosition: CGPoint {
+        let insetedBounds = bounds.inset(by: padding)
         let randomX = Double.random(in: insetedBounds.minX...insetedBounds.maxX)
         let randomY = Double.random(in: insetedBounds.minY...insetedBounds.maxY)
-        let square = Square(center: CGPoint(x: randomX, y: randomY), size: SquareView.size)
-
-        addSquareView(square: square)
+        return CGPoint(x: randomX, y: randomY)
     }
 
-    func addSquareView(square: Square) {
-        let squareView = SquareView(square: square, color: UIColor.systemRandomColor)
+    func makeShapeView(shape: Shape) -> ShapeView? {
+        if let square = shape as? Square {
+            return SquareView(square: square, color: UIColor.systemRandomColor)
+        } else if let line = shape as? Line {
+            return LineView(line: line, color: startLineColor)
+        }
 
-        addSubview(squareView)
+        return nil
     }
 
-    func addLineView(line: Line) {
-        let lineView = LineView(line: line, color: startLineColor)
+    func addView(shape: Shape) {
+        guard let shapeView = makeShapeView(shape: shape) else { return }
 
-        addSubview(lineView)
+        addSubview(shapeView)
     }
 
-    @objc private func drawLine(gesture: UIPanGestureRecognizer) {
+    func drawLine(gesture: UIPanGestureRecognizer) {
         guard enableDrawingLine else { return }
 
         switch gesture.state {
@@ -65,11 +54,9 @@ final class DrawingScreen: UIView {
             drawingPoints.append(location)
             setNeedsDisplay()
         case .ended:
-            addLineView(line: Line(points: drawingPoints))
+            addView(shape: Line(points: drawingPoints))
             drawingPoints = []
             setNeedsDisplay()
-        case .cancelled, .failed:
-            print("그리기 실패")
         default:
             print("-")
         }

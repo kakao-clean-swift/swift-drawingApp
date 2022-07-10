@@ -14,4 +14,16 @@ final class Line: Shape {
         self.points = points
         super.init()
     }
+
+    private enum CodingKeys: String, CodingKey {
+        case points
+    }
+
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+
+        self.points = try! container.decode([CGPoint].self, forKey: .points)
+
+        try super.init(from: decoder)
+    }
 }
