@@ -20,8 +20,8 @@ class DrawingUseCasesTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testAddRectangle() throws {
-        let shape = await add.addRectangle()
+    func testAddRectangle() async throws {
+        let shape = try await add.addRectangle(stroke: .systemBlue, frame: .zero)
     }
 
 }

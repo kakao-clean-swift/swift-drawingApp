@@ -253,6 +253,7 @@
 		06B588CD287BFD7500EA0AE0 /* DrawingUseCases */ = {
 			isa = PBXGroup;
 			children = (
+				06B588F7287C0B1F00EA0AE0 /* Stores */,
 				06B588E7287BFE8400EA0AE0 /* Shapes */,
 				06B588CE287BFD7500EA0AE0 /* DrawingUseCases.h */,
 			);
@@ -273,6 +274,13 @@
 				06B588E8287BFE8D00EA0AE0 /* AddShapes.swift */,
 			);
 			path = Shapes;
+			sourceTree = "<group>";
+		};
+		06B588F7287C0B1F00EA0AE0 /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Stores;
 			sourceTree = "<group>";
 		};
 		83A846D428725EF900C777B1 = {
