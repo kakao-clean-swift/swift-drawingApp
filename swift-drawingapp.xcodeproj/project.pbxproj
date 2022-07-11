@@ -26,7 +26,9 @@
 		06B588DC287BFD7500EA0AE0 /* DrawingUseCases.h in Headers */ = {isa = PBXBuildFile; fileRef = 06B588CE287BFD7500EA0AE0 /* DrawingUseCases.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		06B588DF287BFD7500EA0AE0 /* DrawingUseCases.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06B588CC287BFD7500EA0AE0 /* DrawingUseCases.framework */; };
 		06B588E0287BFD7500EA0AE0 /* DrawingUseCases.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 06B588CC287BFD7500EA0AE0 /* DrawingUseCases.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		06B588E9287BFE8D00EA0AE0 /* AddShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B588E8287BFE8D00EA0AE0 /* AddShapes.swift */; };
+		06B588E9287BFE8D00EA0AE0 /* AddShapeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B588E8287BFE8D00EA0AE0 /* AddShapeUseCase.swift */; };
+		06B588FA287C125800EA0AE0 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B588F9287C125800EA0AE0 /* Storage.swift */; };
+		06B588FC287C12B500EA0AE0 /* LocalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B588FB287C12B500EA0AE0 /* LocalStore.swift */; };
 		83A846E128725EFA00C777B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A846E028725EFA00C777B1 /* AppDelegate.swift */; };
 		83A846E328725EFA00C777B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A846E228725EFA00C777B1 /* SceneDelegate.swift */; };
 		83A846E528725EFA00C777B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A846E428725EFA00C777B1 /* ViewController.swift */; };
@@ -129,7 +131,9 @@
 		06B588CE287BFD7500EA0AE0 /* DrawingUseCases.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawingUseCases.h; sourceTree = "<group>"; };
 		06B588D3287BFD7500EA0AE0 /* DrawingUseCasesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrawingUseCasesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		06B588DA287BFD7500EA0AE0 /* DrawingUseCasesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingUseCasesTests.swift; sourceTree = "<group>"; };
-		06B588E8287BFE8D00EA0AE0 /* AddShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddShapes.swift; sourceTree = "<group>"; };
+		06B588E8287BFE8D00EA0AE0 /* AddShapeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddShapeUseCase.swift; sourceTree = "<group>"; };
+		06B588F9287C125800EA0AE0 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		06B588FB287C12B500EA0AE0 /* LocalStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStore.swift; sourceTree = "<group>"; };
 		83A846DD28725EFA00C777B1 /* swift-drawingapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-drawingapp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83A846E028725EFA00C777B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83A846E228725EFA00C777B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -271,7 +275,7 @@
 		06B588E7287BFE8400EA0AE0 /* Shapes */ = {
 			isa = PBXGroup;
 			children = (
-				06B588E8287BFE8D00EA0AE0 /* AddShapes.swift */,
+				06B588E8287BFE8D00EA0AE0 /* AddShapeUseCase.swift */,
 			);
 			path = Shapes;
 			sourceTree = "<group>";
@@ -279,6 +283,8 @@
 		06B588F7287C0B1F00EA0AE0 /* Stores */ = {
 			isa = PBXGroup;
 			children = (
+				06B588F9287C125800EA0AE0 /* Storage.swift */,
+				06B588FB287C12B500EA0AE0 /* LocalStore.swift */,
 			);
 			path = Stores;
 			sourceTree = "<group>";
@@ -638,7 +644,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06B588E9287BFE8D00EA0AE0 /* AddShapes.swift in Sources */,
+				06B588E9287BFE8D00EA0AE0 /* AddShapeUseCase.swift in Sources */,
+				06B588FA287C125800EA0AE0 /* Storage.swift in Sources */,
+				06B588FC287C12B500EA0AE0 /* LocalStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

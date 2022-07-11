@@ -2,10 +2,17 @@ import UIKit
 import Foundation
 import DrawingShapes
 
-public struct AddShapes {
+public final class AddShapeUseCase {
+    
+    private var stores: [Storage] = []
+    
     public init() {}
     
     public func addRectangle(stroke: UIColor, frame: CGRect) async throws -> Rectangle {
         Rectangle(stroke: stroke, frame: frame)
+    }
+    
+    public func insert(store: Storage) {
+        self.stores.append(store)
     }
 }

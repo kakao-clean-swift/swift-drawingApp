@@ -12,11 +12,12 @@ class DrawingUseCasesTests: XCTestCase {
 
     var localStore: LocalStore!
     
-    var add: AddShapes!
+    var add: AddShapeUseCase!
     
     override func setUpWithError() throws {
-        localStore = localStore()
-        add = AddShapes(stores: [localStore])
+        localStore = LocalStore()
+        add = AddShapeUseCase()
+        add.insert(store: localStore)
     }
 
     override func tearDownWithError() throws {
