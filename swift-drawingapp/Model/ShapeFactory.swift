@@ -40,12 +40,7 @@ class ShapeFactory: ShapeGeneratable {
     }
     
     func build<T: Shape>(type: T.Type) -> Shape? {
-        switch type {
-        case is Rectangle.Type:
-            return Rectangle.init(points: self.points(count: 4))
-        default:
-            return nil
-        }
+        return T.init(points: points(count: T.countOfPoints))
     }
     
     private func points(count: Int) -> [Point] {

@@ -15,6 +15,7 @@ class DrawViewController: UIViewController {
     let viewModel = DrawViewModel()
     var disposables = Set<AnyCancellable>()
     var shapeFactory: ShapeGeneratable!
+    var chatManager: ChatManagable!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +27,13 @@ class DrawViewController: UIViewController {
                                           maxY: view.bounds.maxY / 3.0)
         shapeFactory = ShapeFactory(planeRange: viewModel.planeRange,
                                     shapeRange: ShapeRange(minX: 300, minY: 300, maxX: 600, maxY: 600))
+        chatManager = ChatManager(client: ChatClient(),
+                                  commandFactory: CommandFactory())
         
-        self.bind()
+        Task { @MainActor in
+            await self.chatManager.login()
+            self.bind()
+        }
     }
     
     private func bind() {
@@ -41,6 +47,16 @@ class DrawViewController: UIViewController {
                         self.drawLine(from: CGPoint(x: lhs.x, y: lhs.y),
                                       to: CGPoint(x: rhs.x, y: rhs.y))
                     })
+                }
+            }).store(in: &disposables)
+        
+        viewModel.$shouldSync
+            .sink(receiveValue: { [weak self] shouldSync in
+                guard let self = self, shouldSync else { return }
+                let manager = ShapeSyncManager(chatManager: self.chatManager)
+
+                Task {
+                    await manager.send(shapes: self.viewModel.shapes)
                 }
             }).store(in: &disposables)
     }
@@ -70,6 +86,10 @@ class DrawViewController: UIViewController {
         bottomView.didTapLeft = { [weak self] in
             guard let self = self else { return }
             self.viewModel.shapes.append(self.shapeFactory.build(type: Rectangle.self)!)
+        }
+        
+        bottomView.didTapCenter = { [weak self] in
+            self?.viewModel.shouldSync = true
         }
     }
 

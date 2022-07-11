@@ -8,9 +8,9 @@
 import Foundation
 
 protocol ChatManagable {
-    func login()
-    func send(to: String,
-              data: Data)
+    func login() async -> Bool
+    func send(id: String,
+              data: Data) async -> Bool
 }
 
 class ChatManager: ChatManagable {
@@ -24,20 +24,19 @@ class ChatManager: ChatManagable {
         client.start()
     }
     
-    func login() {
+    func login() async -> Bool {
         let data = commandFactory
             .command(type: .login)
             .encoded()
 
-        client.send(data: data!)
+        return await client.send(data: data!)
     }
     
-    func send(to: String,
-              data: Data) {
+    func send(id: String, data: Data) async -> Bool {
         let data = commandFactory
-            .command(type: .chat, id: to, data: data)
+            .command(type: .chat, id: id, data: data)
             .encoded()
         
-        client.send(data: data!)
+        return await client.send(data: data!)
     }
 }

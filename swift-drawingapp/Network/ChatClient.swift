@@ -14,7 +14,7 @@ protocol ChatConnectable {
 }
 
 protocol ChatSendable {
-    func send(data: Data)
+    func send(data: Data) async -> Bool
 }
 
 class ChatClient: ChatConnectable, ChatSendable {
@@ -41,15 +41,19 @@ class ChatClient: ChatConnectable, ChatSendable {
         NSLog("did stop")
     }
     
-    func send(data: Data) {
-        self.connection.send(content: data, completion: NWConnection.SendCompletion.contentProcessed { error in
-            if let error = error {
-                NSLog("did send, error: %@", "\(error)")
-                self.stop()
-            } else {
-                NSLog("did send, data: %@", data as NSData)
-            }
-        })
+    func send(data: Data) async -> Bool {
+        await withCheckedContinuation { continuation in
+            self.connection.send(content: data, completion: NWConnection.SendCompletion.contentProcessed { error in
+                if let error = error {
+                    NSLog("did send, error: %@", "\(error)")
+                    self.stop()
+                    continuation.resume(with: .success(false))
+                } else {
+                    NSLog("did send, data: %@", data as NSData)
+                    continuation.resume(with: .success(true))
+                }
+            })
+        }
     }
 
     private func didChange(state: NWConnection.State) {
