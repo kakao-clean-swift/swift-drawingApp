@@ -9,5 +9,8 @@ import Foundation
 import DrawingShapes
 
 public protocol Storage {
+    
+    var shapes: [Shape] { get }
+    
     func add<S>(shape: S) async throws where S: Shape
 }
