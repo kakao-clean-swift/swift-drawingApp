@@ -31,6 +31,8 @@ class DrawingUseCasesTests: XCTestCase {
     }
 
     func testAddRectangleToLocalStore() async throws {
+        let insertedRectangle = try await add.addRectangle(stroke: .systemCyan, frame: .init(origin: .init(x: 120, y: 120), size: .init(width: 200, height: 200)))
         
+        XCTAssertEqual(localStore.shapes, [insertedRectangle])
     }
 }

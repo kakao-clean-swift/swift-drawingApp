@@ -8,6 +8,7 @@ public final class AddShapeUseCase {
     
     public init() {}
     
+    @discardableResult
     public func addRectangle(stroke: UIColor, frame: CGRect) async throws -> Rectangle {
         Rectangle(stroke: stroke, frame: frame)
     }
