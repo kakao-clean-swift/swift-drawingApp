@@ -11,6 +11,10 @@ let package = Package(
             name: "Repository",
             targets: ["Repository"]
         ),
+        .library(
+            name: "Network",
+            targets: ["Network"]
+        )
     ],
     dependencies: [
         .package(path: "../Domain")
@@ -22,9 +26,19 @@ let package = Package(
                 .product(name: "UseCase", package: "Domain")
             ]
         ),
+        .target(
+            name: "Network",
+            dependencies: [
+                .product(name: "UseCase", package: "Domain")
+            ]
+        ),
         .testTarget(
             name: "RepositoryTests",
             dependencies: ["Repository"]
+        ),
+        .testTarget(
+            name: "NetworkTests",
+            dependencies: ["Network"]
         )
     ]
 )

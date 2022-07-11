@@ -28,6 +28,14 @@ public struct Rectangle: Shape {
         self.points = RandomPointsGenerator.rectangePoints(screenRect: screenRect, size: size)
         self.isSelectable = isSelectable
     }
+    
+    // For Data Mapping
+    public init(id: UUID, color: UIColor, points: [CGPoint], isSelectable: Bool = true) {
+        self.id = id
+        self.color = color
+        self.points = points
+        self.isSelectable = isSelectable
+    }
 }
 
 public struct LineDrawing: ModifiableShape {
