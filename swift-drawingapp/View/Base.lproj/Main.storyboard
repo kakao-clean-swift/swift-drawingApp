@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Drawing View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="DrawingViewController" id="BYZ-38-t0r" customClass="DrawingViewController" customModule="swift_drawingapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="GNd-8l-71i">
+                                <rect key="frame" x="61.5" y="821" width="291" height="31"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kYj-wM-GUY">
+                                        <rect key="frame" x="0.0" y="0.0" width="85" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="사각형">
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didDrawingRectButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ysk-JU-iyl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8CG-ty-Up5">
+                                        <rect key="frame" x="103" y="0.0" width="85" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="라인드로잉">
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didDrawingLineButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p74-JT-IAx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dR6-vU-rj1">
+                                        <rect key="frame" x="206" y="0.0" width="85" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="동기화">
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didSyncButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VBD-9I-1Yg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OEa-gK-dp3" userLabel="CanvasView" customClass="CanvasView" customModule="swift_drawingapp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="777"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GNd-8l-71i" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AxI-li-Vkf"/>
+                            <constraint firstItem="OEa-gK-dp3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CWs-Z3-Nbc"/>
+                            <constraint firstItem="OEa-gK-dp3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Nyk-DQ-YWS"/>
+                            <constraint firstItem="GNd-8l-71i" firstAttribute="top" secondItem="OEa-gK-dp3" secondAttribute="bottom" id="Uxv-DR-ZAW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OEa-gK-dp3" secondAttribute="trailing" id="hH6-Tn-vsf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GNd-8l-71i" secondAttribute="bottom" constant="10" id="oof-gh-hcn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="canvasView" destination="OEa-gK-dp3" id="ztq-sU-eBj"/>
+                        <outlet property="drawingLineButton" destination="8CG-ty-Up5" id="Xup-LR-acQ"/>
+                        <outlet property="drawingRectButton" destination="kYj-wM-GUY" id="JdO-Sy-o0Z"/>
+                        <outlet property="syncButton" destination="dR6-vU-rj1" id="HpN-un-zcM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="108"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
