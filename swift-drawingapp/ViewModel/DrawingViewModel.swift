@@ -9,56 +9,96 @@ import UIKit
 import Combine
 
 class DrawingViewModel {
-    @Published var drawableItems: [ItemDrawable] = []
-    @Published var isManualDrawingSelected: Bool = false
+    @Published var drawableItems: [DrawingObject] = []
     
-    public let manualDrawingEvent = PassthroughSubject<UIColor, Never>()    
+    var currentDrawing: DrawingObject?
+    
+    public let startDrawingEvent = PassthroughSubject<ItemDrawable, Never>()  
+    public let endDrawingEvent = PassthroughSubject<ItemDrawable, Never>()
+    public let refreshItems = PassthroughSubject<[ItemDrawable], Never>()
         
     var visibleRect: CGRect = .zero
     
     // input
-    func didTouchManualDrawingButton(selected: Bool) {
-        isManualDrawingSelected = selected
-        startManualDrawing()
+    func didTapManualDrawingButton() {                
+        didTapDrawing(type: .manual)
     }
     
-    func didTouchSquareButton() {
-        isManualDrawingSelected = false
-        addSquareObject()
+    func didEndManualDrawing(color: UIColor, points: [CGPoint]) {
+        endDrawing(type: .manual, points: points.map { Point(x: Float($0.x), y: Float($0.y)) })      
     }
+    
+    func didTapSquareButton() {
+        didTapDrawing(type: .square)
+    }
+    
+    func didTapSyncButton() {
+        
+    }
+    
+    func didSelectItem(_ item: ItemDrawable) {
+        guard let item = didSelect(item: item) else { return }        
+        drawSelect(item: item)
+    }
+}
 
-    func didManualDrawing(color: UIColor, points: [CGPoint]) {
-        addManualDrawing(color: color, points: points)
-        isManualDrawingSelected = false
+// MARK: - CreateDrawingUseCase
+extension DrawingViewModel: CreateDrawingUseCase {    
+    func didTapDrawing(type: DrawingObjectType) {
+        startDrawing(type: type)     
     }
     
-    // output    
-    func startManualDrawing() {
-        manualDrawingEvent.send(randomSystemColor())
+    func startDrawing(type: DrawingObjectType) {
+        let color = randomSystemColor()
+        currentDrawing = DrawingObject(type: type, color: color)
+        
+        // manual - 추가 입력을 받는다. 
+        startDrawingEvent.send(currentDrawing!)
+        
+        // square - 추가 입력을 안받고 바로 그린다.       
+        if type == .square {            
+            let startPoint = randomPoint()
+            let fixedLength = currentDrawing?.fixedLength ?? 0
+            let points = [startPoint, Point(x: startPoint.x + fixedLength, y: startPoint.y + fixedLength)]
+            
+            endDrawing(type: type, points: points)
+        }
     }
     
-    private func addSquareObject() {
-        let squareObject = DrawingObject(type: .square, color: randomSystemColor())
-        let startPoint = randomPoint()
-        let fixedLength = squareObject.fixedLength
-        squareObject.points = [startPoint, CGPoint(x: startPoint.x + fixedLength, y: startPoint.y + fixedLength)]
-        drawableItems.append(squareObject)
+    func endDrawing(type: DrawingObjectType, points: [Point]) {
+        guard let currentDrawing = currentDrawing, currentDrawing.type == type else { return }      
+        
+        currentDrawing.points = points        
+        drawableItems.append(currentDrawing)
+        self.currentDrawing = nil
+        
+        endDrawingEvent.send(currentDrawing)
     }
-    
-    private func addManualDrawing(color: UIColor, points: [CGPoint]) {
-        let drawingObject = DrawingObject(type: .manual, color: color)
-        drawingObject.points = points
-        drawableItems.append(drawingObject)
-    }
+}
 
+// MARK: - CreateDrawingUseCase
+extension DrawingViewModel: SelectDrawingUseCase {
+    func didSelect(item: ItemDrawable) -> DrawingObject? {
+        guard let item = item as? DrawingObject, drawableItems.contains(item) else { return nil }
+        return item        
+    }
+    
+    func drawSelect(item: DrawingObject) {
+        item.isSelected = !item.isSelected
+        refreshItems.send(drawableItems)        
+    }
+}
+
+// MARK: - Misc
+extension DrawingViewModel {
     private func randomSystemColor() -> UIColor {
         let colors: [UIColor] = [.systemPink, .systemBlue, .systemBlue, .systemCyan, .systemFill, .systemGray, .systemMint, .systemTeal, .systemBrown, .systemGray2, .systemGreen, .systemIndigo, .systemOrange, .systemPurple, .systemYellow]
         return colors.randomElement() ?? .systemGray
     }
 
-    private func randomPoint() -> CGPoint {
-        let x = Int(arc4random_uniform(UInt32(visibleRect.width)))
-        let y = Int(arc4random_uniform(UInt32(visibleRect.height)))
-        return CGPoint(x: x, y: y)
+    private func randomPoint() -> Point {
+        let x = Float(arc4random_uniform(UInt32(visibleRect.width)))
+        let y = Float(arc4random_uniform(UInt32(visibleRect.height)))
+        return Point(x: x, y: y)
     }
 }

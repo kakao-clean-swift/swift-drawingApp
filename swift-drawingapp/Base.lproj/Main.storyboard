@@ -86,8 +86,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="drawingButton" destination="fCA-j7-EwO" id="akb-kM-0j9"/>
                         <outlet property="drawingCanvas" destination="VA0-Nc-lBi" id="rRk-8e-3F6"/>
+                        <outlet property="drawingManualButton" destination="fCA-j7-EwO" id="Khn-qf-k17"/>
+                        <outlet property="drawingSquareButton" destination="dj6-sH-a8a" id="coY-ee-f7z"/>
+                        <outlet property="drawingSyncButton" destination="gXm-Gg-Yrw" id="AUk-bm-WV2"/>
                         <outlet property="itemContainerView" destination="5pq-Ta-PLJ" id="QNG-N9-dmX"/>
                     </connections>
                 </viewController>

@@ -18,6 +18,11 @@
 		83A8470428725EFF00C777B1 /* swift_drawingappUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A8470328725EFF00C777B1 /* swift_drawingappUITestsLaunchTests.swift */; };
 		A140E01A28730496004EC893 /* SquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A140E01928730496004EC893 /* SquareView.swift */; };
 		A140E02928730A80004EC893 /* ItemDrawable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A140E02828730A80004EC893 /* ItemDrawable.swift */; };
+		A1465042287BF490007E9B28 /* NetworkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1465041287BF490007E9B28 /* NetworkRepository.swift */; };
+		A1465046287BF55F007E9B28 /* CreateDrawingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1465045287BF55F007E9B28 /* CreateDrawingUseCase.swift */; };
+		A1465048287BF598007E9B28 /* SelectDrawingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1465047287BF598007E9B28 /* SelectDrawingUseCase.swift */; };
+		A146504A287BF5AB007E9B28 /* SyncServerUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1465049287BF5AB007E9B28 /* SyncServerUseCase.swift */; };
+		A146504C287BF6C7007E9B28 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A146504B287BF6C7007E9B28 /* LoginUseCase.swift */; };
 		A16D41A62872BF8F007F7FF6 /* DrawingObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16D41A52872BF8F007F7FF6 /* DrawingObject.swift */; };
 		A16D41B92872F044007F7FF6 /* DrawingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16D41B82872F044007F7FF6 /* DrawingImageView.swift */; };
 		A16D41BD2872F172007F7FF6 /* DrawingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16D41BC2872F172007F7FF6 /* DrawingViewModel.swift */; };
@@ -56,6 +61,11 @@
 		83A8470328725EFF00C777B1 /* swift_drawingappUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_drawingappUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A140E01928730496004EC893 /* SquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareView.swift; sourceTree = "<group>"; };
 		A140E02828730A80004EC893 /* ItemDrawable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDrawable.swift; sourceTree = "<group>"; };
+		A1465041287BF490007E9B28 /* NetworkRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRepository.swift; sourceTree = "<group>"; };
+		A1465045287BF55F007E9B28 /* CreateDrawingUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDrawingUseCase.swift; sourceTree = "<group>"; };
+		A1465047287BF598007E9B28 /* SelectDrawingUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDrawingUseCase.swift; sourceTree = "<group>"; };
+		A1465049287BF5AB007E9B28 /* SyncServerUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncServerUseCase.swift; sourceTree = "<group>"; };
+		A146504B287BF6C7007E9B28 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
 		A16D41A52872BF8F007F7FF6 /* DrawingObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingObject.swift; sourceTree = "<group>"; };
 		A16D41B82872F044007F7FF6 /* DrawingImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingImageView.swift; sourceTree = "<group>"; };
 		A16D41BC2872F172007F7FF6 /* DrawingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewModel.swift; sourceTree = "<group>"; };
@@ -110,6 +120,8 @@
 			isa = PBXGroup;
 			children = (
 				A16D41A42872BCD6007F7FF6 /* Model */,
+				A146505B287C1490007E9B28 /* Repository */,
+				A146505A287C13C5007E9B28 /* UseCase */,
 				A16D41BB2872F064007F7FF6 /* ViewModel */,
 				A16D41BA2872F057007F7FF6 /* View */,
 				83A846E028725EFA00C777B1 /* AppDelegate.swift */,
@@ -137,6 +149,25 @@
 				83A8470328725EFF00C777B1 /* swift_drawingappUITestsLaunchTests.swift */,
 			);
 			path = "swift-drawingappUITests";
+			sourceTree = "<group>";
+		};
+		A146505A287C13C5007E9B28 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				A1465045287BF55F007E9B28 /* CreateDrawingUseCase.swift */,
+				A1465047287BF598007E9B28 /* SelectDrawingUseCase.swift */,
+				A1465049287BF5AB007E9B28 /* SyncServerUseCase.swift */,
+				A146504B287BF6C7007E9B28 /* LoginUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		A146505B287C1490007E9B28 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				A1465041287BF490007E9B28 /* NetworkRepository.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 		A16D41A42872BCD6007F7FF6 /* Model */ = {
@@ -301,10 +332,15 @@
 				A16D41BD2872F172007F7FF6 /* DrawingViewModel.swift in Sources */,
 				83A846E128725EFA00C777B1 /* AppDelegate.swift in Sources */,
 				A16D41A62872BF8F007F7FF6 /* DrawingObject.swift in Sources */,
+				A1465046287BF55F007E9B28 /* CreateDrawingUseCase.swift in Sources */,
+				A1465048287BF598007E9B28 /* SelectDrawingUseCase.swift in Sources */,
 				A140E02928730A80004EC893 /* ItemDrawable.swift in Sources */,
 				A140E01A28730496004EC893 /* SquareView.swift in Sources */,
+				A146504A287BF5AB007E9B28 /* SyncServerUseCase.swift in Sources */,
 				83A846E328725EFA00C777B1 /* SceneDelegate.swift in Sources */,
+				A1465042287BF490007E9B28 /* NetworkRepository.swift in Sources */,
 				A16D41B92872F044007F7FF6 /* DrawingImageView.swift in Sources */,
+				A146504C287BF6C7007E9B28 /* LoginUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
