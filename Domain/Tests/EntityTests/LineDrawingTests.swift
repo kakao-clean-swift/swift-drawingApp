@@ -5,7 +5,7 @@ class LineDrawingTests: XCTestCase {
 
     func test_line_drawing_append() {
         // given
-        var sut = LineDrawing()
+        var sut = LineDrawing(initialPoint: .zero)
         XCTAssertTrue(sut.points.isEmpty)
         
         // when
