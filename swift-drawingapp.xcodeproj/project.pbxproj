@@ -7,23 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		551474012872CA3D00929152 /* Selectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551474002872CA3D00929152 /* Selectable.swift */; };
-		551474032872CA4300929152 /* Colorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551474022872CA4300929152 /* Colorable.swift */; };
-		5514740B2872CAAB00929152 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5514740A2872CAAB00929152 /* Point.swift */; };
-		5514740F2872CC7700929152 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5514740E2872CC7700929152 /* Color.swift */; };
-		551474132872CED700929152 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551474122872CED700929152 /* Identifiable.swift */; };
-		551474152872CF1400929152 /* Drawable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551474142872CF1400929152 /* Drawable.swift */; };
-		551474172872CF8200929152 /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551474162872CF8200929152 /* Rectangle.swift */; };
-		5514741C2872D0AD00929152 /* Draw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5514741B2872D0AD00929152 /* Draw.swift */; };
-		5514741E2872D7DD00929152 /* LineDrawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5514741D2872D7DD00929152 /* LineDrawing.swift */; };
-		551474202872E57D00929152 /* DrawableFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5514741F2872E57D00929152 /* DrawableFactory.swift */; };
+		550DEAF4287AAB2100B50CC2 /* Painter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550DEAF3287AAB2100B50CC2 /* Painter.swift */; };
+		550DEAF6287AABC700B50CC2 /* RectangleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550DEAF5287AABC700B50CC2 /* RectangleFactory.swift */; };
+		550DEAF8287AABD900B50CC2 /* PointGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550DEAF7287AABD900B50CC2 /* PointGenerator.swift */; };
+		550DEAFA287AABDF00B50CC2 /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550DEAF9287AABDF00B50CC2 /* ColorManager.swift */; };
+		550DEAFC287AB23700B50CC2 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550DEAFB287AB23700B50CC2 /* Color.swift */; };
+		550DEAFE287AB24900B50CC2 /* ColorGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550DEAFD287AB24900B50CC2 /* ColorGenerator.swift */; };
+		550DEB00287AB26300B50CC2 /* ColorVerifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550DEAFF287AB26300B50CC2 /* ColorVerifier.swift */; };
+		550DEB03287AB2DE00B50CC2 /* PointManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550DEB02287AB2DE00B50CC2 /* PointManager.swift */; };
+		550DEB05287AB2E300B50CC2 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550DEB04287AB2E300B50CC2 /* Point.swift */; };
+		550DEB07287AB2EA00B50CC2 /* PointVerifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550DEB06287AB2EA00B50CC2 /* PointVerifier.swift */; };
+		550DEB15287BFB5500B50CC2 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550DEB14287BFB5500B50CC2 /* MainViewModel.swift */; };
+		550DEB17287BFB8100B50CC2 /* RectangleUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550DEB16287BFB8100B50CC2 /* RectangleUsecase.swift */; };
+		550DEB19287BFE6500B50CC2 /* RectangleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550DEB18287BFE6500B50CC2 /* RectangleViewModel.swift */; };
+		550DEB1D287C126C00B50CC2 /* RectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550DEB1C287C126C00B50CC2 /* RectangleView.swift */; };
+		550DEB1F287C181E00B50CC2 /* ColorVerifierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550DEB1E287C181E00B50CC2 /* ColorVerifierTests.swift */; };
+		550DEB24287C1BC000B50CC2 /* SyncUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550DEB23287C1BC000B50CC2 /* SyncUseCase.swift */; };
+		550DEB26287C1CB000B50CC2 /* SyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550DEB25287C1CB000B50CC2 /* SyncService.swift */; };
 		83A846E128725EFA00C777B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A846E028725EFA00C777B1 /* AppDelegate.swift */; };
 		83A846E328725EFA00C777B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A846E228725EFA00C777B1 /* SceneDelegate.swift */; };
 		83A846E528725EFA00C777B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A846E428725EFA00C777B1 /* ViewController.swift */; };
 		83A846E828725EFA00C777B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A846E628725EFA00C777B1 /* Main.storyboard */; };
 		83A846EA28725EFE00C777B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83A846E928725EFE00C777B1 /* Assets.xcassets */; };
 		83A846ED28725EFE00C777B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A846EB28725EFE00C777B1 /* LaunchScreen.storyboard */; };
-		83A846F828725EFF00C777B1 /* swift_drawingappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A846F728725EFF00C777B1 /* swift_drawingappTests.swift */; };
+		83A846F828725EFF00C777B1 /* PointVerifierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A846F728725EFF00C777B1 /* PointVerifierTests.swift */; };
 		83A8470228725EFF00C777B1 /* swift_drawingappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A8470128725EFF00C777B1 /* swift_drawingappUITests.swift */; };
 		83A8470428725EFF00C777B1 /* swift_drawingappUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A8470328725EFF00C777B1 /* swift_drawingappUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
@@ -46,16 +53,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		551474002872CA3D00929152 /* Selectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selectable.swift; sourceTree = "<group>"; };
-		551474022872CA4300929152 /* Colorable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colorable.swift; sourceTree = "<group>"; };
-		5514740A2872CAAB00929152 /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
-		5514740E2872CC7700929152 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		551474122872CED700929152 /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
-		551474142872CF1400929152 /* Drawable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drawable.swift; sourceTree = "<group>"; };
-		551474162872CF8200929152 /* Rectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
-		5514741B2872D0AD00929152 /* Draw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Draw.swift; sourceTree = "<group>"; };
-		5514741D2872D7DD00929152 /* LineDrawing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineDrawing.swift; sourceTree = "<group>"; };
-		5514741F2872E57D00929152 /* DrawableFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawableFactory.swift; sourceTree = "<group>"; };
+		550DEAF3287AAB2100B50CC2 /* Painter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Painter.swift; sourceTree = "<group>"; };
+		550DEAF5287AABC700B50CC2 /* RectangleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleFactory.swift; sourceTree = "<group>"; };
+		550DEAF7287AABD900B50CC2 /* PointGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointGenerator.swift; sourceTree = "<group>"; };
+		550DEAF9287AABDF00B50CC2 /* ColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
+		550DEAFB287AB23700B50CC2 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		550DEAFD287AB24900B50CC2 /* ColorGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorGenerator.swift; sourceTree = "<group>"; };
+		550DEAFF287AB26300B50CC2 /* ColorVerifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorVerifier.swift; sourceTree = "<group>"; };
+		550DEB02287AB2DE00B50CC2 /* PointManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointManager.swift; sourceTree = "<group>"; };
+		550DEB04287AB2E300B50CC2 /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
+		550DEB06287AB2EA00B50CC2 /* PointVerifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointVerifier.swift; sourceTree = "<group>"; };
+		550DEB14287BFB5500B50CC2 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		550DEB16287BFB8100B50CC2 /* RectangleUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleUsecase.swift; sourceTree = "<group>"; };
+		550DEB18287BFE6500B50CC2 /* RectangleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleViewModel.swift; sourceTree = "<group>"; };
+		550DEB1C287C126C00B50CC2 /* RectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleView.swift; sourceTree = "<group>"; };
+		550DEB1E287C181E00B50CC2 /* ColorVerifierTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorVerifierTests.swift; sourceTree = "<group>"; };
+		550DEB23287C1BC000B50CC2 /* SyncUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncUseCase.swift; sourceTree = "<group>"; };
+		550DEB25287C1CB000B50CC2 /* SyncService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncService.swift; sourceTree = "<group>"; };
 		83A846DD28725EFA00C777B1 /* swift-drawingapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-drawingapp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83A846E028725EFA00C777B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83A846E228725EFA00C777B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,7 +79,7 @@
 		83A846EC28725EFE00C777B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83A846EE28725EFE00C777B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83A846F328725EFF00C777B1 /* swift-drawingappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swift-drawingappTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		83A846F728725EFF00C777B1 /* swift_drawingappTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_drawingappTests.swift; sourceTree = "<group>"; };
+		83A846F728725EFF00C777B1 /* PointVerifierTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointVerifierTests.swift; sourceTree = "<group>"; };
 		83A846FD28725EFF00C777B1 /* swift-drawingappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swift-drawingappUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83A8470128725EFF00C777B1 /* swift_drawingappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_drawingappUITests.swift; sourceTree = "<group>"; };
 		83A8470328725EFF00C777B1 /* swift_drawingappUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_drawingappUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -96,42 +110,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		551473FF2872CA2F00929152 /* Protocol */ = {
+		550DEB01287AB27400B50CC2 /* Color */ = {
 			isa = PBXGroup;
 			children = (
-				551474002872CA3D00929152 /* Selectable.swift */,
-				551474022872CA4300929152 /* Colorable.swift */,
-				551474122872CED700929152 /* Identifiable.swift */,
-				551474142872CF1400929152 /* Drawable.swift */,
+				550DEAFB287AB23700B50CC2 /* Color.swift */,
+				550DEAF9287AABDF00B50CC2 /* ColorManager.swift */,
+				550DEAFD287AB24900B50CC2 /* ColorGenerator.swift */,
+				550DEAFF287AB26300B50CC2 /* ColorVerifier.swift */,
 			);
-			path = Protocol;
+			path = Color;
 			sourceTree = "<group>";
 		};
-		551474062872CA5F00929152 /* Model */ = {
+		550DEB08287AB5FC00B50CC2 /* Point */ = {
 			isa = PBXGroup;
 			children = (
-				5514741B2872D0AD00929152 /* Draw.swift */,
-				5514740A2872CAAB00929152 /* Point.swift */,
-				5514740E2872CC7700929152 /* Color.swift */,
-				551474162872CF8200929152 /* Rectangle.swift */,
-				5514741D2872D7DD00929152 /* LineDrawing.swift */,
+				550DEB04287AB2E300B50CC2 /* Point.swift */,
+				550DEB02287AB2DE00B50CC2 /* PointManager.swift */,
+				550DEAF7287AABD900B50CC2 /* PointGenerator.swift */,
+				550DEB06287AB2EA00B50CC2 /* PointVerifier.swift */,
 			);
-			path = Model;
+			path = Point;
 			sourceTree = "<group>";
 		};
-		551474072872CA7200929152 /* Usecase */ = {
+		550DEB21287C184100B50CC2 /* Usecase */ = {
 			isa = PBXGroup;
 			children = (
-				5514741F2872E57D00929152 /* DrawableFactory.swift */,
+				550DEB22287C1BAF00B50CC2 /* Rectangle */,
+				550DEB23287C1BC000B50CC2 /* SyncUseCase.swift */,
+				550DEB25287C1CB000B50CC2 /* SyncService.swift */,
 			);
 			path = Usecase;
 			sourceTree = "<group>";
 		};
-		551474182872D06600929152 /* ViewModel */ = {
+		550DEB22287C1BAF00B50CC2 /* Rectangle */ = {
 			isa = PBXGroup;
 			children = (
+				550DEAF3287AAB2100B50CC2 /* Painter.swift */,
+				550DEB16287BFB8100B50CC2 /* RectangleUsecase.swift */,
+				550DEAF5287AABC700B50CC2 /* RectangleFactory.swift */,
 			);
-			path = ViewModel;
+			path = Rectangle;
 			sourceTree = "<group>";
 		};
 		83A846D428725EF900C777B1 = {
@@ -157,17 +175,19 @@
 		83A846DF28725EFA00C777B1 /* swift-drawingapp */ = {
 			isa = PBXGroup;
 			children = (
+				83A846EE28725EFE00C777B1 /* Info.plist */,
 				83A846E028725EFA00C777B1 /* AppDelegate.swift */,
 				83A846E228725EFA00C777B1 /* SceneDelegate.swift */,
 				83A846E428725EFA00C777B1 /* ViewController.swift */,
-				551474182872D06600929152 /* ViewModel */,
-				551474072872CA7200929152 /* Usecase */,
-				551474062872CA5F00929152 /* Model */,
-				551473FF2872CA2F00929152 /* Protocol */,
-				83A846E628725EFA00C777B1 /* Main.storyboard */,
+				550DEB14287BFB5500B50CC2 /* MainViewModel.swift */,
+				550DEB1C287C126C00B50CC2 /* RectangleView.swift */,
+				550DEB18287BFE6500B50CC2 /* RectangleViewModel.swift */,
+				550DEB21287C184100B50CC2 /* Usecase */,
+				550DEB08287AB5FC00B50CC2 /* Point */,
+				550DEB01287AB27400B50CC2 /* Color */,
 				83A846E928725EFE00C777B1 /* Assets.xcassets */,
 				83A846EB28725EFE00C777B1 /* LaunchScreen.storyboard */,
-				83A846EE28725EFE00C777B1 /* Info.plist */,
+				83A846E628725EFA00C777B1 /* Main.storyboard */,
 			);
 			path = "swift-drawingapp";
 			sourceTree = "<group>";
@@ -175,7 +195,8 @@
 		83A846F628725EFF00C777B1 /* swift-drawingappTests */ = {
 			isa = PBXGroup;
 			children = (
-				83A846F728725EFF00C777B1 /* swift_drawingappTests.swift */,
+				83A846F728725EFF00C777B1 /* PointVerifierTests.swift */,
+				550DEB1E287C181E00B50CC2 /* ColorVerifierTests.swift */,
 			);
 			path = "swift-drawingappTests";
 			sourceTree = "<group>";
@@ -320,19 +341,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				550DEAF6287AABC700B50CC2 /* RectangleFactory.swift in Sources */,
+				550DEB07287AB2EA00B50CC2 /* PointVerifier.swift in Sources */,
 				83A846E528725EFA00C777B1 /* ViewController.swift in Sources */,
 				83A846E128725EFA00C777B1 /* AppDelegate.swift in Sources */,
-				5514740F2872CC7700929152 /* Color.swift in Sources */,
-				551474132872CED700929152 /* Identifiable.swift in Sources */,
-				5514741E2872D7DD00929152 /* LineDrawing.swift in Sources */,
-				551474152872CF1400929152 /* Drawable.swift in Sources */,
-				5514741C2872D0AD00929152 /* Draw.swift in Sources */,
+				550DEB19287BFE6500B50CC2 /* RectangleViewModel.swift in Sources */,
+				550DEB1D287C126C00B50CC2 /* RectangleView.swift in Sources */,
 				83A846E328725EFA00C777B1 /* SceneDelegate.swift in Sources */,
-				551474202872E57D00929152 /* DrawableFactory.swift in Sources */,
-				5514740B2872CAAB00929152 /* Point.swift in Sources */,
-				551474032872CA4300929152 /* Colorable.swift in Sources */,
-				551474172872CF8200929152 /* Rectangle.swift in Sources */,
-				551474012872CA3D00929152 /* Selectable.swift in Sources */,
+				550DEB15287BFB5500B50CC2 /* MainViewModel.swift in Sources */,
+				550DEAF8287AABD900B50CC2 /* PointGenerator.swift in Sources */,
+				550DEB17287BFB8100B50CC2 /* RectangleUsecase.swift in Sources */,
+				550DEB26287C1CB000B50CC2 /* SyncService.swift in Sources */,
+				550DEAFC287AB23700B50CC2 /* Color.swift in Sources */,
+				550DEAFE287AB24900B50CC2 /* ColorGenerator.swift in Sources */,
+				550DEB03287AB2DE00B50CC2 /* PointManager.swift in Sources */,
+				550DEB05287AB2E300B50CC2 /* Point.swift in Sources */,
+				550DEB24287C1BC000B50CC2 /* SyncUseCase.swift in Sources */,
+				550DEAFA287AABDF00B50CC2 /* ColorManager.swift in Sources */,
+				550DEAF4287AAB2100B50CC2 /* Painter.swift in Sources */,
+				550DEB00287AB26300B50CC2 /* ColorVerifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,7 +367,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83A846F828725EFF00C777B1 /* swift_drawingappTests.swift in Sources */,
+				83A846F828725EFF00C777B1 /* PointVerifierTests.swift in Sources */,
+				550DEB1F287C181E00B50CC2 /* ColorVerifierTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,7 +466,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -492,7 +520,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -517,6 +545,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -545,6 +574,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -566,7 +596,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kakaocorp.swift-drawingappTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -585,7 +615,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kakaocorp.swift-drawingappTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
