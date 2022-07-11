@@ -9,28 +9,25 @@ import XCTest
 @testable import swift_drawingapp
 
 class swift_drawingappTests: XCTestCase {
+    func test_무작위_랜덤_위치() throws {
+        let drawingScreen = DrawingScreen(frame: CGRect(origin: .zero, size: CGSize(width: 1000, height: 1000)))
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+        drawingScreen.padding = UIEdgeInsets(top: 50, left: 50, bottom: 50, right: 50)
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+        for _ in (0..<200) {
+            XCTAssertTrue(CGRect(x: 50, y: 50, width: 900, height: 900).contains(drawingScreen.randomPosition))
         }
     }
 
+    func test_스크린_추가된_뷰_모델_추출하기() throws {
+        let drawingScreen = DrawingScreen(frame: CGRect(origin: .zero, size: CGSize(width: 1000, height: 1000)))
+        let line = Line(points: [.zero, CGPoint(x: 100, y: 100)])
+        let square = Square(center: CGPoint(x: 200, y: 200), size: CGSize(width: 100, height: 100))
+
+        drawingScreen.addView(shape: line)
+        drawingScreen.addView(shape: square)
+
+        XCTAssertTrue(drawingScreen.shapes.count == 2)
+        XCTAssertTrue(drawingScreen.shapes.filter({ $0 == line || $0 == square }).count == 2)
+    }
 }

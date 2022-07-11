@@ -8,10 +8,10 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var drawingScreen: DrawingScreen!
+    @IBOutlet weak private var drawingScreen: DrawingScreen!
 
     @IBAction func drawSquare(_ sender: UIButton) {
-        drawingScreen.addSquareViewForRandom()
+        drawingScreen.addView(shape: Square(center: drawingScreen.randomPosition, size: SquareView.size))
         drawingScreen.enableDrawingLine = false
     }
 
@@ -20,19 +20,28 @@ class ViewController: UIViewController {
     }
 
     @IBAction func startSync(_ sender: UIButton) {
-        do {
-            try drawingSyncManager.startSync(shapes: drawingScreen.shapes)
-        } catch SyncError.notLogin {
-            print("로그인 아이디 입력화면 출력.")
-        } catch {
-            print(error.localizedDescription)
-        }
+        drawingScreen.shapes.compactMap({ $0.data }).forEach { localChatServer.sendData($0) }
     }
 
-    private let drawingSyncManager = DrawingSyncManager()
+    private var localChatServer: DrawingUseCase!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        localChatServer = DrawingLocalChatServerUseCase(delegate: self)
+        drawingScreen.padding = UIEdgeInsets(top: 50, left: 50, bottom: 50, right: 50)
+        drawingScreen.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(drawLine(gesture:))))
+    }
+
+    @objc private func drawLine(gesture: UIPanGestureRecognizer) {
+        drawingScreen.drawLine(gesture: gesture)
+    }
+}
+
+extension ViewController: DrawingLocalChatServerDelegate {
+    func drawingLocalChatServer(didFail error: Error) {
+        if case SyncError.notLogin = error {
+            print("로그인 아이디 입력화면 출력.")
+        }
     }
 }
 

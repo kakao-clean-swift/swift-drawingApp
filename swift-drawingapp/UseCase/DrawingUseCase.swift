@@ -8,5 +8,6 @@
 import Foundation
 
 protocol DrawingUseCase {
-
+    func sendData(_ data: Data)
+    func receiveData(_ data: Data)
 }

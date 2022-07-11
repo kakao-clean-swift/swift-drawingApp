@@ -7,10 +7,18 @@
 
 import Foundation
 
-class Shape {
+class Shape: Codable, Equatable {
     let id: String
+
+    var data: Data? {
+        try? JSONEncoder().encode(self)
+    }
 
     init() {
         id = UUID().uuidString
+    }
+
+    static func == (lhs: Shape, rhs: Shape) -> Bool {
+        lhs.id == rhs.id
     }
 }

@@ -24,7 +24,7 @@
 		C2E22C1C2872D2C40045EAA7 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E22C1B2872D2C40045EAA7 /* Shape.swift */; };
 		C2E22C1E2872D5060045EAA7 /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E22C1D2872D5060045EAA7 /* LineView.swift */; };
 		C2E22C212872D5330045EAA7 /* ShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E22C202872D5330045EAA7 /* ShapeView.swift */; };
-		C2E22C232872E1ED0045EAA7 /* DrawingSyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E22C222872E1ED0045EAA7 /* DrawingSyncManager.swift */; };
+		C2E22C232872E1ED0045EAA7 /* DrawingLocalChatServerUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E22C222872E1ED0045EAA7 /* DrawingLocalChatServerUseCase.swift */; };
 		C2E22C2528732EFC0045EAA7 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E22C2428732EFC0045EAA7 /* Array+Extensions.swift */; };
 		C2E22C2728732F2E0045EAA7 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E22C2628732F2E0045EAA7 /* UIColor+Extensions.swift */; };
 /* End PBXBuildFile section */
@@ -68,7 +68,7 @@
 		C2E22C1B2872D2C40045EAA7 /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
 		C2E22C1D2872D5060045EAA7 /* LineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
 		C2E22C202872D5330045EAA7 /* ShapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeView.swift; sourceTree = "<group>"; };
-		C2E22C222872E1ED0045EAA7 /* DrawingSyncManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingSyncManager.swift; sourceTree = "<group>"; };
+		C2E22C222872E1ED0045EAA7 /* DrawingLocalChatServerUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingLocalChatServerUseCase.swift; sourceTree = "<group>"; };
 		C2E22C2428732EFC0045EAA7 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		C2E22C2628732F2E0045EAA7 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,7 +123,6 @@
 			children = (
 				C2E22C102872CAD00045EAA7 /* Supporting Files */,
 				83A846E428725EFA00C777B1 /* ViewController.swift */,
-				C2E22C222872E1ED0045EAA7 /* DrawingSyncManager.swift */,
 				C2E22C2828732F390045EAA7 /* Extensions */,
 				C2E22C1F2872D50C0045EAA7 /* View */,
 				C2E22C1A2872D1FD0045EAA7 /* UseCase */,
@@ -176,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				C2E22C182872D1EA0045EAA7 /* DrawingUseCase.swift */,
+				C2E22C222872E1ED0045EAA7 /* DrawingLocalChatServerUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -334,7 +334,7 @@
 				C2E22C122872CC390045EAA7 /* Square.swift in Sources */,
 				83A846E528725EFA00C777B1 /* ViewController.swift in Sources */,
 				83A846E128725EFA00C777B1 /* AppDelegate.swift in Sources */,
-				C2E22C232872E1ED0045EAA7 /* DrawingSyncManager.swift in Sources */,
+				C2E22C232872E1ED0045EAA7 /* DrawingLocalChatServerUseCase.swift in Sources */,
 				C2E22C142872CC7E0045EAA7 /* Line.swift in Sources */,
 				C2E22C1C2872D2C40045EAA7 /* Shape.swift in Sources */,
 				C2E22C212872D5330045EAA7 /* ShapeView.swift in Sources */,
