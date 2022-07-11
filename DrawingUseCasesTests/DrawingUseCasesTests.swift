@@ -10,10 +10,13 @@ import XCTest
 
 class DrawingUseCasesTests: XCTestCase {
 
+    var localStore: LocalStore!
+    
     var add: AddShapes!
     
     override func setUpWithError() throws {
-        add = AddShapes()
+        localStore = localStore()
+        add = AddShapes(stores: [localStore])
     }
 
     override func tearDownWithError() throws {
@@ -26,4 +29,7 @@ class DrawingUseCasesTests: XCTestCase {
         XCTAssertEqual(shape.frame, .zero)
     }
 
+    func testAddRectangleToLocalStore() async throws {
+        
+    }
 }
