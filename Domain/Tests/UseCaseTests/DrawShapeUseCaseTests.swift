@@ -1,17 +1,12 @@
 import XCTest
-@testable import Entity
+import Entity
 @testable import UseCase
 
 class LocalRepositoryMock: LocalRepository {
     var saveShapeCallCount = 0
-    var addPointCallCount = 0
     
     func saveShape(_ shape: Shape) {
         saveShapeCallCount += 1
-    }
-    
-    func addPoint(_ point: CGPoint, to shape: Shape) {
-        addPointCallCount += 1
     }
 }
 
@@ -46,16 +41,5 @@ class DrawShapeUseCaseTests: XCTestCase {
         
         // then
         XCTAssertEqual(repositoryMock.saveShapeCallCount, 1)
-    }
-    
-    func test_useCase_call_save_when_add_point() {
-        // given
-        XCTAssertEqual(repositoryMock.addPointCallCount, 0)
-        
-        // when
-        _ = useCase.addPoint(.zero, to: LineDrawing(initialPoint: .zero))
-        
-        // then
-        XCTAssertEqual(repositoryMock.addPointCallCount, 1)
     }
 }

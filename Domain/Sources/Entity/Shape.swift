@@ -9,6 +9,10 @@ public protocol Shape {
     var isSelectable: Bool { get }
 }
 
+public protocol ModifiableShape: Shape {
+    mutating func addPoint(_ point: CGPoint)
+}
+
 public struct Rectangle: Shape {
     
     public let id: UUID
@@ -26,8 +30,8 @@ public struct Rectangle: Shape {
     }
 }
 
-public struct LineDrawing: Shape {
-    
+public struct LineDrawing: ModifiableShape {
+
     public let id = UUID()
     public let color: UIColor
     public private(set) var points: [CGPoint] = []

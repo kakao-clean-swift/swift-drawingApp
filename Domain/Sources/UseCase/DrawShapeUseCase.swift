@@ -8,7 +8,6 @@ protocol RectangleUseCase {
 
 protocol LineDrawingUseCase {
     func addLineDrawing(with initialPoint: CGPoint) -> LineDrawing
-    func addPoint(_ point: CGPoint, to lineDrawing: LineDrawing)
 }
 
 typealias DrawShapeUseCase = RectangleUseCase & LineDrawingUseCase
@@ -31,9 +30,5 @@ class DrawShapeUseCaseImpl: DrawShapeUseCase {
         let lineDrawing = LineDrawing(initialPoint: initialPoint)
         repository.saveShape(lineDrawing)
         return lineDrawing
-    }
-    
-    func addPoint(_ point: CGPoint, to lineDrawing: LineDrawing) {
-        repository.addPoint(point, to: lineDrawing)
     }
 }
