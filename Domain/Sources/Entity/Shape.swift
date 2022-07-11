@@ -2,44 +2,55 @@ import Foundation
 import UIKit
 import Util
 
-protocol Shape: Identifiable {
+public protocol Shape {
+    var id: UUID { get }
     var color: UIColor { get }
     var points: [CGPoint] { get }
     var isSelectable: Bool { get }
 }
 
-// DTO를 만든다면 DTO가 Codable을 채택할 것!
-struct Rectangle: Shape, Codable {
-    
-    let id: UUID
-    let colorHex: String
-    let points: [CGPoint]
-    let isSelectable: Bool
-    
-    var color: UIColor { return UIColor(hex: colorHex) ?? .clear }
+public protocol ModifiableShape: Shape {
+    mutating func addPoint(_ point: CGPoint)
+}
 
-    init(screenRect: CGRect,
-         size: CGFloat = 100.0,
-         isSelectable: Bool = true) {
+public struct Rectangle: Shape {
+    
+    public let id: UUID
+    public let color: UIColor
+    public let points: [CGPoint]
+    public let isSelectable: Bool
+    
+    public init(screenRect: CGRect,
+                size: CGFloat = 100.0,
+                isSelectable: Bool = true) {
         self.id = UUID()
-        self.colorHex = RandomColorGenerator.color().hex
+        self.color = RandomColorGenerator.color()
         self.points = RandomPointsGenerator.rectangePoints(screenRect: screenRect, size: size)
+        self.isSelectable = isSelectable
+    }
+    
+    // For Data Mapping
+    public init(id: UUID, color: UIColor, points: [CGPoint], isSelectable: Bool = true) {
+        self.id = id
+        self.color = color
+        self.points = points
         self.isSelectable = isSelectable
     }
 }
 
-struct LineDrawing: Shape {
+public struct LineDrawing: ModifiableShape {
+
+    public let id = UUID()
+    public let color: UIColor
+    public private(set) var points: [CGPoint] = []
+    public let isSelectable: Bool = false
     
-    let id = UUID()
-    let color: UIColor
-    private(set) var points: [CGPoint] = []
-    let isSelectable: Bool = false
-    
-    init() {
+    public init(initialPoint: CGPoint) {
         self.color = RandomColorGenerator.color()
+        self.addPoint(initialPoint)
     }
     
-    mutating func addPoint(_ point: CGPoint) {
+    public mutating func addPoint(_ point: CGPoint) {
         points.append(point)
     }
 }
