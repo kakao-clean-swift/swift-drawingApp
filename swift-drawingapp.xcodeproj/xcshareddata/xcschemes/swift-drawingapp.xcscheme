@@ -58,6 +58,16 @@
                ReferencedContainer = "container:swift-drawingapp.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "06B588D2287BFD7500EA0AE0"
+               BuildableName = "DrawingUseCasesTests.xctest"
+               BlueprintName = "DrawingUseCasesTests"
+               ReferencedContainer = "container:swift-drawingapp.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
