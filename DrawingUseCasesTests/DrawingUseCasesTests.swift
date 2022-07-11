@@ -22,6 +22,8 @@ class DrawingUseCasesTests: XCTestCase {
 
     func testAddRectangle() async throws {
         let shape = try await add.addRectangle(stroke: .systemBlue, frame: .zero)
+        XCTAssertEqual(shape.stroke, .systemBlue)
+        XCTAssertEqual(shape.frame, .zero)
     }
 
 }
