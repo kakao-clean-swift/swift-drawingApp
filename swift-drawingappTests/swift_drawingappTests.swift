@@ -6,6 +6,7 @@
 //
 
 import XCTest
+import DrawingShapes
 @testable import swift_drawingapp
 
 class DrawersTest: XCTestCase {

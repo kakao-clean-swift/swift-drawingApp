@@ -7,6 +7,7 @@
 
 import Foundation
 import CoreGraphics
+import DrawingShapes
 import UIKit
 
 final class Drawers<RandomColorize: Randomizable, RandomFrame: BoundaryRandomizable>
