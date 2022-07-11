@@ -9,21 +9,18 @@ public protocol Shape {
     var isSelectable: Bool { get }
 }
 
-// DTO를 만든다면 DTO가 Codable을 채택할 것!
-public struct Rectangle: Shape, Codable {
+public struct Rectangle: Shape {
     
     public let id: UUID
-    let colorHex: String
+    public let color: UIColor
     public let points: [CGPoint]
     public let isSelectable: Bool
     
-    public var color: UIColor { return UIColor(hex: colorHex) ?? .clear }
-
     public init(screenRect: CGRect,
                 size: CGFloat = 100.0,
                 isSelectable: Bool = true) {
         self.id = UUID()
-        self.colorHex = RandomColorGenerator.color().hex
+        self.color = RandomColorGenerator.color()
         self.points = RandomPointsGenerator.rectangePoints(screenRect: screenRect, size: size)
         self.isSelectable = isSelectable
     }
