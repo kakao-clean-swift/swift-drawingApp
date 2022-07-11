@@ -11,6 +11,7 @@ class ViewController: UIViewController {
     var drawManager: DrawManagable?
     
     var rectangles = [UIView: RectangleViewModel]()
+    var views = [RectangleViewModel: UIView]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,10 +34,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func didTouchDrawing(_ sender: Any) {
+        
     }
     
     @IBAction func didTouchSync(_ sender: Any) {
+        
     }
+    
 }
 
 extension ViewController: DrawManagerDelegate {
@@ -46,9 +50,27 @@ extension ViewController: DrawManagerDelegate {
         
         view.addSubview(rectView)
         rectangles[rectView] = rectViewModel
+        views[rectViewModel] = rectView
+    }
+    
+    func selectRect(rectViewModel: RectangleViewModel) {
+        guard let rectView = views[rectViewModel] else { return }
+        
+        rectView.layer.borderWidth = rectViewModel.isSelected ? 3 : 0
     }
     
     func drawLine(from: CGPoint, to: CGPoint) {
         // UI
+    }
+}
+
+extension ViewController {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let touch = touches.first,
+              let rectView = touch.view,
+              let rectViewModel = rectangles[rectView]
+        else { return }
+        
+        drawManager?.selectRect(rect: rectViewModel)
     }
 }

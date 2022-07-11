@@ -1,5 +1,5 @@
 //
-//  IdenditiableRectangle.swift
+//  RectangleViewModel.swift
 //  swift-drawingapp
 //
 //  Created by Hochang Lee on 2022/07/08.
@@ -7,21 +7,24 @@
 
 import Foundation
 
-protocol DrawingIdentifiable {
-    var id: UUID { get }
-}
-
-final class RectangleViewModel: DrawingIdentifiable {
+final class RectangleViewModel {
     let id = UUID()
     let rectangle: Rectangle
     var canSelect: Bool
-    var isSelected: Bool = false
+    private var _isSelected: Bool = false
+    var isSelected: Bool { _isSelected }
     
     init(rectangle: Rectangle, canSenect: Bool) {
         self.rectangle = rectangle
         self.canSelect = canSenect
     }
     
+    func select() {
+        _isSelected.toggle()
+    }
+}
+
+extension RectangleViewModel: Hashable {
     func hash(into hasher: inout Hasher) {
         hasher.combine(id)
     }

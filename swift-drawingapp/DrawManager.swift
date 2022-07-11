@@ -7,8 +7,11 @@
 
 import UIKit
 
+// UseCase : UI Event -> Business Logic
 protocol DrawManagable: AnyObject {
     func addRect()
+    func selectRect(rect: RectangleViewModel)
+    
     func startDraw(at point: CGPoint)
     func continueDraw(at point: CGPoint)
     func endDraw(at point: CGPoint)
@@ -16,8 +19,10 @@ protocol DrawManagable: AnyObject {
     var delegate: DrawManagerDelegate? { get set }
 }
 
+// UseCase : Business Logic -> Presenter
 protocol DrawManagerDelegate: AnyObject {
     func drawRect(rectViewModel: RectangleViewModel)
+    func selectRect(rectViewModel: RectangleViewModel)
     func drawLine(from: CGPoint, to: CGPoint)
 }
 
@@ -28,7 +33,7 @@ class DrawManager: DrawManagable {
     private let figureDrawable: FigureDrawable
     private let pathDrawable: PathDrawable
     
-    private var figures = [DrawingIdentifiable]()
+    private var figures = [RectangleViewModel]()
     private var drawings = [Drawing]()
     
     weak var delegate: DrawManagerDelegate?
@@ -57,6 +62,13 @@ class DrawManager: DrawManagable {
         } else {
             addRect()
         }
+    }
+    
+    func selectRect(rect: RectangleViewModel) {
+        guard rect.canSelect else { return }
+        
+        rect.select()
+        delegate?.selectRect(rectViewModel: rect)
     }
     
     func startDraw(at point: CGPoint) {
