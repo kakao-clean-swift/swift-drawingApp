@@ -24,6 +24,9 @@
 		C25E12CB2872D868009A4564 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E12CA2872D867009A4564 /* Point.swift */; };
 		C25E12CE2872D9AE009A4564 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E12CD2872D9AE009A4564 /* NetworkManager.swift */; };
 		C25E12D32872F390009A4564 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E12D22872F390009A4564 /* UIView+Extension.swift */; };
+		C25E12DA287C10FA009A4564 /* SelectFigureUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E12D9287C10FA009A4564 /* SelectFigureUseCase.swift */; };
+		C25E12DE287C19B4009A4564 /* PresenterPort.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E12DD287C19B4009A4564 /* PresenterPort.swift */; };
+		C25E12E0287C2D06009A4564 /* CreateFigureUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E12DF287C2D06009A4564 /* CreateFigureUseCase.swift */; };
 		E195847F6EC6CFBB8E203EC8 /* Pods_swift_drawingappTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74AA93EBCAE399BF7442B4C7 /* Pods_swift_drawingappTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +75,9 @@
 		C25E12CA2872D867009A4564 /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
 		C25E12CD2872D9AE009A4564 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		C25E12D22872F390009A4564 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		C25E12D9287C10FA009A4564 /* SelectFigureUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFigureUseCase.swift; sourceTree = "<group>"; };
+		C25E12DD287C19B4009A4564 /* PresenterPort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterPort.swift; sourceTree = "<group>"; };
+		C25E12DF287C2D06009A4564 /* CreateFigureUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFigureUseCase.swift; sourceTree = "<group>"; };
 		F4DF94540CD115662816B8EF /* Pods_swift_drawingapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swift_drawingapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -151,6 +157,7 @@
 		83A846DF28725EFA00C777B1 /* swift-drawingapp */ = {
 			isa = PBXGroup;
 			children = (
+				C25E12D8287C0DCA009A4564 /* UseCase */,
 				C25E12D12872F384009A4564 /* Common */,
 				C25E12CC2872D999009A4564 /* Network */,
 				C25E12C02872D433009A4564 /* ViewModel */,
@@ -223,6 +230,16 @@
 				C25E12D22872F390009A4564 /* UIView+Extension.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		C25E12D8287C0DCA009A4564 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				C25E12DF287C2D06009A4564 /* CreateFigureUseCase.swift */,
+				C25E12D9287C10FA009A4564 /* SelectFigureUseCase.swift */,
+				C25E12DD287C19B4009A4564 /* PresenterPort.swift */,
+			);
+			path = UseCase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -466,10 +483,13 @@
 			files = (
 				83A846E528725EFA00C777B1 /* ViewController.swift in Sources */,
 				83A846E128725EFA00C777B1 /* AppDelegate.swift in Sources */,
+				C25E12DA287C10FA009A4564 /* SelectFigureUseCase.swift in Sources */,
+				C25E12E0287C2D06009A4564 /* CreateFigureUseCase.swift in Sources */,
 				C25E12C62872D559009A4564 /* RectView.swift in Sources */,
 				83A846E328725EFA00C777B1 /* SceneDelegate.swift in Sources */,
 				C25E12CE2872D9AE009A4564 /* NetworkManager.swift in Sources */,
 				C25E12CB2872D868009A4564 /* Point.swift in Sources */,
+				C25E12DE287C19B4009A4564 /* PresenterPort.swift in Sources */,
 				C25E12C22872D46D009A4564 /* Figure.swift in Sources */,
 				C25E12C92872D6AB009A4564 /* DrawingViewModel.swift in Sources */,
 				C25E12D32872F390009A4564 /* UIView+Extension.swift in Sources */,

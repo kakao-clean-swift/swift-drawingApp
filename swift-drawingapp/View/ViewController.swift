@@ -78,6 +78,8 @@ class ViewController: UIViewController {
     }
     
     private func setViewModel() {
+        viewModel.setPresenter(with: self)
+        
         viewModel.$rects
             .sink { [weak self] rects in
                 guard let rect = rects.last else { return }
@@ -89,26 +91,12 @@ class ViewController: UIViewController {
                 self?.setAccessibilityIdentifier(rectView)
             }
             .store(in: &subscriptions)
-        
-        viewModel.$selectedId
-            .sink { [weak self] id in
-                guard let id = id else { return }
-                (self?.views[id] as? RectView)?.selected()
-            }
-            .store(in: &subscriptions)
-        
-        viewModel.$deselectedId
-            .sink { [weak self] id in
-                guard let id = id else { return }
-                (self?.views[id] as? RectView)?.deselected()
-            }
-            .store(in: &subscriptions)
     }
     
     private func observeTouch(_ rectView: RectView) {
         rectView.$touched
             .sink { [weak self] id in
-                self?.viewModel.touched(id)
+                self?.viewModel.touchRect(id)
             }
             .store(in: &subscriptions)
     }
@@ -127,11 +115,26 @@ class ViewController: UIViewController {
     private func pressSyncButton() {
         
     }
-    
+}
+
+// MARK: - 출력 처리
+extension ViewController: PresenterPort {
+    func touchRect(_ deselectedId: UUID?, _ selectedId: UUID?) {
+        if let deselectedId = deselectedId {
+            (self.views[deselectedId] as? RectView)?.deselected()
+        }
+        
+        if let selectedId = selectedId {
+            (self.views[selectedId] as? RectView)?.selected()
+        }
+    }
+}
+
+// MARK: - UITest
+extension ViewController {
     /// UITest를 위한 코드
     private func setAccessibilityIdentifier(_ view: UIView) {
         figureCount += 1
         view.accessibilityIdentifier = "view\(figureCount)"
     }
 }
-

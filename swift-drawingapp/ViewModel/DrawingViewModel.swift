@@ -5,32 +5,37 @@
 //  Created by joel.inju on 2022/07/04.
 //
 
-import UIKit
+import Foundation
 
 class DrawingViewModel {
     @Published var rects = [Figure]()
     @Published var drawings = [Figure]()
-    @Published var selectedId: UUID?
-    @Published var deselectedId: UUID?
     
-    func createRect() {
-        let rect = Figure(randomPoint())
-        rects.append(rect)
-    }
+    private var selectedId: UUID?
+    private var deselectedId: UUID?
+    private var presenterPort: PresenterPort?
     
     init() {
         
     }
-    
-    private func randomPoint() -> Point {
-        let x = Int(arc4random_uniform(UInt32(UIScreen.main.bounds.width)))
-        let y = Int(arc4random_uniform(UInt32(UIScreen.main.bounds.height)))
-        return Point(x: x, y: y)
+}
+
+extension DrawingViewModel: CreateFigureUseCase {
+    func createRect() {
+        let randomPoint = Point()
+        let rect = Figure(randomPoint)
+        rects.append(rect)
+    }
+}
+
+extension DrawingViewModel: SelectFigureUseCase {
+    func setPresenter(with port: PresenterPort?) {
+        self.presenterPort = port
     }
     
-    func touched(_ id: UUID?) {
+    func touchRect(_ id: UUID?) {
         guard let id = id else { return }
-        
+
         if selectedId == id {
             deselectedId = id
             selectedId = nil
@@ -38,5 +43,7 @@ class DrawingViewModel {
             deselectedId = selectedId
             selectedId = id
         }
+        
+        self.presenterPort?.touchRect(deselectedId, selectedId)
     }
 }
