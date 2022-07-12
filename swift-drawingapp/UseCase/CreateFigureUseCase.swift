@@ -8,5 +8,5 @@
 import Foundation
 
 protocol CreateFigureUseCase {
-    func createRect()
+    func createRect() -> Figure
 }

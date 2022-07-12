@@ -11,39 +11,18 @@ class DrawingViewModel {
     @Published var rects = [Figure]()
     @Published var drawings = [Figure]()
     
-    private var selectedId: UUID?
-    private var deselectedId: UUID?
-    private var presenterPort: PresenterPort?
+    private let logic: Logic
     
-    init() {
-        
+    init(_ logic: Logic) {
+        self.logic = logic
     }
-}
-
-extension DrawingViewModel: CreateFigureUseCase {
+    
     func createRect() {
-        let randomPoint = Point()
-        let rect = Figure(randomPoint)
+        let rect = logic.createRect()
         rects.append(rect)
-    }
-}
-
-extension DrawingViewModel: SelectFigureUseCase {
-    func setPresenter(with port: PresenterPort?) {
-        self.presenterPort = port
     }
     
     func touchRect(_ id: UUID?) {
-        guard let id = id else { return }
-
-        if selectedId == id {
-            deselectedId = id
-            selectedId = nil
-        } else {
-            deselectedId = selectedId
-            selectedId = id
-        }
-        
-        self.presenterPort?.touchRect(deselectedId, selectedId)
+        logic.touchRect(id)
     }
 }

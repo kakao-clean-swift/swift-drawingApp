@@ -40,7 +40,7 @@ class ViewController: UIViewController {
         return button
     }()
     
-    private var viewModel = DrawingViewModel()
+    private var viewModel: DrawingViewModel?
     
     override func loadView() {
         super.loadView()
@@ -78,9 +78,12 @@ class ViewController: UIViewController {
     }
     
     private func setViewModel() {
-        viewModel.setPresenter(with: self)
+        let logic = Logic()
+        logic.setPresenter(with: self)
+        viewModel = DrawingViewModel(logic)
         
-        viewModel.$rects
+        viewModel?.$rects
+            .receive(on: DispatchQueue.main)
             .sink { [weak self] rects in
                 guard let rect = rects.last else { return }
                 
@@ -96,14 +99,14 @@ class ViewController: UIViewController {
     private func observeTouch(_ rectView: RectView) {
         rectView.$touched
             .sink { [weak self] id in
-                self?.viewModel.touchRect(id)
+                self?.viewModel?.touchRect(id)
             }
             .store(in: &subscriptions)
     }
     
     @objc
     private func pressRectButton() {
-        viewModel.createRect()
+        viewModel?.createRect()
     }
     
     @objc
