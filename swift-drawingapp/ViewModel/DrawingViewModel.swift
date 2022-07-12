@@ -76,7 +76,7 @@ extension DrawingViewModel: CreateDrawingUseCase {
     }
 }
 
-// MARK: - CreateDrawingUseCase
+// MARK: - SelectDrawingUseCase
 extension DrawingViewModel: SelectDrawingUseCase {
     func didSelect(item: ItemDrawable) -> DrawingObject? {
         guard let item = item as? DrawingObject, drawableItems.contains(item) else { return nil }

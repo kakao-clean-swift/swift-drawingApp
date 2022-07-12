@@ -8,7 +8,7 @@
 import Foundation
 
 /**
- 오브젝트를 선택한다.
+ 이벤트를 받아서 오브젝트를 선택한다. 
  */
 
 protocol SelectDrawingUseCase {
