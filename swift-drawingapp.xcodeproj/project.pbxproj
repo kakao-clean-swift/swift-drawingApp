@@ -16,6 +16,8 @@
 		83A846F828725EFF00C777B1 /* swift_drawingappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A846F728725EFF00C777B1 /* swift_drawingappTests.swift */; };
 		83A8470228725EFF00C777B1 /* swift_drawingappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A8470128725EFF00C777B1 /* swift_drawingappUITests.swift */; };
 		83A8470428725EFF00C777B1 /* swift_drawingappUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A8470328725EFF00C777B1 /* swift_drawingappUITestsLaunchTests.swift */; };
+		C2999DA5287C0A7100AE79AB /* DrawingRequestPort.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2999DA4287C0A7100AE79AB /* DrawingRequestPort.swift */; };
+		C2999DA7287C0B4E00AE79AB /* DrawingLocalServerRequestPort.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2999DA6287C0B4E00AE79AB /* DrawingLocalServerRequestPort.swift */; };
 		C2E22C0F2872CAC10045EAA7 /* DrawingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E22C0E2872CAC10045EAA7 /* DrawingScreen.swift */; };
 		C2E22C122872CC390045EAA7 /* Square.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E22C112872CC390045EAA7 /* Square.swift */; };
 		C2E22C142872CC7E0045EAA7 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E22C132872CC7E0045EAA7 /* Line.swift */; };
@@ -24,7 +26,7 @@
 		C2E22C1C2872D2C40045EAA7 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E22C1B2872D2C40045EAA7 /* Shape.swift */; };
 		C2E22C1E2872D5060045EAA7 /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E22C1D2872D5060045EAA7 /* LineView.swift */; };
 		C2E22C212872D5330045EAA7 /* ShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E22C202872D5330045EAA7 /* ShapeView.swift */; };
-		C2E22C232872E1ED0045EAA7 /* DrawingLocalChatServerUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E22C222872E1ED0045EAA7 /* DrawingLocalChatServerUseCase.swift */; };
+		C2E22C232872E1ED0045EAA7 /* DrawingLocalServerUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E22C222872E1ED0045EAA7 /* DrawingLocalServerUseCase.swift */; };
 		C2E22C2528732EFC0045EAA7 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E22C2428732EFC0045EAA7 /* Array+Extensions.swift */; };
 		C2E22C2728732F2E0045EAA7 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E22C2628732F2E0045EAA7 /* UIColor+Extensions.swift */; };
 /* End PBXBuildFile section */
@@ -60,6 +62,8 @@
 		83A846FD28725EFF00C777B1 /* swift-drawingappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swift-drawingappUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83A8470128725EFF00C777B1 /* swift_drawingappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_drawingappUITests.swift; sourceTree = "<group>"; };
 		83A8470328725EFF00C777B1 /* swift_drawingappUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_drawingappUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C2999DA4287C0A7100AE79AB /* DrawingRequestPort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingRequestPort.swift; sourceTree = "<group>"; };
+		C2999DA6287C0B4E00AE79AB /* DrawingLocalServerRequestPort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingLocalServerRequestPort.swift; sourceTree = "<group>"; };
 		C2E22C0E2872CAC10045EAA7 /* DrawingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingScreen.swift; sourceTree = "<group>"; };
 		C2E22C112872CC390045EAA7 /* Square.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Square.swift; sourceTree = "<group>"; };
 		C2E22C132872CC7E0045EAA7 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
@@ -68,7 +72,7 @@
 		C2E22C1B2872D2C40045EAA7 /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
 		C2E22C1D2872D5060045EAA7 /* LineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
 		C2E22C202872D5330045EAA7 /* ShapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeView.swift; sourceTree = "<group>"; };
-		C2E22C222872E1ED0045EAA7 /* DrawingLocalChatServerUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingLocalChatServerUseCase.swift; sourceTree = "<group>"; };
+		C2E22C222872E1ED0045EAA7 /* DrawingLocalServerUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingLocalServerUseCase.swift; sourceTree = "<group>"; };
 		C2E22C2428732EFC0045EAA7 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		C2E22C2628732F2E0045EAA7 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -175,7 +179,9 @@
 			isa = PBXGroup;
 			children = (
 				C2E22C182872D1EA0045EAA7 /* DrawingUseCase.swift */,
-				C2E22C222872E1ED0045EAA7 /* DrawingLocalChatServerUseCase.swift */,
+				C2E22C222872E1ED0045EAA7 /* DrawingLocalServerUseCase.swift */,
+				C2999DA4287C0A7100AE79AB /* DrawingRequestPort.swift */,
+				C2999DA6287C0B4E00AE79AB /* DrawingLocalServerRequestPort.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -331,15 +337,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2999DA5287C0A7100AE79AB /* DrawingRequestPort.swift in Sources */,
 				C2E22C122872CC390045EAA7 /* Square.swift in Sources */,
 				83A846E528725EFA00C777B1 /* ViewController.swift in Sources */,
 				83A846E128725EFA00C777B1 /* AppDelegate.swift in Sources */,
-				C2E22C232872E1ED0045EAA7 /* DrawingLocalChatServerUseCase.swift in Sources */,
+				C2E22C232872E1ED0045EAA7 /* DrawingLocalServerUseCase.swift in Sources */,
 				C2E22C142872CC7E0045EAA7 /* Line.swift in Sources */,
 				C2E22C1C2872D2C40045EAA7 /* Shape.swift in Sources */,
 				C2E22C212872D5330045EAA7 /* ShapeView.swift in Sources */,
 				C2E22C192872D1EA0045EAA7 /* DrawingUseCase.swift in Sources */,
 				C2E22C162872CCD70045EAA7 /* SquareView.swift in Sources */,
+				C2999DA7287C0B4E00AE79AB /* DrawingLocalServerRequestPort.swift in Sources */,
 				C2E22C2528732EFC0045EAA7 /* Array+Extensions.swift in Sources */,
 				C2E22C0F2872CAC10045EAA7 /* DrawingScreen.swift in Sources */,
 				C2E22C2728732F2E0045EAA7 /* UIColor+Extensions.swift in Sources */,

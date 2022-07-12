@@ -10,10 +10,6 @@ import Foundation
 class Shape: Codable, Equatable {
     let id: String
 
-    var data: Data? {
-        try? JSONEncoder().encode(self)
-    }
-
     init() {
         id = UUID().uuidString
     }

@@ -8,6 +8,6 @@
 import Foundation
 
 protocol DrawingUseCase {
-    func sendData(_ data: Data)
-    func receiveData(_ data: Data)
+    func login(id: String)
+    func sendShapes(_ shapes: [Shape]) throws
 }
