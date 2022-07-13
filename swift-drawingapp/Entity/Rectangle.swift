@@ -7,8 +7,9 @@
 
 import Foundation
 
-struct Rectangle {
-    let point: Point
-    let width: Float
-    let height: Float
+protocol Figureable { }
+
+struct Rectangle: Figureable {
+    let origin: Point
+    let size: Size
 }

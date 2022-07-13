@@ -8,6 +8,7 @@
 import Foundation
 
 protocol FigureDrawable: PaperDrawable {
+    func draw(at point: Point) -> Figureable
 }
 
 final class RectangleDraw: FigureDrawable {
@@ -30,5 +31,9 @@ final class RectangleDraw: FigureDrawable {
         } else {
             return true
         }
+    }
+    
+    func draw(at point: Point) -> Figureable {
+        return Rectangle(origin: point, size: Size(width: width, height: height))
     }
 }
