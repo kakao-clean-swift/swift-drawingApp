@@ -8,34 +8,35 @@
 import Foundation
 
 protocol ChatManagable {
-    func login()
-    func send(to: String,
-              data: Data)
+    func login() async -> Bool
+    func send(id: String,
+              data: Data) async -> Bool
 }
 
 class ChatManager: ChatManagable {
     
+    let commandFactory: CommandGeneratable
     let client: ChatSendable & ChatConnectable
     
-    init(client: ChatSendable & ChatConnectable) {
+    init(client: ChatSendable & ChatConnectable, commandFactory: CommandGeneratable) {
         self.client = client
+        self.commandFactory = commandFactory
         client.start()
     }
     
-    func login() {
-        let data = CommandFactory
+    func login() async -> Bool {
+        let data = commandFactory
             .command(type: .login)
             .encoded()
 
-        client.send(data: data!)
+        return await client.send(data: data!)
     }
     
-    func send(to: String,
-              data: Data) {
-        let data = CommandFactory
-            .command(type: .chat, id: to, data: data)
+    func send(id: String, data: Data) async -> Bool {
+        let data = commandFactory
+            .command(type: .chat, id: id, data: data)
             .encoded()
         
-        client.send(data: data!)
+        return await client.send(data: data!)
     }
 }

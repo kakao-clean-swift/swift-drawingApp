@@ -15,20 +15,25 @@ class DrawViewController: UIViewController {
     let viewModel = DrawViewModel()
     var disposables = Set<AnyCancellable>()
     var shapeFactory: ShapeGeneratable!
+    var chatManager: ChatManagable!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initView()
         NSLog("DrawViewController - viewDidLoad")
-        viewModel.shapeRange = ShapeRange(minX: 0,
+        viewModel.planeRange = ShapeRange(minX: 0,
                                           minY: 0,
-                                          maxX: 100,
-                                          maxY: 100)
-        shapeFactory = ShapeFactory(range: viewModel.shapeRange)
+                                          maxX: view.bounds.maxY / 3.0,
+                                          maxY: view.bounds.maxY / 3.0)
+        shapeFactory = ShapeFactory(planeRange: viewModel.planeRange,
+                                    shapeRange: ShapeRange(minX: 300, minY: 300, maxX: 600, maxY: 600))
+        chatManager = ChatManager(client: ChatClient(),
+                                  commandFactory: CommandFactory())
         
-        self.bind()
-        
-        viewModel.shapes.append(shapeFactory.build(type: Rectangle.self)!)
+        Task { @MainActor in
+            await self.chatManager.login()
+            self.bind()
+        }
     }
     
     private func bind() {
@@ -36,7 +41,7 @@ class DrawViewController: UIViewController {
             .sink(receiveCompletion: { result in
             }, receiveValue: { shapes in
                 shapes.forEach { shape in
-                    stride(from: 0, to: shape.points.count - 1, by: 2).map {
+                    stride(from: 0, to: shape.points.count - 1, by: 1).map {
                         (shape.points[$0], shape.points[$0+1])
                     }.forEach( {lhs, rhs in
                         self.drawLine(from: CGPoint(x: lhs.x, y: lhs.y),
@@ -44,9 +49,19 @@ class DrawViewController: UIViewController {
                     })
                 }
             }).store(in: &disposables)
+        
+        viewModel.$shouldSync
+            .sink(receiveValue: { [weak self] shouldSync in
+                guard let self = self, shouldSync else { return }
+                let manager = ShapeSyncManager(chatManager: self.chatManager)
+
+                Task {
+                    await manager.send(shapes: self.viewModel.shapes)
+                }
+            }).store(in: &disposables)
     }
     
-    func drawLine(from start: CGPoint, to end:CGPoint, color: UIColor = .black) {
+    private func drawLine(from start: CGPoint, to end:CGPoint, color: UIColor = .black) {
         let path = UIBezierPath()
         path.move(to: start)
         path.addLine(to: end)
@@ -66,6 +81,15 @@ class DrawViewController: UIViewController {
             make.left.right.equalToSuperview()
             make.bottom.equalTo(view.safeAreaLayoutGuide)
             make.height.equalTo(100)
+        }
+        
+        bottomView.didTapLeft = { [weak self] in
+            guard let self = self else { return }
+            self.viewModel.shapes.append(self.shapeFactory.build(type: Rectangle.self)!)
+        }
+        
+        bottomView.didTapCenter = { [weak self] in
+            self?.viewModel.shouldSync = true
         }
     }
 

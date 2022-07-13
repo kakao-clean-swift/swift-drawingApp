@@ -70,6 +70,19 @@ class DrawBottomView: UIView {
             make.bottom.equalToSuperview()
             make.left.equalTo(centerButton.snp.right)
         }
+        
+        leftButton.addTarget(self, action: #selector(didTapLeft(_:)), for: .touchUpInside)
+        centerButton.addTarget(self, action: #selector(didTapCenter(_:)), for: .touchUpInside)
+    }
+    
+    @objc
+    private func didTapLeft(_ sender: UIButton) {
+        didTapLeft?()
+    }
+    
+    @objc
+    private func didTapCenter(_ sender: UIButton) {
+        didTapCenter?()
     }
 }
 

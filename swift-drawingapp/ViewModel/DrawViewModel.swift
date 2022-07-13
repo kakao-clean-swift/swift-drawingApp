@@ -8,7 +8,8 @@
 import Foundation
 import Combine
 
-class DrawViewModel {
+class DrawViewModel: ObservableObject {
     @Published var shapes: [Shape] = []
-    var shapeRange: ShapeRange = ShapeRange()
+    @Published var shouldSync: Bool = false
+    var planeRange: ShapeRange = ShapeRange()
 }

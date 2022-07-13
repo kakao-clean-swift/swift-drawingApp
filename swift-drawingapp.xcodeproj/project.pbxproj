@@ -16,6 +16,10 @@
 		5D6C3966287320E1009274B6 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6C3965287320E1009274B6 /* Shape.swift */; };
 		5D6C3969287321DB009274B6 /* DrawBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6C3968287321DB009274B6 /* DrawBottomView.swift */; };
 		5D6C396B2873266E009274B6 /* ShapeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6C396A2873266E009274B6 /* ShapeFactory.swift */; };
+		5D832B932876E21600FF71D4 /* ChatManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D832B922876E21600FF71D4 /* ChatManagerTest.swift */; };
+		5D832B952876F05000FF71D4 /* CommandGenerateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D832B942876F05000FF71D4 /* CommandGenerateTest.swift */; };
+		5D832B972876F17A00FF71D4 /* DrawViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D832B962876F17A00FF71D4 /* DrawViewModelTest.swift */; };
+		5D832BBC287C591500FF71D4 /* ShapeSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D832BBB287C591500FF71D4 /* ShapeSync.swift */; };
 		78301DB68FE2E0172D9A35AD /* Pods_swift_drawingapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A04BD64827C15DB12905F7FA /* Pods_swift_drawingapp.framework */; };
 		83A846E128725EFA00C777B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A846E028725EFA00C777B1 /* AppDelegate.swift */; };
 		83A846E328725EFA00C777B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A846E228725EFA00C777B1 /* SceneDelegate.swift */; };
@@ -23,7 +27,6 @@
 		83A846E828725EFA00C777B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A846E628725EFA00C777B1 /* Main.storyboard */; };
 		83A846EA28725EFE00C777B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83A846E928725EFE00C777B1 /* Assets.xcassets */; };
 		83A846ED28725EFE00C777B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A846EB28725EFE00C777B1 /* LaunchScreen.storyboard */; };
-		83A846F828725EFF00C777B1 /* swift_drawingappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A846F728725EFF00C777B1 /* swift_drawingappTests.swift */; };
 		83A8470228725EFF00C777B1 /* swift_drawingappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A8470128725EFF00C777B1 /* swift_drawingappUITests.swift */; };
 		83A8470428725EFF00C777B1 /* swift_drawingappUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A8470328725EFF00C777B1 /* swift_drawingappUITestsLaunchTests.swift */; };
 		AEB8774B5131D0E752DF6E86 /* Pods_swift_drawingapp_swift_drawingappUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E28D3B5CB93739DF4C12D4B /* Pods_swift_drawingapp_swift_drawingappUITests.framework */; };
@@ -56,6 +59,10 @@
 		5D6C3965287320E1009274B6 /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
 		5D6C3968287321DB009274B6 /* DrawBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawBottomView.swift; sourceTree = "<group>"; };
 		5D6C396A2873266E009274B6 /* ShapeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeFactory.swift; sourceTree = "<group>"; };
+		5D832B922876E21600FF71D4 /* ChatManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatManagerTest.swift; sourceTree = "<group>"; };
+		5D832B942876F05000FF71D4 /* CommandGenerateTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandGenerateTest.swift; sourceTree = "<group>"; };
+		5D832B962876F17A00FF71D4 /* DrawViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawViewModelTest.swift; sourceTree = "<group>"; };
+		5D832BBB287C591500FF71D4 /* ShapeSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeSync.swift; sourceTree = "<group>"; };
 		71A6FC5227B427D169FB2204 /* Pods_swift_drawingappTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swift_drawingappTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		776D7F143EBECFD577526FB2 /* Pods-swift-drawingappTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-drawingappTests.debug.xcconfig"; path = "Target Support Files/Pods-swift-drawingappTests/Pods-swift-drawingappTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7E03D6A08F1C6FB5ACDAD135 /* Pods-swift-drawingappTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-drawingappTests.release.xcconfig"; path = "Target Support Files/Pods-swift-drawingappTests/Pods-swift-drawingappTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -68,7 +75,6 @@
 		83A846EC28725EFE00C777B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83A846EE28725EFE00C777B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83A846F328725EFF00C777B1 /* swift-drawingappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swift-drawingappTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		83A846F728725EFF00C777B1 /* swift_drawingappTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_drawingappTests.swift; sourceTree = "<group>"; };
 		83A846FD28725EFF00C777B1 /* swift-drawingappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swift-drawingappUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83A8470128725EFF00C777B1 /* swift_drawingappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_drawingappUITests.swift; sourceTree = "<group>"; };
 		83A8470328725EFF00C777B1 /* swift_drawingappUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_drawingappUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -124,6 +130,7 @@
 				5D6C395128731130009274B6 /* ChatManager.swift */,
 				5D6C39532873140E009274B6 /* ChatData.swift */,
 				5D6C396228731ACF009274B6 /* CommandFactory.swift */,
+				5D832BBB287C591500FF71D4 /* ShapeSync.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -196,7 +203,9 @@
 		83A846F628725EFF00C777B1 /* swift-drawingappTests */ = {
 			isa = PBXGroup;
 			children = (
-				83A846F728725EFF00C777B1 /* swift_drawingappTests.swift */,
+				5D832B922876E21600FF71D4 /* ChatManagerTest.swift */,
+				5D832B942876F05000FF71D4 /* CommandGenerateTest.swift */,
+				5D832B962876F17A00FF71D4 /* DrawViewModelTest.swift */,
 			);
 			path = "swift-drawingappTests";
 			sourceTree = "<group>";
@@ -464,6 +473,7 @@
 			files = (
 				5D6C39542873140E009274B6 /* ChatData.swift in Sources */,
 				5D6C3969287321DB009274B6 /* DrawBottomView.swift in Sources */,
+				5D832BBC287C591500FF71D4 /* ShapeSync.swift in Sources */,
 				83A846E528725EFA00C777B1 /* DrawViewController.swift in Sources */,
 				83A846E128725EFA00C777B1 /* AppDelegate.swift in Sources */,
 				5D6C394D28730CC4009274B6 /* ChatClient.swift in Sources */,
@@ -480,7 +490,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83A846F828725EFF00C777B1 /* swift_drawingappTests.swift in Sources */,
+				5D832B972876F17A00FF71D4 /* DrawViewModelTest.swift in Sources */,
+				5D832B932876E21600FF71D4 /* ChatManagerTest.swift in Sources */,
+				5D832B952876F05000FF71D4 /* CommandGenerateTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
