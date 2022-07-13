@@ -26,10 +26,10 @@ class swift_drawingappTests: XCTestCase {
 
     func testDrawingViewModel_아이템추가() {
         let viewModel = DrawingViewModel()
-        viewModel.addSquare()
-        viewModel.addManualDrawing(color: .systemPurple, points: [CGPoint(x: 100, y: 100), CGPoint(x: 150, y: 200)])
-        viewModel.addSquare()
-        viewModel.addSquare()
+        viewModel.didTouchSquareButton()
+        viewModel.didManualDrawing(color: .systemPurple, points: [CGPoint(x: 100, y: 100), CGPoint(x: 150, y: 200)])
+        viewModel.didTouchSquareButton()
+        viewModel.didTouchSquareButton()
 
         print(viewModel.drawableItems)
         XCTAssertEqual(viewModel.drawableItems.count, 4)

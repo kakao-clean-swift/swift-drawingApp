@@ -11,12 +11,27 @@ import UIKit
  DrawItemView
  */
 
-class SquareView: UIImageView {
-    var item: ItemDrawable
+class SquareView: UIButton {
+    var item: ItemDrawable    
+    public var didTap: ((_ item: ItemDrawable) -> Void)?
+    
+    override var isSelected: Bool {
+        didSet {
+            if isSelected {
+                self.layer.borderColor = UIColor.systemRed.cgColor
+                self.layer.borderWidth = 5
+            } else {
+                self.layer.borderWidth = 0
+            }
+        }
+    }
 
     init(item: ItemDrawable) {
         self.item = item
         super.init(frame: .zero)
+        
+        self.isSelected = item.isSelected
+        self.addTarget(self, action: #selector(didSelect), for: .touchUpInside)
 
         drawItem()
     }
@@ -28,9 +43,14 @@ class SquareView: UIImageView {
     func drawItem() {
         self.frame = getFrame()
 
-        if item.fill {
+        if item.drawingType == .fill {
             self.backgroundColor = item.color
         }
+    }
+    
+    @objc
+    private func didSelect() {
+        self.didTap?(item)
     }
 
     private func getFrame() -> CGRect {
@@ -41,7 +61,7 @@ class SquareView: UIImageView {
               let minY = yArray.min(),
               let maxY = yArray.max() else { return CGRect.zero }
 
-        return CGRect(x: minX, y: minY, width: maxX - minX, height: maxY - minY)
+        return CGRect(x: CGFloat(minX), y: CGFloat(minY), width: CGFloat(maxX - minX), height: CGFloat(maxY - minY))
     }
 }
 
