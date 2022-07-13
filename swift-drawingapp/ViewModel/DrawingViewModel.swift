@@ -5,38 +5,24 @@
 //  Created by joel.inju on 2022/07/04.
 //
 
-import UIKit
+import Foundation
 
 class DrawingViewModel {
     @Published var rects = [Figure]()
     @Published var drawings = [Figure]()
-    @Published var selectedId: UUID?
-    @Published var deselectedId: UUID?
+    
+    private let logic: Logic
+    
+    init(_ logic: Logic) {
+        self.logic = logic
+    }
     
     func createRect() {
-        let rect = Figure(randomPoint())
+        let rect = logic.createRect()
         rects.append(rect)
     }
     
-    init() {
-        
-    }
-    
-    private func randomPoint() -> Point {
-        let x = Int(arc4random_uniform(UInt32(UIScreen.main.bounds.width)))
-        let y = Int(arc4random_uniform(UInt32(UIScreen.main.bounds.height)))
-        return Point(x: x, y: y)
-    }
-    
-    func touched(_ id: UUID?) {
-        guard let id = id else { return }
-        
-        if selectedId == id {
-            deselectedId = id
-            selectedId = nil
-        } else {
-            deselectedId = selectedId
-            selectedId = id
-        }
+    func touchRect(_ id: UUID?) {
+        logic.touchRect(id)
     }
 }

@@ -23,7 +23,8 @@ class swift_drawingappTests: XCTestCase {
     
     func test_뷰모델_사각형추가_성공() {
         // given
-        let viewModel = DrawingViewModel()
+        let logic = Logic()
+        let viewModel = DrawingViewModel(logic)
         
         // when
         viewModel.createRect()
