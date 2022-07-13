@@ -9,13 +9,35 @@
 /* Begin PBXBuildFile section */
 		83A846E128725EFA00C777B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A846E028725EFA00C777B1 /* AppDelegate.swift */; };
 		83A846E328725EFA00C777B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A846E228725EFA00C777B1 /* SceneDelegate.swift */; };
-		83A846E528725EFA00C777B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A846E428725EFA00C777B1 /* ViewController.swift */; };
+		83A846E528725EFA00C777B1 /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A846E428725EFA00C777B1 /* DrawingViewController.swift */; };
 		83A846E828725EFA00C777B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A846E628725EFA00C777B1 /* Main.storyboard */; };
 		83A846EA28725EFE00C777B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83A846E928725EFE00C777B1 /* Assets.xcassets */; };
 		83A846ED28725EFE00C777B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A846EB28725EFE00C777B1 /* LaunchScreen.storyboard */; };
 		83A846F828725EFF00C777B1 /* swift_drawingappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A846F728725EFF00C777B1 /* swift_drawingappTests.swift */; };
 		83A8470228725EFF00C777B1 /* swift_drawingappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A8470128725EFF00C777B1 /* swift_drawingappUITests.swift */; };
 		83A8470428725EFF00C777B1 /* swift_drawingappUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A8470328725EFF00C777B1 /* swift_drawingappUITestsLaunchTests.swift */; };
+		C257D7C2287AD67300F2EC64 /* DrawingInteractor+Draw.swift in Sources */ = {isa = PBXBuildFile; fileRef = C257D7C1287AD67300F2EC64 /* DrawingInteractor+Draw.swift */; };
+		C257D7C4287AD6C900F2EC64 /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C257D7C3287AD6C900F2EC64 /* Rectangle.swift */; };
+		C257D7C6287AD6CF00F2EC64 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = C257D7C5287AD6CF00F2EC64 /* Line.swift */; };
+		C257D7C8287AD6DD00F2EC64 /* DrawingComponentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C257D7C7287AD6DD00F2EC64 /* DrawingComponentType.swift */; };
+		C257D7CA287AD7BA00F2EC64 /* RelativePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C257D7C9287AD7BA00F2EC64 /* RelativePoint.swift */; };
+		C257D7D1287AE5A700F2EC64 /* CanvasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C257D7CF287AE5A700F2EC64 /* CanvasTests.swift */; };
+		C257D7D5287AF17F00F2EC64 /* Movable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C257D7D4287AF17F00F2EC64 /* Movable.swift */; };
+		C257D7D7287AF80200F2EC64 /* Selectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C257D7D6287AF80200F2EC64 /* Selectable.swift */; };
+		C257D7D9287BB54700F2EC64 /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = C257D7D8287BB54700F2EC64 /* Canvas.swift */; };
+		C257D7DB287BC30100F2EC64 /* DrawingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C257D7DA287BC30100F2EC64 /* DrawingPresenter.swift */; };
+		C257D7DD287BC43600F2EC64 /* DrawingModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C257D7DC287BC43600F2EC64 /* DrawingModels.swift */; };
+		C257D7DF287BC69600F2EC64 /* Extension+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C257D7DE287BC69600F2EC64 /* Extension+UIColor.swift */; };
+		C257D7E1287BCDD100F2EC64 /* RectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C257D7E0287BCDD100F2EC64 /* RectangleView.swift */; };
+		C257D7E3287BD8C300F2EC64 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C257D7E2287BD8C300F2EC64 /* CanvasView.swift */; };
+		C257D7F6287BFE0600F2EC64 /* DrawingInteractor+Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = C257D7F5287BFE0600F2EC64 /* DrawingInteractor+Move.swift */; };
+		C257D7F8287BFE0D00F2EC64 /* DrawingInteractor+Select.swift in Sources */ = {isa = PBXBuildFile; fileRef = C257D7F7287BFE0D00F2EC64 /* DrawingInteractor+Select.swift */; };
+		C257D7FA287BFE1400F2EC64 /* DrawingInteractor+Sync.swift in Sources */ = {isa = PBXBuildFile; fileRef = C257D7F9287BFE1400F2EC64 /* DrawingInteractor+Sync.swift */; };
+		C257D802287BFF2300F2EC64 /* DrawingPresenter+Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = C257D801287BFF2300F2EC64 /* DrawingPresenter+Move.swift */; };
+		C257D804287BFF6F00F2EC64 /* DrawingModels+Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = C257D803287BFF6F00F2EC64 /* DrawingModels+Move.swift */; };
+		C257D806287BFFA000F2EC64 /* DrawingPresenter+Select.swift in Sources */ = {isa = PBXBuildFile; fileRef = C257D805287BFFA000F2EC64 /* DrawingPresenter+Select.swift */; };
+		C257D808287BFFDC00F2EC64 /* DrawingPresenter+Sync.swift in Sources */ = {isa = PBXBuildFile; fileRef = C257D807287BFFDC00F2EC64 /* DrawingPresenter+Sync.swift */; };
+		C257D80A287C000600F2EC64 /* DrawingModels+Select.swift in Sources */ = {isa = PBXBuildFile; fileRef = C257D809287C000600F2EC64 /* DrawingModels+Select.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +61,7 @@
 		83A846DD28725EFA00C777B1 /* swift-drawingapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-drawingapp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83A846E028725EFA00C777B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83A846E228725EFA00C777B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		83A846E428725EFA00C777B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		83A846E428725EFA00C777B1 /* DrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
 		83A846E728725EFA00C777B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		83A846E928725EFE00C777B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83A846EC28725EFE00C777B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +71,28 @@
 		83A846FD28725EFF00C777B1 /* swift-drawingappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swift-drawingappUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83A8470128725EFF00C777B1 /* swift_drawingappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_drawingappUITests.swift; sourceTree = "<group>"; };
 		83A8470328725EFF00C777B1 /* swift_drawingappUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_drawingappUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C257D7C1287AD67300F2EC64 /* DrawingInteractor+Draw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DrawingInteractor+Draw.swift"; sourceTree = "<group>"; };
+		C257D7C3287AD6C900F2EC64 /* Rectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
+		C257D7C5287AD6CF00F2EC64 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		C257D7C7287AD6DD00F2EC64 /* DrawingComponentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingComponentType.swift; sourceTree = "<group>"; };
+		C257D7C9287AD7BA00F2EC64 /* RelativePoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelativePoint.swift; sourceTree = "<group>"; };
+		C257D7CF287AE5A700F2EC64 /* CanvasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasTests.swift; sourceTree = "<group>"; };
+		C257D7D4287AF17F00F2EC64 /* Movable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movable.swift; sourceTree = "<group>"; };
+		C257D7D6287AF80200F2EC64 /* Selectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selectable.swift; sourceTree = "<group>"; };
+		C257D7D8287BB54700F2EC64 /* Canvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Canvas.swift; sourceTree = "<group>"; };
+		C257D7DA287BC30100F2EC64 /* DrawingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingPresenter.swift; sourceTree = "<group>"; };
+		C257D7DC287BC43600F2EC64 /* DrawingModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingModels.swift; sourceTree = "<group>"; };
+		C257D7DE287BC69600F2EC64 /* Extension+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIColor.swift"; sourceTree = "<group>"; };
+		C257D7E0287BCDD100F2EC64 /* RectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleView.swift; sourceTree = "<group>"; };
+		C257D7E2287BD8C300F2EC64 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
+		C257D7F5287BFE0600F2EC64 /* DrawingInteractor+Move.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DrawingInteractor+Move.swift"; sourceTree = "<group>"; };
+		C257D7F7287BFE0D00F2EC64 /* DrawingInteractor+Select.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DrawingInteractor+Select.swift"; sourceTree = "<group>"; };
+		C257D7F9287BFE1400F2EC64 /* DrawingInteractor+Sync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DrawingInteractor+Sync.swift"; sourceTree = "<group>"; };
+		C257D801287BFF2300F2EC64 /* DrawingPresenter+Move.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DrawingPresenter+Move.swift"; sourceTree = "<group>"; };
+		C257D803287BFF6F00F2EC64 /* DrawingModels+Move.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DrawingModels+Move.swift"; sourceTree = "<group>"; };
+		C257D805287BFFA000F2EC64 /* DrawingPresenter+Select.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DrawingPresenter+Select.swift"; sourceTree = "<group>"; };
+		C257D807287BFFDC00F2EC64 /* DrawingPresenter+Sync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DrawingPresenter+Sync.swift"; sourceTree = "<group>"; };
+		C257D809287C000600F2EC64 /* DrawingModels+Select.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DrawingModels+Select.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +143,12 @@
 		83A846DF28725EFA00C777B1 /* swift-drawingapp */ = {
 			isa = PBXGroup;
 			children = (
+				C257D7E9287BF8A200F2EC64 /* Extension */,
+				C257D7E7287BF84400F2EC64 /* View */,
+				C257D7E6287BF82100F2EC64 /* Presentation */,
+				C257D7E5287BF81D00F2EC64 /* Domain */,
 				83A846E028725EFA00C777B1 /* AppDelegate.swift */,
 				83A846E228725EFA00C777B1 /* SceneDelegate.swift */,
-				83A846E428725EFA00C777B1 /* ViewController.swift */,
-				83A846E628725EFA00C777B1 /* Main.storyboard */,
 				83A846E928725EFE00C777B1 /* Assets.xcassets */,
 				83A846EB28725EFE00C777B1 /* LaunchScreen.storyboard */,
 				83A846EE28725EFE00C777B1 /* Info.plist */,
@@ -114,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				83A846F728725EFF00C777B1 /* swift_drawingappTests.swift */,
+				C257D7CF287AE5A700F2EC64 /* CanvasTests.swift */,
 			);
 			path = "swift-drawingappTests";
 			sourceTree = "<group>";
@@ -125,6 +172,145 @@
 				83A8470328725EFF00C777B1 /* swift_drawingappUITestsLaunchTests.swift */,
 			);
 			path = "swift-drawingappUITests";
+			sourceTree = "<group>";
+		};
+		C257D7E5287BF81D00F2EC64 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				C257D7F1287BFD4300F2EC64 /* Drawing */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		C257D7E6287BF82100F2EC64 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				C257D7FD287BFECF00F2EC64 /* Drawing */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		C257D7E7287BF84400F2EC64 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				83A846E628725EFA00C777B1 /* Main.storyboard */,
+				83A846E428725EFA00C777B1 /* DrawingViewController.swift */,
+				C257D7E0287BCDD100F2EC64 /* RectangleView.swift */,
+				C257D7E2287BD8C300F2EC64 /* CanvasView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C257D7E8287BF87800F2EC64 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C257D7C7287AD6DD00F2EC64 /* DrawingComponentType.swift */,
+				C257D7D8287BB54700F2EC64 /* Canvas.swift */,
+				C257D7C3287AD6C900F2EC64 /* Rectangle.swift */,
+				C257D7C5287AD6CF00F2EC64 /* Line.swift */,
+				C257D7C9287AD7BA00F2EC64 /* RelativePoint.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C257D7E9287BF8A200F2EC64 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C257D7DE287BC69600F2EC64 /* Extension+UIColor.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		C257D7F0287BFD3E00F2EC64 /* SelectDrawing */ = {
+			isa = PBXGroup;
+			children = (
+				C257D7D6287AF80200F2EC64 /* Selectable.swift */,
+				C257D7F7287BFE0D00F2EC64 /* DrawingInteractor+Select.swift */,
+			);
+			path = SelectDrawing;
+			sourceTree = "<group>";
+		};
+		C257D7F1287BFD4300F2EC64 /* Drawing */ = {
+			isa = PBXGroup;
+			children = (
+				C257D7F3287BFD5500F2EC64 /* Draw */,
+				C257D7F2287BFD4E00F2EC64 /* MoveDrawing */,
+				C257D7F0287BFD3E00F2EC64 /* SelectDrawing */,
+				C257D7F4287BFD5A00F2EC64 /* SyncDrawing */,
+				C257D7E8287BF87800F2EC64 /* Model */,
+			);
+			path = Drawing;
+			sourceTree = "<group>";
+		};
+		C257D7F2287BFD4E00F2EC64 /* MoveDrawing */ = {
+			isa = PBXGroup;
+			children = (
+				C257D7D4287AF17F00F2EC64 /* Movable.swift */,
+				C257D7F5287BFE0600F2EC64 /* DrawingInteractor+Move.swift */,
+			);
+			path = MoveDrawing;
+			sourceTree = "<group>";
+		};
+		C257D7F3287BFD5500F2EC64 /* Draw */ = {
+			isa = PBXGroup;
+			children = (
+				C257D7C1287AD67300F2EC64 /* DrawingInteractor+Draw.swift */,
+			);
+			path = Draw;
+			sourceTree = "<group>";
+		};
+		C257D7F4287BFD5A00F2EC64 /* SyncDrawing */ = {
+			isa = PBXGroup;
+			children = (
+				C257D7F9287BFE1400F2EC64 /* DrawingInteractor+Sync.swift */,
+			);
+			path = SyncDrawing;
+			sourceTree = "<group>";
+		};
+		C257D7FB287BFEC100F2EC64 /* Draw */ = {
+			isa = PBXGroup;
+			children = (
+				C257D7DA287BC30100F2EC64 /* DrawingPresenter.swift */,
+				C257D7DC287BC43600F2EC64 /* DrawingModels.swift */,
+			);
+			path = Draw;
+			sourceTree = "<group>";
+		};
+		C257D7FC287BFEC900F2EC64 /* MoveDrawing */ = {
+			isa = PBXGroup;
+			children = (
+				C257D801287BFF2300F2EC64 /* DrawingPresenter+Move.swift */,
+				C257D803287BFF6F00F2EC64 /* DrawingModels+Move.swift */,
+			);
+			path = MoveDrawing;
+			sourceTree = "<group>";
+		};
+		C257D7FD287BFECF00F2EC64 /* Drawing */ = {
+			isa = PBXGroup;
+			children = (
+				C257D7FB287BFEC100F2EC64 /* Draw */,
+				C257D7FC287BFEC900F2EC64 /* MoveDrawing */,
+				C257D7FE287BFED300F2EC64 /* SelectDrawing */,
+				C257D7FF287BFED900F2EC64 /* SyncDrawing */,
+			);
+			path = Drawing;
+			sourceTree = "<group>";
+		};
+		C257D7FE287BFED300F2EC64 /* SelectDrawing */ = {
+			isa = PBXGroup;
+			children = (
+				C257D805287BFFA000F2EC64 /* DrawingPresenter+Select.swift */,
+				C257D809287C000600F2EC64 /* DrawingModels+Select.swift */,
+			);
+			path = SelectDrawing;
+			sourceTree = "<group>";
+		};
+		C257D7FF287BFED900F2EC64 /* SyncDrawing */ = {
+			isa = PBXGroup;
+			children = (
+				C257D807287BFFDC00F2EC64 /* DrawingPresenter+Sync.swift */,
+			);
+			path = SyncDrawing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +444,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83A846E528725EFA00C777B1 /* ViewController.swift in Sources */,
+				C257D7CA287AD7BA00F2EC64 /* RelativePoint.swift in Sources */,
+				C257D7D9287BB54700F2EC64 /* Canvas.swift in Sources */,
+				C257D7E3287BD8C300F2EC64 /* CanvasView.swift in Sources */,
+				C257D7C4287AD6C900F2EC64 /* Rectangle.swift in Sources */,
+				83A846E528725EFA00C777B1 /* DrawingViewController.swift in Sources */,
+				C257D7D5287AF17F00F2EC64 /* Movable.swift in Sources */,
+				C257D7DB287BC30100F2EC64 /* DrawingPresenter.swift in Sources */,
+				C257D7F8287BFE0D00F2EC64 /* DrawingInteractor+Select.swift in Sources */,
+				C257D808287BFFDC00F2EC64 /* DrawingPresenter+Sync.swift in Sources */,
+				C257D804287BFF6F00F2EC64 /* DrawingModels+Move.swift in Sources */,
+				C257D7C2287AD67300F2EC64 /* DrawingInteractor+Draw.swift in Sources */,
+				C257D7FA287BFE1400F2EC64 /* DrawingInteractor+Sync.swift in Sources */,
+				C257D7F6287BFE0600F2EC64 /* DrawingInteractor+Move.swift in Sources */,
+				C257D7D7287AF80200F2EC64 /* Selectable.swift in Sources */,
+				C257D802287BFF2300F2EC64 /* DrawingPresenter+Move.swift in Sources */,
+				C257D7C8287AD6DD00F2EC64 /* DrawingComponentType.swift in Sources */,
+				C257D80A287C000600F2EC64 /* DrawingModels+Select.swift in Sources */,
+				C257D7DF287BC69600F2EC64 /* Extension+UIColor.swift in Sources */,
+				C257D7DD287BC43600F2EC64 /* DrawingModels.swift in Sources */,
+				C257D7C6287AD6CF00F2EC64 /* Line.swift in Sources */,
 				83A846E128725EFA00C777B1 /* AppDelegate.swift in Sources */,
+				C257D806287BFFA000F2EC64 /* DrawingPresenter+Select.swift in Sources */,
 				83A846E328725EFA00C777B1 /* SceneDelegate.swift in Sources */,
+				C257D7E1287BCDD100F2EC64 /* RectangleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +476,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83A846F828725EFF00C777B1 /* swift_drawingappTests.swift in Sources */,
+				C257D7D1287AE5A700F2EC64 /* CanvasTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,7 +574,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -420,7 +628,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -492,7 +700,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kakaocorp.swift-drawingappTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -511,7 +719,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kakaocorp.swift-drawingappTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
