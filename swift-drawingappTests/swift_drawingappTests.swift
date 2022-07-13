@@ -6,6 +6,7 @@
 //
 
 import XCTest
+import DrawingShapes
 @testable import swift_drawingapp
 
 class DrawersTest: XCTestCase {
@@ -36,12 +37,12 @@ class DrawersTest: XCTestCase {
         
         let shape1 = drawers.shape(of: 0) as! Rectangle
         XCTAssertEqual(shape1.frame, CGRect(x: 0, y: 120, width: 100, height: 100))
-        XCTAssertEqual(shape1.color, UIColor.systemBlue)
+        XCTAssertEqual(shape1.stroke, UIColor.systemBlue)
         
         let shape2 = drawers.shape(of: 1) as! Rectangle
         
         XCTAssertEqual(shape2.frame, CGRect(x: 120, y: 120, width: 100, height: 100))
-        XCTAssertEqual(shape2.color, UIColor.systemTeal)
+        XCTAssertEqual(shape2.stroke, UIColor.systemTeal)
         
         XCTAssertNotEqual(shape1.id, shape2.id)
     }
